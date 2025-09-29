@@ -1070,8 +1070,8 @@ body:has(.theme-switch:checked),
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 0.8) 0%,
-    rgba(255, 255, 255, 0.4) 30%,
-    rgba(155, 92, 255, 0.3) 60%,
+    #ffffff66 30%,
+    rgba(255, 92, 228, 0.3) 60%,
     transparent 100%
   );
   border-radius: 50%;
@@ -1079,8 +1079,7 @@ body:has(.theme-switch:checked),
   z-index: 10;
   opacity: 0;
   transition: opacity 0.2s ease;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
-    0 0 40px rgba(155, 92, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px #ff5ce933;
 }
 
 .hero.cursor-active .cursor-glow {
@@ -1139,7 +1138,7 @@ body:has(.theme-switch:checked),
 
 @media (hover: none) {
   .hero {
-    cursor: default;
+    cursor: auto;
   }
   .cursor-glow,
   .trail-particle {
@@ -1334,6 +1333,7 @@ body:has(.theme-switch:checked),
   .hero {
     padding-top: 48px; /* less gap under header */
     padding-bottom: 32px;
+    cursor: auto;
   }
   .hero h1 {
     margin: 0 0 16px; /* tighter spacing */

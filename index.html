@@ -322,6 +322,38 @@
       // Update footer year
       const yearEl = document.getElementById("year");
       if (yearEl) yearEl.textContent = new Date().getFullYear();
+      
+      // Cursor glow effect
+      const hero = document.querySelector(".hero");
+      const cursorGlow = document.getElementById("cursorGlow");
+
+      if (hero && cursorGlow) {
+        hero.addEventListener("mousemove", (e) => {
+          const rect = hero.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          cursorGlow.style.left = x - 10 + "px";
+          cursorGlow.style.top = y - 10 + "px";
+
+          if (Math.random() < 0.3) {
+            const particle = document.createElement("div");
+            particle.className = "trail-particle";
+            particle.style.left = x - 2 + "px";
+            particle.style.top = y - 2 + "px";
+            hero.appendChild(particle);
+            setTimeout(() => particle.remove(), 1000);
+          }
+        });
+
+        hero.addEventListener("mouseenter", () =>
+          hero.classList.add("cursor-active")
+        );
+        hero.addEventListener("mouseleave", () =>
+          hero.classList.remove("cursor-active")
+        );
+      }
+    
     </script>
 </body>
 
