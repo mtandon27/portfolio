@@ -28,11 +28,6 @@ img {
   max-width: 100%;
 }
 
-.intro-section,
-.content-grid {
-  padding-top: var(--header-height);
-}
-
 /* sidebar / TOC */
 .sidebar {
   position: sticky;
@@ -89,6 +84,8 @@ img {
    Polaroids / Shuffle
 ========================== */
 .polaroids {
+  display: flex;
+
   position: relative;
   height: 210px;
 }
@@ -137,13 +134,13 @@ img {
   z-index: 3;
 }
 .polaroids:hover .polaroid:nth-child(2) {
-  left: 30px !important;
-  top: 10px !important;
+  left: 100px !important;
+  top: 30px !important;
   transform: rotate(-15deg);
   z-index: 2;
 }
 .polaroids:hover .polaroid:nth-child(3) {
-  right: 20px !important;
+  right: 100px !important;
   top: 80px !important;
   transform: rotate(-8deg);
   z-index: 1;
