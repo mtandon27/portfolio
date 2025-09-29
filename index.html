@@ -1,366 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--style elements-->
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="global.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
-    <!--This is a little tidbit that gets it to be responsive-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Manvi Tandon</title>
+<head>
+  <!--style elements-->
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  </head>
+  <!--This is a little tidbit that gets it to be responsive-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Manvi Tandon</title>
 
-  <body>
-    <div class="site">
-      <!--Global Navigation Header-->
-      <header class="site-header" role="banner">
-        <div class="container header-inner">
-          <!-- Left side: brand group -->
-          <div class="brand-group">
-            <img src="logodark.png" alt="Logo" class="logo" id="logo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="icon" href="assets/mt.png" type="image/png"> 
+</head>
+
+<body>
+  <div class="site">
+    <!--Global Navigation Header-->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <!-- Left side: brand group -->
+        <div class="brand-group">
+          <img src="assets/logodark.png" alt="Logo" class="logo" id="logo" />
+        </div>
+
+        <!-- Right side -->
+        <div class="header-right">
+          <!-- Theme switch -->
+          <input id="theme-switch" class="theme-switch" type="checkbox" aria-label="Toggle color theme" />
+
+          <!-- Hamburger toggle (mobile only) -->
+          <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Desktop nav -->
+          <nav class="nav desktop-nav" aria-label="Primary">
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Mobile nav (hidden by default) -->
+      <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+      </nav>
+    </header>
+
+    <main id="content" role="main">
+
+      <!-- HERO -->
+      <section class="hero intro-section">
+
+        <!-- hero cursor element -->
+        <div class="cursor-glow" id="cursorGlow"></div>
+        <div class="container hero-grid">
+
+          <!-- Left side -->
+          <div>
+            <img src="assets/heroleftdark.png" alt="Decorative left graphic" class="hero-decorative-left" id="heroLeft">
           </div>
 
           <!-- Right side -->
-          <div class="header-right">
-            <!-- Theme switch -->
-            <input
-              id="theme-switch"
-              class="theme-switch"
-              type="checkbox"
-              aria-label="Toggle color theme"
-            />
+          <div class="hero-right">
+            <!-- Image -->
+            <img src="assets/heroimg.png" alt="Hero image">
+            <div>
+            </div>
+          </div>
+      </section>
 
-            <!-- Hamburger toggle (mobile only) -->
-            <button
-              class="hamburger"
-              aria-label="Menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+      <!-- WORK GRID -->
+      <section id="work" class="work">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Featured Work</h2>
+            <a href="work.html" class="section-subtitle">View all projects →</a>
+          </div>
 
-            <!-- Desktop nav -->
-            <nav class="nav desktop-nav" aria-label="Primary">
-              <a href="work.html">Work</a>
-              <a href="about.html">About</a>
-              <a href="blog.html">Blog</a>
-            </nav>
+          <div class="projects-grid">
+            <article class="project">
+              <div class="project-image project-1">
+                <div class="gradient-bg"></div>
+                <a href="beatdrop.html">
+                  <img src="assets/beatdropcover.png" alt="Beat Drop project screenshot" />
+                </a>
+              </div>
+              <div class="project-content">
+                <div class="project-meta">
+                  Amazon Music Challenge Winner
+                </div>
+                <a href="beatdrop.html">
+                  <h3 class="project-title">Beat Drop</h3>
+                </a>
+                <p class="project-description">
+                  BeatDrop transforms individual selections into collaborative
+                  DJ mixes by allowing friends to contribute tracks that are
+                  seamlessly mixed by AI, creating shared experiences that
+                  enhance music discovery and social bonds.
+                </p>
+                <a href="beatdrop.html" class="project-link">View Project</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-image project-2">
+                <div class="gradient-bg purple-gradient"></div>
+                <a href="dsdelights.html">
+                  <img src="assets/dsdelightscover.png" alt="D's Delights project screenshot" />
+                </a>
+              </div>
+              <div class="project-content">
+                <div class="project-meta">Product Design · Branding</div>
+                <a href="dsdelights.html">
+                  <h3 class="project-title">D's Delights Jewelry</h3>
+                </a>
+                <p class="project-description">
+                  Branding and e-commerce website design for a handmade
+                  African bead jewelry brand, focusing on bold aesthetics and
+                  user-friendly shopping experience.
+                </p>
+                <a href="dsdelights.html" class="project-link">View Project</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-image project-3">
+                <div class="gradient-bg"></div>
+                <a href="mathworks.html">
+                  <img src="assets/mathworks.cover.png" alt="D's Delights project screenshot" />
+                </a>
+              </div>
+              <div class="project-content">
+                <div class="project-meta">Product Design · Engineering</div>
+                <a href="mathworks.html">
+                  <h3 class="project-title">Feature Modeling Apps</h3>
+                </a>
+                <p class="project-description">
+                  Designing intuitive feature modeling applications to help
+                  engineers efficiently select and analyze key features from
+                  complex datasets at MathWorks.
+                </p>
+                <a href="mathworks.html" class="project-link">View Project</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-image project-4">
+                <div class="gradient-bg pink-gradient"></div>
+                <img src="assets/keralamuseumcover.png" alt="D's Delights project screenshot" />
+              </div>
+              <div class="project-content">
+                <div class="project-meta">
+                  Responsive Web Design · Strategy
+                </div>
+                <h3 class="project-title">Kerala Art Museum</h3>
+                <p class="project-description">
+                  A responsive website redesign for a cultural institution in
+                  India, focusing on accessibility, user engagement, and
+                  showcasing diverse art collections.
+                </p>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+            </article>
           </div>
         </div>
-
-        <!-- Mobile nav (hidden by default) -->
-        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#blog">Blog</a>
-        </nav>
-      </header>
-
-      <main id="content" role="main">
-        <!-- hero section -->
-        <section class="hero intro-section">
-
-          <!-- Custom cursor element -->
-          <div class="cursor-glow" id="cursorGlow"></div>
-          <div class="container hero-grid">
-
-            <!-- Left side -->
-            <div>
-             <img src="heroleftdark.png" alt="Decorative left graphic" class="hero-decorative-left" id="heroLeft">
-            </div>
-
-            <!-- Right side -->
-            <div class="hero-right">
-                <!-- Image -->
-              <img src="heroimg.png" alt="Hero image">
-              <div class="status-group">
-            </div>
-          </div>
-        </section>
-
-        <!-- WORK GRID -->
-        <section id="work" class="work">
-          <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">Featured Work</h2>
-              <a href="work.html" class="section-subtitle">View all projects →</a>
-            </div>
-
-            <div class="projects-grid">
-              <article class="project">
-                <div class="project-image project-1">
-                  <div class="gradient-bg"></div>
-                  <a href="beatdrop.html">
-                  <img
-                    src="beatdropcover.png"
-                    alt="Beat Drop project screenshot"/>
-                  </a>
-                </div>
-                <div class="project-content">
-                  <div class="project-meta">
-                    Amazon Music Challenge Winner 
-                  </div>
-                  <a href="beatdrop.html">
-                  <h3 class="project-title">Beat Drop</h3>
-                  </a>
-                  <p class="project-description">
-                    BeatDrop transforms individual selections into collaborative
-                    DJ mixes by allowing friends to contribute tracks that are
-                    seamlessly mixed by AI, creating shared experiences that
-                    enhance music discovery and social bonds.
-                  </p>
-                  <a href="beatdrop.html" class="project-link">View Project</a>
-                </div>
-              </article>
-
-              <article class="project">
-                <div class="project-image project-2">
-                  <div class="gradient-bg purple-gradient"></div>
-                    <a href="dsdelights.html">
-                  <img
-                    src="dsdelightscover.png"
-                    alt="D's Delights project screenshot"/>
-                  </a>
-                </div>
-                <div class="project-content">
-                  <div class="project-meta">Product Design · Branding</div>
-                  <a href="dsdelights.html">
-                  <h3 class="project-title">D's Delights Jewelry</h3>
-                  </a>
-                  <p class="project-description">
-                    Branding and e-commerce website design for a handmade
-                    African bead jewelry brand, focusing on bold aesthetics and
-                    user-friendly shopping experience.
-                  </p>
-                  <a href="dsdelights.html" class="project-link">View Project</a>
-                </div>
-              </article>
-
-              <article class="project">
-                <div class="project-image project-3">
-                  <div class="gradient-bg"></div>
-                  <a href="mathworks.html">
-                  <img
-                    src="mathworks.cover.png"
-                    alt="D's Delights project screenshot"/>
-                  </a>
-                </div>
-                <div class="project-content">
-                  <div class="project-meta">Product Design · Engineering</div>
-                  <a href="mathworks.html">
-                  <h3 class="project-title">Feature Modeling Apps</h3>
-                  </a>
-                  <p class="project-description">
-                    Designing intuitive feature modeling applications to help
-                    engineers efficiently select and analyze key features from
-                    complex datasets at MathWorks.
-                  </p>
-                  <a href="mathworks.html" class="project-link">View Project</a>
-                </div>
-              </article>
-
-              <article class="project">
-                <div class="project-image project-4">
-                  <div class="gradient-bg pink-gradient"></div>
-                  <img
-                    src="keralamuseumcover.png"
-                    alt="D's Delights project screenshot"
-                  />
-                </div>
-                <div class="project-content">
-                  <div class="project-meta">
-                    Responsive Web Design · Strategy
-                  </div>
-                  <h3 class="project-title">Kerala Art Museum</h3>
-                  <p class="project-description">
-                    A responsive website redesign for a cultural institution in
-                    India, focusing on accessibility, user engagement, and
-                    showcasing diverse art collections.
-                  </p>
-                  <a href="#" class="project-link">View Project</a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
+      </section>
 
       <!-- BLOG / LATEST ARTICLES -->
-<section id="blog" class="section section--border">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Latest Articles</h2>
-      <p class="section-subtitle">
-        <a href="blog.html" class="section-subtitle">View all articles →</a>
-      </p>
-    </div>
+      <section id="blog" class="section section--border">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Latest Articles</h2>
+            <p class="section-subtitle">
+              <a href="blog.html" class="section-subtitle">View all articles →</a>
+            </p>
+          </div>
 
-    <div class="articles-grid">
-      <article class="article">
-        <div class="article-meta">January 2025 · UX Research</div>
-        <h3 class="article-title">The Rise of Calm Technology</h3>
-        <p class="article-description">
-          Exploring how reducing digital stress can enhance workplace well-being.
+          <div class="articles-grid">
+            <article class="article">
+              <div class="article-meta">January 2025 · UX Research</div>
+              <h3 class="article-title">The Rise of Calm Technology</h3>
+              <p class="article-description">
+                Exploring how reducing digital stress can enhance workplace well-being.
+              </p>
+              <a href="#" class="project-link">View article</a>
+            </article>
+
+            <article class="article">
+              <div class="article-meta">September 2024 · Design Critique</div>
+              <h3 class="article-title">Etsy iOS App: A Design Critique</h3>
+              <p class="article-description">
+                Analyzing the user experience and design choices of the Etsy iOS application.
+              </p>
+              <a href="#" class="project-link">View article</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section section--border">
+        <div class="container row">
+          <h2 class="section-title">Let’s build something great</h2>
+          <div class="btn-row">
+            <a href="mailto:hello@manvitandon.com" class="btn btn--primary" aria-label="Email Manvi">Email me</a>
+            <a href="https://www.linkedin.com/in/manvitandon" target="_blank" rel="noreferrer" class="btn btn--ghost"
+              aria-label="Open LinkedIn profile in a new tab">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <p>
+          <small> © <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small>
         </p>
-        <a href="#" class="project-link">View article</a>
-      </article>
-
-      <article class="article">
-        <div class="article-meta">September 2024 · Design Critique</div>
-        <h3 class="article-title">Etsy iOS App: A Design Critique</h3>
-        <p class="article-description">
-          Analyzing the user experience and design choices of the Etsy iOS application.
-        </p>
-        <a href="#" class="project-link">View article</a>
-      </article>
-
-    </div>
+        <div class="footer-links breadcrumb">
+          <a href="mailto:hello@manvitandon.com">Email</a>
+          <a href="https://www.linkedin.com/in/manvitandon" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/design.manvi/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="sonar-wrap">
+        <div class="sonar-layer layer-1"></div>
+        <div class="sonar-layer layer-2"></div>
+        <div class="sonar-layer layer-3"></div>
+      </div>
+    </footer>
   </div>
-</section>
 
 
 
-        <!-- CONTACT -->
-        <section id="contact" class="section section--border">
-          <div class="container row">
-            <h2 class="section-title">Let’s build something great</h2>
-            <div class="btn-row">
-              <a
-                href="mailto:hello@manvitandon.com"
-                class="btn btn--primary"
-                aria-label="Email Manvi"
-                >Email me</a
-              >
-              <a
-                href="https://www.linkedin.com/in/manvitandon"
-                target="_blank"
-                rel="noreferrer"
-                class="btn btn--ghost"
-                aria-label="Open LinkedIn profile in a new tab"
-                >LinkedIn</a
-              >
-            </div>
-          </div>
-        </section>
-      </main>
+  <script>
+    // Cursor glow effect
+    const hero = document.querySelector(".hero");
+    const cursorGlow = document.getElementById("cursorGlow");
 
-      <!-- FOOTER -->
-      <footer class="site-footer">
-        <div class="container footer-top">
-          <p>
-           <small> © <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small>
-          </p>
-          <div class="footer-links breadcrumb">
-            <a href="mailto:hello@manvitandon.com">Email</a>
-            <a
-              href="https://www.linkedin.com/in/manvitandon"
-              target="_blank"
-              rel="noreferrer"
-              >LinkedIn</a
-            >
-            <a href="https://www.instagram.com/design.manvi/" target="_blank" rel="noreferrer"
-              >Instagram</a
-            >
-          </div>
-        </div>
-        <div class="sonar-wrap">
-          <div class="sonar-layer layer-1"></div>
-          <div class="sonar-layer layer-2"></div>
-          <div class="sonar-layer layer-3"></div>
-        </div>
-      </footer>
-    </div>
+    if (hero && cursorGlow) {
+      hero.addEventListener("mousemove", (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
+        cursorGlow.style.left = x - 10 + "px";
+        cursorGlow.style.top = y - 10 + "px";
 
+        if (Math.random() < 0.3) {
+          const particle = document.createElement("div");
+          particle.className = "trail-particle";
+          particle.style.left = x - 2 + "px";
+          particle.style.top = y - 2 + "px";
+          hero.appendChild(particle);
+          setTimeout(() => particle.remove(), 1000);
+        }
+      });
 
-    <script>
-      // Cursor glow effect
-      const hero = document.querySelector(".hero");
-      const cursorGlow = document.getElementById("cursorGlow");
-
-      if (hero && cursorGlow) {
-        hero.addEventListener("mousemove", (e) => {
-          const rect = hero.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-
-          cursorGlow.style.left = x - 10 + "px";
-          cursorGlow.style.top = y - 10 + "px";
-
-          if (Math.random() < 0.3) {
-            const particle = document.createElement("div");
-            particle.className = "trail-particle";
-            particle.style.left = x - 2 + "px";
-            particle.style.top = y - 2 + "px";
-            hero.appendChild(particle);
-            setTimeout(() => particle.remove(), 1000);
-          }
-        });
-
-        hero.addEventListener("mouseenter", () =>
-          hero.classList.add("cursor-active")
-        );
-        hero.addEventListener("mouseleave", () =>
-          hero.classList.remove("cursor-active")
-        );
-      }
-
-      const hamburger = document.querySelector(".hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      if (hamburger && mobileMenu) {
-        hamburger.addEventListener("click", () => {
-          const isOpen = mobileMenu.classList.toggle("open");
-          hamburger.setAttribute("aria-expanded", isOpen);
-        });
-      }
-
- const themeSwitch = document.getElementById("theme-switch");
-  const logo = document.getElementById("logo");
-  const heroLeft = document.getElementById("heroLeft");
-
-  // Apply images depending on theme
-  function updateImages() {
-    if (themeSwitch.checked) {
-      // Light mode
-      logo.src = "logolight.png";
-      heroLeft.src = "heroleftlight.png";
-      document.body.classList.add("light");
-      document.body.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      // Dark mode
-      logo.src = "logodark.png";
-      heroLeft.src = "heroleftdark.png";
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-      localStorage.setItem("theme", "dark");
+      hero.addEventListener("mouseenter", () =>
+        hero.classList.add("cursor-active")
+      );
+      hero.addEventListener("mouseleave", () =>
+        hero.classList.remove("cursor-active")
+      );
     }
-  }
 
-  // On page load → restore saved theme
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-    themeSwitch.checked = true;
-  } else {
-    themeSwitch.checked = false;
-  }
-  updateImages();
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-  // Listen for changes
-  themeSwitch.addEventListener("change", updateImages);
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+      });
+    }
 
-  // Update footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+    const themeSwitch = document.getElementById("theme-switch");
+    const logo = document.getElementById("logo");
+    const heroLeft = document.getElementById("heroLeft");
+
+    // Apply images depending on theme
+    function updateImages() {
+      if (themeSwitch.checked) {
+        // Light mode
+        logo.src = "assets/logolight.png";
+        heroLeft.src = "assets/heroleftlight.png";
+        document.body.classList.add("light");
+        document.body.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      } else {
+        // Dark mode
+        logo.src = "assets/logodark.png";
+        heroLeft.src = "assets/heroleftdark.png";
+        document.body.classList.add("dark");
+        document.body.classList.remove("light");
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // On page load → restore saved theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      themeSwitch.checked = true;
+    } else {
+      themeSwitch.checked = false;
+    }
+    updateImages();
+
+    // Listen for changes
+    themeSwitch.addEventListener("change", updateImages);
+
+    // Update footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>
