@@ -250,7 +250,7 @@ main#content {
 .role {
   font-weight: 500;
   font-size: 16px;
-  color: var(--accent);
+  color: var(--fr);
   margin-bottom: 4px;
 }
 
@@ -283,8 +283,17 @@ main#content {
   }
   .row-content,
   .row-line-content {
-    margin-left: 28px;
+    margin-left: 14px;
   }
+}
+
+.company {
+  color: var(--fg);
+}
+
+.company:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 /* ==========================
