@@ -1,256 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <!--style elements-->
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-     <!--This is a little tidbit that gets it to be responsive-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Manvi Tandon</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:wght@700;800&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <div class="site">
+      <header class="site-header">
+        <div class="container header-inner">
+          <div class="brand-group">
+            <a href="index.html"
+              ><img src="logodark.png" alt="Logo" class="logo" id="logo"
+            /></a>
+          </div>
 
-<body>
-  <!--Global Navigation Header-->
-    <header class="site-header">
-      <div class="inner container">
-        <a href="#" class="brand" aria-label="Go to homepage">
-          <span class="logo-dot"></span>
-          <span class="name">Manvi Tandon</span>
-        </a>
-        <nav class="nav" aria-label="Primary">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#blog">Blog</a>
-        </nav>
-      </div>
-    </header>
-
-    <!--primary content of about page-->
-    <div class="container" role="main">
-        <div class="top-half">
-        
-          <!--sidebar image/page navigation-->
-          <section class="container content-grid">
-          <aside class="sidebar">
-          <div class="collage">
-          <div class="note-grid"></div>
-          
-          <div class="polaroids">
-            <div class="polaroid" style="left:0; top:24px; transform:rotate(-8deg)"><div class="ph"><img src="manvipolaroid2.png" class="polaroidimage"></div></div>
-            <div class="polaroid" style="left:110px; top:-4px; transform:rotate(8deg)"><div class="ph"><img src="manvipolaroid3.jpg" class="polaroidimage"></div></div>
-            <div class="polaroid" style="right:0; top:36px; transform:rotate(6deg)"><div class="ph"><img src="manvipolaroid1.JPG" class="polaroidimage"></div></div>
+          <div class="header-right">
+            <input
+              id="theme-switch"
+              class="theme-switch"
+              type="checkbox"
+              aria-label="Toggle color theme"
+            />
+            <button
+              class="hamburger"
+              aria-label="Menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span></span><span></span><span></span>
+            </button>
+            <nav class="nav desktop-nav">
+              <a href="work.html">Work</a>
+              <a href="about.html" class="active">About</a>
+              <a href="blog.html">Blog</a>
+            </nav>
           </div>
         </div>
 
-         <!--left hand sticky navigation and image -->
-    <nav class="toc">
-          <a href="#experience"><div class="ico" viewBox="0 0 24 24" aria-hidden><img src="experience.png"><use href="#briefcase"/></div>Experience</a>
-          <a href="#awards"><div class="ico" viewBox="0 0 24 24" aria-hidden><img src="awards.png"><use href="#trophy"/></div>Awards</a>
-          <a href="#education"><div class="ico" viewBox="0 0 24 24" aria-hidden><img src="education.png"><use href="#cap"/></div>Education</a>
-          <a href="#skills"><div class="ico" viewBox="0 0 24 24" aria-hidden><img src="skills.png"><use href="#spark"/></div>Skills</a>
-          <a href="#leadership"><div class="ico" viewBox="0 0 24 24" aria-hidden><img src="leadership.png"><use href="#users"/></div>Leadership</a>
-          <a href="#contact"><div class="ico" viewBox="0 0 24 24" aria-hidden><img src="contact.png"><use href="#mail"/></div>Contact</a>
+        <nav id="mobile-menu" class="mobile-nav">
+          <a href="work.html">Work</a>
+          <a href="about.html" class="active">About</a>
+          <a href="blog.html">Blog</a>
         </nav>
-      </aside>
+      </header>
 
-      <article class="main">
-        <section id="bio" class="block">
-              <h2>Hello! <br> I'm Manvi.</h2>
-                <p>I'm a <mark>product designer</mark> based in NYC, currently completing my M.S. in Information Experience Design at <span class="wavy-underline"><a href = "https://www.pratt.edu/information/information-experience-design/" class="link">Pratt Institute</a></span>. My background in Computer Science and Graphic Design has led me to pursue a career in user expereince design. </p>
-                <p>I previously designed 3D automotive simulation apps at <span class="wavy-underline">Mathworks</span>. I’m passionate about cultural representation in design, ethical tech, and creating creative digital spaces. I believe in the power of design to tell stories and make connections.  </p>
-        </section>
+      <main id="content">
+        <div class="container four-grid">
+          <!-- Left column: Polaroids + Education -->
+          <aside class="left-column">
+            <div class="polaroids">
+              <div
+                class="polaroid"
+                style="left: 0; top: 24px; transform: rotate(-8deg)"
+              >
+                <div class="ph">
+                  <img
+                    src="cirlce.JPG"
+                    class="polaroidimage"
+                    alt="Creative eye animation"
+                  />
+                </div>
+              </div>
+              <div
+                class="polaroid"
+                style="left: 110px; top: -4px; transform: rotate(8deg)"
+              >
+                <div class="ph">
+                  <img
+                    src="manvipolaroid3.jpg"
+                    class="polaroidimage"
+                    alt="Manvi portrait"
+                  />
+                </div>
+              </div>
+              <div
+                class="polaroid"
+                style="right: 0; top: 36px; transform: rotate(6deg)"
+              >
+                <div class="ph">
+                  <img
+                    src="manvipolaroid1.JPG"
+                    class="polaroidimage"
+                    alt="Manvi portrait"
+                  />
+                </div>
+              </div>
+            </div>
 
-        <section id="experience" class="block">
-          <h4>EXPERIENCE</h4>
-          <ul class="list">
-            <li>
-              <div class="row">
-                <div>
-                  <p class="role">Product Design Intern — Palantir</p>
-                  <ul class="bullets">
-                    <li>Designed an LLM testing tool to evaluate models via iteration and variance‑based unit testing.</li>
-                    <li>Led 15+ interviews, synthesized insights, designed wireframes and production prototypes.</li>
-                  </ul>
-                </div>
-                <span class="date">May 2025 – August 2025</span>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div>
-                  <p class="role">Lead Product Designer — Ever Innovations</p>
-                  <ul class="bullets">
-                    <li>Designed an AI wedding planning app from 0→1 for generating and visualizing venue concepts.</li>
-                    <li>Conducted 20+ user interviews to drive product decisions.</li>
-                  </ul>
-                </div>
-                <span class="date">Feb 2025 – Present</span>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div>
-                  <p class="role">Lead User Experience Designer — <a href = "https://www.mgnxactivewear.com/">MGNX Activewear</a></p>
-                  <ul class="bullets">
-                    <li>Shipped a responsive e‑commerce website for EMF‑protective activewear resulting in +40% conversion rate.</li>
-                  </ul>
-                </div>
-                <span class="date">Nov 2024 – Feb 2025</span>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div>
-                  <p class="role">User Experience Design Consultant — D’s Delights</p>
-                  <ul class="bullets">
-                    <li>Redesigned website, social media, and a design system for D's Delights handmade jewelry brand.</li>
-                  </ul>
-                </div>
-                <span class="date">Oct 2024 – Dec 2024</span>
-              </div>
-            </li>
-            <li>
-                  <div class="row">
-                <div>
-                  <p class="role">UX Research Assistant — Pratt Institute</p>
-                  <ul class="bullets">
-                    <li>Researched and deployed loT sensors to build curriculum for a graduate course at Pratt Institute. Integrated Arduino, sensors, LoRaWan gateways, and generative AI to design class materials for students with low technical experience. </li>
-                  </ul>
-                </div>
-                <span class="date">Aug 2024 – Sep 2026</span>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div>
-                  <p class="role">Senior User Experience Designer — MathWorks</p>
-                  <ul class="bullets">
-                    <li>Designed 3D automotive engineering apps for Simulink, increasing retention by +70%.</li>
-                    <li>Improved onboarding/engagement for modeling apps resulting in new user acquisition.</li>
-                  </ul>
-                </div>
-                <span class="date">Jul 2022 – Aug 2024</span>
-              </div>
-            </li>
-          </ul>
-        </section>
+            <section id="education" class="block">
+              <h2>Education</h2>
+              <ul class="list">
+                <li>
+                  <p class="role">
+                    M.S. Information Experience Design — Pratt Institute
+                  </p>
+                  <span class="date">2024–2026</span>
+                </li>
+                <li>
+                  <p class="role">
+                    B.S. Computer Science & Graphic Design — Northeastern
+                    University
+                  </p>
+                  <span class="date">2017–2022</span>
+                </li>
+              </ul>
+            </section>
+          </aside>
 
-        <section id="awards" class="block">
-          <h4>AWARDS</h4>
-          <ul class="list">
-            <li class="row-line"><p class="role">Amazon Music Challenge Winner</p><span class="date">March 2025</span></li>
-            <li class="row-line"><p class="role">Partiful UX-athon 3rd place Winner</p><span class="date">April 2025</span></li>
-            <li class="row-line"><p class="role">Merit Scholarship, Pratt Institute</p><span class="date">2024-2026</span></li>
-            <li class="row-line"><p class="role">Digital Pfizer Hackathon Winner</p><span class="date">2018</span></li>
-            <li class="row-line"><p class="role">Student Acheivement Award Scholarship, Northeastern University</p><span class="date">2017-2022</span></li>
-            <li class="row-line"><p class="role">Dean's Award for Academic Excellence, Northeastern University</p><span class="date">2022</span></li>
-            <li class="row-line"><p class="role">Boston Globe Scholastic Medalist for Oil Painting</p><span class="date">2017</span></li>
-          </ul>
-        </section>
+          <!-- Right column: Bio + Experience -->
+          <article class="right-column">
+            <section id="bio" class="block">
+              <h2>
+                Hello! <br />
+                I'm Manvi.
+              </h2>
+              <p>
+                I'm a product designer based in NYC, currently completing my
+                M.S. in Information Experience Design at
+                <a
+                  href="https://www.pratt.edu/information/information-experience-design/"
+                  class="project-link"
+                  >Pratt Institute.</a
+                >
+              </p>
+              <p>
+                I previously designed 3D simulations apps for automotive
+                engineers at <span class="project-link">Mathworks.</span>
+              </p>
+              <p>
+                I'm passionate about cultural representation in design, ethical
+                tech, and creating inclusive digital spaces.
+              </p>
+            </section>
 
-        <section id="education" class="block">
-          <h4>EDUCATION</h4>
-          <ul class="list">
-            <li class="row-line"><p class="role">M.S. Information Experience Design — Pratt Institute</p><span class="date">2024–2026</span></li>
-            <li class="row-line"><p class="role">B.S. Computer Science & Graphic Design — Northeastern University</p><span class="date">2017–2022</span></li>
-          </ul>
-        </section>
+            <section id="experience" class="block">
+              <h2>Experience</h2>
+              <ul class="list">
+                <li>
+                  <div class="row-line">
+                    <p class="role">Product Design Intern — Palantir</p>
+                    <span class="date">May 2025 – August 2025</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="row-line">
+                    <p class="role">Product Designer — Ever Innovations</p>
+                    <span class="date">Feb 2025 – Present</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="row-line">
+                    <p class="role">
+                      User Experience Designer —
+                      <a href="https://www.mgnxactivewear.com/"
+                        >MGNX Activewear</a
+                      >
+                    </p>
+                    <span class="date">Nov 2024 – Feb 2025</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="row-line">
+                    <p class="role">User Experience Designer — D's Delights</p>
+                    <span class="date">Oct 2024 – Dec 2024</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="row-line">
+                    <p class="role">UX Research Assistant — Pratt Institute</p>
+                    <span class="date">Aug 2024 – Sep 2026</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="row-line">
+                    <p class="role">User Experience Designer — MathWorks</p>
+                    <span class="date">Jul 2022 – Aug 2024</span>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </article>
+        </div>
 
-        <section id="skills" class="block">
-          <h4>SKILLS</h4>
-          <div class="skills-grid">
-            <div><p class="cap">Design</p><p>Sketching, Wireframing Storyboarding, Rapid Prototyping, Interaction Design</p></div>
-            <div><p class="cap">Research</p><p>User Interviews, Usability Testing, Card Sorting, Eye‑Tracking, Competitive Analysis, Strategy</p></div>
-            <div><p class="cap">Software</p><p>Figma, Sketch, Photoshop, Illustrator, After Effects, Tobii, Userlytics, Salesforce</p></div>
-            <div><p class="cap">Technical</p><p>HTML5, CSS3, JavaScript React, Java, Raspberry Pi, SQL</p></div>
-            <div><p class="cap">Other</p><p>Collaboration, Communication, Project Management, Presentations, Hindi</p></div>
+        <!-- Contact -->
+        <section id="contact" class="section section--border">
+          <div class="container row">
+            <h2 class="section-title">Let’s build something great</h2>
+            <div class="btn-row">
+              <a href="mailto:hello@manvitandon.com" class="btn btn--primary"
+                >Email me</a
+              >
+              <a
+                href="https://www.linkedin.com/in/manvitandon"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn--ghost"
+                >LinkedIn</a
+              >
+            </div>
           </div>
         </section>
+      </main>
 
-        <section id="leadership" class="block">
-          <h4>LEADERSHIP</h4>
-          <ul class="list">
-            <li class="row-line"><p class="role">Graduate Research Assistant — Pratt Institute</p><span class="date">2024–Present</span></li>
-            <li class="row-line"><p class="role">New Hire UX Mentor — MathWorks</p><span class="date">2023–2024</span></li>
-          </ul>
-        </section>
-
-        <section id="contact" class="block">
-          <h4>CONTACT</h4>
-          <p>Want to collaborate? I’d love to hear from you.</p>
-          <p class="cta"><a href="mailto:mtandon@pratt.edu" class="btn">Email me</a></p>
-        </section>
-      </article>
-    </section>
-  </main>
-            </div>  
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="container footer-top">
+          <p>
+           <small> © <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small>
+          </p>
+          <div class="footer-links breadcrumb">
+            <a href="mailto:hello@manvitandon.com">Email</a>
+            <a
+              href="https://www.linkedin.com/in/manvitandon"
+              target="_blank"
+              rel="noreferrer"
+              >Instagram</a
+            >
+            <a href="https://www.instagram.com/design.manvi/" target="_blank" rel="noreferrer"
+              >GitHub</a
+            >
+          </div>
         </div>
+        <div class="sonar-wrap">
+          <div class="sonar-layer layer-1"></div>
+          <div class="sonar-layer layer-2"></div>
+          <div class="sonar-layer layer-3"></div>
         </div>
-        
-
-  <section class="pattern-banner">
-    <div class="pattern-grid">
-      <!-- 36 icons alternating: sun, moon, star -->
-      <!-- Row 1 -->
-      <span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span>
-      <!-- Row 2 -->
-      <span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span>
-      <!-- Row 3 -->
-      <span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span>
-      <!-- Row 4 -->
-      <span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span>
-      <!-- Row 5 -->
-      <span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span>
-      <!-- Row 6 -->
-      <span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span><span class="icon star"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#star"/></svg></span><span class="icon sun"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#sun"/></svg></span><span class="icon moon"><svg viewBox="0 0 24 24" class="svg" aria-hidden><use href="#moon"/></svg></span>
+      </footer>
     </div>
-    <div class="pattern-center" aria-hidden="true">
-      <div class="center-mask"></div>
-      <!--<p class="center-text">every design tells story</p>-->
-    </div>
-    <!-- SVG defs used for icons -->
-    <svg style="display:none" aria-hidden>
-      <symbol id="sun" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="5" fill="currentColor" />
-        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none">
-          <path d="M12 1v4" />
-          <path d="M12 19v4" />
-          <path d="M1 12h4" />
-          <path d="M19 12h4" />
-          <path d="M4.2 4.2l2.8 2.8" />
-          <path d="M17 17l3 3" />
-          <path d="M19.8 4.2l-2.8 2.8" />
-          <path d="M7 17l-3 3" />
-        </g>
-      </symbol>
-      <symbol id="moon" viewBox="0 0 24 24">
-        <path d="M21 14.5A9 9 0 1 1 10.5 3 7 7 0 0 0 21 14.5z" fill="currentColor" />
-      </symbol>
-      <symbol id="star" viewBox="0 0 24 24">
-        <path d="M12 2l2.9 6.6 7.1.6-5.3 4.6 1.6 6.8L12 17l-6.3 3.6 1.6-6.8-5.3-4.6 7.1-.6L12 2z" fill="currentColor" />
-      </symbol>
-    </svg>
-  </section>
 
-  <footer class="site-footer">
-    <div class="container small">© <span id="y"></span> Manvi Tandon — made with ♡ </div>
-  </footer>
-  <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-  // Hydrate icons and mix order
-  const icons = document.querySelectorAll('.icon');
-  const base = ['sun','moon','star'];
-  const kinds = Array.from({length: icons.length}, (_,i)=> base[i%3]);
-  for (let i=kinds.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[kinds[i],kinds[j]]=[kinds[j],kinds[i]]}
-  icons.forEach((el,i)=>{const kind=kinds[i]; el.innerHTML = `<svg viewBox='0 0 24 24' class='svg' aria-hidden><use href='#${kind}'/></svg>`; el.classList.add(kind);});
-  </script>
-  
-</body>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger?.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+      });
+
+      const themeSwitch = document.getElementById("theme-switch");
+      const logo = document.getElementById("logo");
+      const heroLeft = document.getElementById("heroLeft");
+
+      // Apply images depending on theme
+      function updateImages() {
+        if (themeSwitch.checked) {
+          // Light mode
+          logo.src = "logolight.png";
+          heroLeft.src = "heroleftlight.png";
+          document.body.classList.add("light");
+          document.body.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          // Dark mode
+          logo.src = "logodark.png";
+          heroLeft.src = "heroleftdark.png";
+          document.body.classList.add("dark");
+          document.body.classList.remove("light");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // On page load → restore saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        themeSwitch.checked = true;
+      } else {
+        themeSwitch.checked = false;
+      }
+      updateImages();
+
+      // Listen for changes
+      themeSwitch.addEventListener("change", updateImages);
+
+      // Update footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
-
