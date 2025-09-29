@@ -658,7 +658,7 @@ body:has(.theme-switch:checked),
   align-items: center;
   gap: 8px;
   font-size: 16px;
-  color: var(--muted);
+  color: var(--accent);
   font-weight: 500;
   position: relative;
   transition: gap 0.2s ease;
@@ -1461,4 +1461,37 @@ body:has(.theme-switch:checked),
 
 .breadcrumb a:hover {
   text-decoration: underline;
+}
+
+/* Tooltip container */
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip styling */
+.theme-toggle::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 125%; /* show below instead of above */
+  left: 50%;
+  transform: translateX(-50%);
+  background: color-mix(in srgb, var(--fg) 80%, transparent);
+  color: var(--bg);
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+/* Tooltip visible on hover */
+.theme-toggle:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
 }
