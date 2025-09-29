@@ -153,6 +153,10 @@ body:not(:has(.theme-switch:checked)) .site-header {
   justify-content: space-between;
 }
 
+.disabled {
+  color: var(--muted);
+}
+
 .brand-name {
   font-size: clamp(23px, 2vw, 45px);
 }

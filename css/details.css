@@ -93,6 +93,20 @@ img {
   margin: 40px 0;
 }
 
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-image:hover img {
+  transform: scale(1.05);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth, distinct transition */
+}
+
+.project-link-wrapper:hover .project-title {
+  color: var(--primary, #d9564a);
+  transition: color 0.3s ease;
+}
+
 .nav-link {
   position: relative;
   text-decoration: none;
