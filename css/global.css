@@ -223,8 +223,8 @@ body:not(:has(.theme-switch:checked)) .site-header {
 
 .theme-switch:checked::before {
   transform: translate(31px, 2px);
-  background: #fcda84;
-  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.4);
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(228, 165, 7, 0.4);
 }
 
 /* light theme style */
@@ -240,7 +240,7 @@ body:has(.theme-switch:checked),
 }
 
 .theme-switch::after {
-  content: "☾";
+  content: "🌑";
   position: absolute;
   top: 50%;
   left: 8px;
@@ -250,9 +250,9 @@ body:has(.theme-switch:checked),
 }
 
 .theme-switch:checked::after {
-  content: "𖤓";
+  content: "🌕";
   left: auto;
-  right: 7px;
+  right: 6px;
 }
 
 .theme-toggle {
