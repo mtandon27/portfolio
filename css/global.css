@@ -236,7 +236,7 @@ body:has(.theme-switch:checked),
   --card: #f4f6f8;
   --border: #e5e8ee;
   --primary: #d9564a;
-  --accent: #008b9b;
+  --accent: #f2dc99;
 }
 
 .theme-switch::after {
@@ -658,7 +658,7 @@ body:has(.theme-switch:checked),
   align-items: center;
   gap: 8px;
   font-size: 16px;
-  color: var(--accent);
+  color: var(--primary);
   font-weight: 500;
   position: relative;
   transition: gap 0.2s ease;
