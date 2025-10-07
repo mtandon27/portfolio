@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVA: User Experience - Manvi Tandon</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/details.css" />
+    <link rel="icon" href="assets/mt.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="site">
+        <!--Global Navigation Header-->
+        <header class="site-header" role="banner">
+            <div class="container header-inner">
+                <!-- Left side: brand group -->
+                <div class="brand-group">
+                    <a href="index.html">
+                        <img src="assets/logodark.png" alt="Logo" class="logo" id="logo" />
+                    </a>
+                </div>
+
+                <!-- Right side -->
+                <div class="header-right">
+                    <div class="theme-toggle" data-tooltip="Switch to lighter theme">
+                        <input id="theme-switch" class="theme-switch" type="checkbox" aria-label="Toggle color theme" />
+                    </div>
+                    <!-- Hamburger toggle (mobile only) -->
+                    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <!-- Desktop nav -->
+                    <nav class="nav desktop-nav" aria-label="Primary">
+                        <a href="work.html">Work</a>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile nav (hidden by default) -->
+            <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+                <a href="work.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- HERO SECTION -->
+            <section class="hero section--large">
+                <div class="hero-content grid grid-2">
+                    <!-- Left column: text -->
+                    <div class="hero-text">
+                        <nav class="breadcrumb">
+                            <a href="work.html">← Back to Work</a>
+                        </nav>
+
+                        <h1 class="hero-title">Why Don't Students Scroll?</h1>
+                        <p class="hero-subtitle">
+                            What Eye Tracking Revealed About the SVA Libraries Page
+                        </p>
+
+                        <div class="hero-meta grid grid-4" style="--gap: 24px;">
+                            <div class="meta-item">
+                                <h4>Timeline</h4>
+                                <p>Sep 2024 - May 2025</p>
+                            </div>
+                            <div class="meta-item">
+                                <h4>Role</h4>
+                                <p>UX/UI Designer & Researcher</p>
+                            </div>
+                            <div class="meta-item">
+                                <h4>Team</h4>
+                                <p>2 UX Researchers</p>
+                            </div>
+                            <div class="meta-item">
+                                <h4>Client</h4>
+                                <a href="https://sva.edu/life-at-sva/campus-life/campus-spaces/library"
+                                    class="project-link">
+                                    <p>SVA Libraries</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right column: cover image -->
+                    <div class="sva-hero-image">
+                        <img src="sva/svahero.gif" alt="SVA project eye tracking snippet" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- THE PROBLEM -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="section-text">
+                        The SVA Libraries landing page was meant to help students help themselves
+                        (ex. find Resources, search the catalogs, book study rooms, etc.). Instead,
+                        <strong>most were skipping it entirely and turning to library staff.</strong>
+
+                    <p class="section-text">
+                        Our team of UX Researchers partnered with SVA to find out why. We used eye tracking (mobile and
+                        desktop using Tobii),
+                        retrospective think-aloud interviews, and the System Usability Scale (SUS) to understand
+                        how students were really interacting with the site. Our research findings provided the SVA
+                        website team actionable recommendations for implementation.
+                    </p>
+                    </p>
+                    <p class="section-header">We set out to find out: why aren’t students using the SVA Libraries
+                        landing page the way it was designed to be used?</p>
+                    <div class="quote">
+                        <div class="quote-text">“I usually just ask someone at the front desk… the site is too much.”
+                        </div>
+                        <p class="image-caption">-SVA Student</p>
+                    </div>
+                    <div class="grid grid-2" style="align-items: start;">
+                        <div>
+                            <h3 class="section-subheader">Key Pain Points Identified</h3>
+                            <ul class="pain-point-list">
+                                <li>Information is scattered across the page, making navigation frustrating.</li>
+                                <li>Critical forms and deadlines are difficult to locate, leading to missed
+                                    opportunities.</li>
+                                <li>There is no native search for the page or expectation of page content.</li>
+                                <li>Accessibility standards were not met, hindering usability for some students.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="section-subheader">Goal</h3>
+                            <div class="quote">
+                                <div class="section-text">
+                                    Create a centralized, intuitive, and accessible SVA Libraries
+                                    home page for students, relying on real student feedback and eye-tracking analytics.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARGET AUDIENCE -->
+            <section class="section section--light">
+                <div class="container">
+                    <h2 class="section-title">Target Audience</h2>
+                    <p class="section-text">
+                        The primary users of the SVA website are novice users attending School of Visual Arts. This
+                        audience can provide unbiased feedback and eye-tracking to understand initial browsing and task
+                        completion.
+                    </p>
+                    <div>
+                        <img src="sva/targetaudience.png">
+                    </div>
+                </div>
+            </section>
+
+            <!-- OUR IMPACT -->
+            <section class="section section--light">
+                <div class="container">
+                    <h2 class="section-title">Our Impact</h2>
+                    <p class="section-text">
+                        With all of our recommendations we were able to: <strong>minimize the overall single scroll by
+                            nearly 50%.</strong>
+                    </p>
+                    <div>
+                        <img src="sva/beforeafter.png" style="max-width:70%; height:100%">
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESEARCH PROCESS -->
+            <section class="section section--light">
+                <div class="container">
+                    <h2 class="section-title">Research Process</h2>
+                    <p class="section-text">
+                        My process began with recruitment and study design for the eye-tracking studies.
+                        After 12 mobile and desktop eye-tracking studies and user interviews we nsynthesized
+                        our findings to create design recommendations.
+                    </p>
+                    <div class="grid grid-2">
+                        <div class="journey-item">
+                            <div class="image-item">
+                                <img src="sva/process1.png" alt="recruitment" />
+                            </div>
+                        </div>
+                        <div class="journey-item">
+                            <div class="image-item">
+                                <img src="sva/process2.png" alt="task creations" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quote">
+                        <h3 class="section-subtitle" style="margin-top:0;">✦ Key Takeaway</h3>
+                        <p class="section-text">
+                            With our task creation we mimicked common student actions (like booking a study room)
+                            to recreate real scenarios of finding information quickly.
+                        </p>
+                    </div>
+                    <div class="grid grid-2">
+                        <div class="journey-item">
+                            <div class="image-item">
+                                <img src="sva/process3.png" alt="recruitment" />
+                            </div>
+                        </div>
+                        <div class="journey-item">
+                            <div class="image-item">
+                                <img src="sva/process4.png" alt="task creations" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-2">
+                        <div class="journey-item">
+                            <div class="image-item">
+                                <img src="sva/process5.png" alt="recruitment" />
+                            </div>
+                            <p class="image-caption">
+                                Eye-tracking study with participant and moderator
+                            </p>
+                        </div>
+                        <div class="journey-item">
+                            <div class="image-item">
+                                <img src="sva/process6.png" alt="task creations" />
+                            </div>
+                            <p class="image-caption">
+                                Tobii software set up in moderator side
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 class="section-subheader">Quantitative & Qualitative Analysis</h3>
+                            <p class="section-text">To make sense of all our findings we cross-referenced:</p>
+
+                            <ul class="pain-point-list">
+                                <li>Eye-tracking heatmaps (attention and scan behavior)</li>
+                                <li>Interview quotes and task success rates</li>
+                                <li>A shared data sheet logging usability issues</li>
+                                <li>SUS scores (cross-device satisfaction)</li>
+                                <li>Scroll behavior through fixations and saccades</li>
+                                <li>This intersection gave us both surface-level behaviors and deep attitudinal insights
+                                    into user frustration.</li>
+                            </ul>
+                        </div>
+                        <div class="journey-item">
+                            <img src="sva/data.png" />
+                            <p class="image-caption">graph showing the break down of methods we used based on
+                                qualitative -> quantitative and behavioral -> attitudinal</p>
+                        </div>
+                    </div>
+                    <h3 class="section-subheader">Usability Patterns</h3>
+                    <p class="section-text">The SUS survey gave us a numeric read on users’ confidence, frustration, and
+                        perceived usability.
+                        The System Usability Scale (SUS) added a valuable quantitative baseline to our qualitative
+                        insights.</p>
+                    <div class="grid grid-2">
+                        <div>
+
+                            <p class="section-text">We noticed <strong>two important patterns:</strong></p>
+
+                            <ul class="pain-point-list">
+                                <li>Mobile users scored consistently lower than desktop users as shown below</li>
+                                <li>Low SUS scores aligned with moments of usability issues, such as:
+                                    clicking on non-interactive boxes, getting stuck on semantic ambiguity ("Services"
+                                    vs. "Resources"),
+                                    and expressing visual fatigue from dense text
+                                </li>
+                            </ul>
+                            <div class="quote">
+                                <h3 class="section-subtitle" style="margin-top:0;">✦ Overall Takeaway</h3>
+                                <p class="section-text">
+                                    The SVA Libraries landing page had all the necessary information users needed
+                                    but fell short in making the user experience intuitive.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="journey-item">
+                            <img src="sva/sus.png" />
+                            <p class="image-caption">
+                                Our SUS responses said things like “I found the system unnecessarily complex” but
+                                “I felt very confident using the system”. This was an interesting because even when
+                                users completed tasks their SUS scores showed they had trouble doing it as shown
+                                above with low usability scores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ANALYSIS -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Key Findings (Cross-Device)</h2>
+                    <p class="section-text">
+                        From our 12 mobile and desktop eye-tracking studies we observed these top 3 insights
+                    </p>
+
+                    <div class="image-showcase grid grid-3">
+                        <div class="journey-item">
+                            <img src="sva/issue1.png" alt="information overload" />
+
+                        </div>
+                        <div class="journey-item">
+                            <img src="sva/issue2.png" alt="issue 2" />
+
+                        </div>
+                        <div class="journey-item">
+                            <img src="sva/issue3.png" alt="issue 3" />
+
+                        </div>
+                    </div>
+                        <h3 class="section-subheader">01 - Information Overload</h3>
+                    <div class="image-showcase grid grid-2 issue">
+                        
+                        <div class="journey-item">
+                            <img src="sva/issue1_1.gif" alt="eye tracking showing information skipping"
+                                style="width: 50%; max-height:100%;" />
+                            <p class="image-caption">Users frequently skimmed or skipped past important content as shown in the gaze plot.</p>
+                            <p class="image-caption">“There’s too much here. I’d rather just search.” <br/>– Usability Participant</p>
+
+                        </div>
+                        <div class="journey-item">
+                            <img src="sva/issue1_2.gif" alt="eye tracking showing spuratic gazes"
+                                style="width: 50%; max-height:100%;" />
+                            <p class="image-caption">The layout is heavy with dense text which discouraged exploration, especially on mobile. </p>
+                            <p class="image-caption">“I was just scrolling…it felt like an endless scroll” <br/>– Usability Participant</p>
+                        </div>
+                        <br/>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="grid">
+                        <img src="sva/rec1.png"/>
+                        <img src="sva/rec1.1.png"/>
+                        <img src="sva/rec1.2.png"/>
+                    </div>
+                </div>
+
+                <div class="container">
+                <h3 class="section-subheader">02 - Unclear UI Structure</h3>
+                    <div class="image-showcase grid grid-2 issue">
+                        
+                        <div class="journey-item">
+                            <img src="sva/issue2.gif" alt="eye tracking showing information skipping"
+                                style="width: 50%; max-height:100%;" />
+                            <p class="image-caption">Users <strong>repeatedly scanned</strong> between “Resources” and “Services & Forms” unsure where to find specific information.</p>
+                            <p class="image-caption">“By scrolling through many times I was able to complete this task. Maybe I got so accustomed to the site”  <br/>– Usability Participant</p>
+
+                        </div>
+                        <div class="journey-item">
+                            <img src="sva/issue2.2.png" alt="eye tracking showing spuratic gazes"
+                                style="width: 50%; max-height:100%;" />
+                            <p class="image-caption">Users showed <strong>frequent fixations</strong> on “Services & Forms” suggesting headers and content grouping was unclear. </p>
+                            <p class="image-caption">“I would probably call them and ask cause that seems like the easiest option.” <br/>– Usability Participant</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="grid">
+                        <img src="sva/rec2.png"/>
+                        <img src="sva/rec2.1.png"/>
+                        <img src="sva/rec2.2.png"/>
+                    </div>
+                </div>
+
+                <div class="container">
+                <h3 class="section-subheader">03 - Misleading Terminology</h3>
+                    <div class="image-showcase grid grid-2 issue">
+                        
+                        <div class="journey-item">
+                            <img src="sva/issue3.gif" alt="eye tracking showing information skipping"
+                                style="width: 50%; max-height:100%;" />
+                            <p class="image-caption">Heatmap analysis shows users spending significant time in the above the fold section, yet were still unsure of the site's main purposes.</p>
+                            <p class="image-caption">Despite the page’s length, most students never made it past the  Library Staff section. Heatmaps showed concentrated attention at the top, and a steep drop-off after mid-section.</p>
+
+                        </div>
+                        <div class="journey-item">
+                            <img src="sva/issue3.1.gif" alt="eye tracking showing spuratic gazes"
+                                style="width: 50%; max-height:100%;" />
+                            <p class="image-caption">Users reported confusion with vague wording like “Check Us Out”, as well as “...and much more” in the search catalog box.</p>
+                           
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="grid">
+                        <img src="sva/rec3.png"/>
+                        <img src="sva/rec3.1.png"/>
+                        <img src="sva/rec3.2.png"/>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FINAL DESIGN & VISUALS -->
+            <section class="section section--light">
+                <div class="container">
+                    <h2 class="section-title">Final Design</h2>
+                    <p class="section-text">
+                        With all of our recommendations we were able to<strong>minimize the overall single scroll by nearly 50%.</strong>  <br/>
+                        Using our analysis of user interviews, retrospective think-alouds, SUS scores, and eye-tracking data we were able 
+                        to provide the SVA team with actionable insights ready for implementation. 
+                        To see our final prototype and presentation use the links below!
+                    </p>
+
+                    <div class="image-showcase grid grid-2">
+                        <div class="journey-item">
+                            <img src="sva/final.gif"
+                                alt="High-fidelity homepage design" 
+                                style="max-height: 100%; width: 50%;"/>
+                            <p class="image-caption">
+                                Redesigned SVA libraries landing page features a clear purpose section for immediate recognition and links to
+                                navigate the page.
+                            </p>
+                        </div>
+                        <div class="journey-item">
+                           <div class="quote">
+                        <h3 class="section-subtitle" style="margin-top:0;">Final Presentation & Prototype</h3>
+                        <div class="insights-list" class="magic-links">
+       
+                            <div class="magic-button"><a href="https://www.figma.com/proto/QIlJ859f161sM858K1mMJs/sva-library-merge-infographic-and-mockups?node-id=116-1585&t=sXlddW9IWVkX3BuR-1&scaling=scale-down&content-scaling=fixed&page-id=61%3A426&starting-point-node-id=116%3A1585" 
+                                target="_blank"
+                                class="magic-button"
+                                >
+                            Final Prototype
+                            </a>
+
+                        </div>
+                            <div class="magic-button"><a href="https://www.figma.com/deck/ZeLVQ7khMFl2ndLHxysGyH" 
+                                target="_blank"
+                                class="magic-button"
+                                >
+                            Client Presentation
+                            </a>
+
+                        </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- NEXT STEPS -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Next steps</h2>
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 class="section-subtitle">To validate our lab findings, I designed a follow-up behavioral analytics proposal using:</h3>
+                            <ul class="insights-list">
+                                <li><strong>Google Analytics 4 </strong>for click paths, exit rates, time-on-page</li>
+                                <li><strong>Hotjar</strong> for more in depth heatmaps and session replays</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <br/><br/>
+                            <p class="section-text">
+                                To focus more on custom events like specific scroll depth or number of clicks on key CTA's 
+                                like “Ask a Librarian,” “Reserve a Room,” etc. These analytics can help track real-world 
+                                user behavior that is not being observed in a lab setting.
+                                               <div class="magic-button">
+                            <a href="https://www.figma.com/deck/7S3KJNo0ku6OqKmiDFnFCe"
+                            target="_blank"
+                            class="magic-button">Research Proposal</a>
+                        </div>
+                        </div>
+
+                    </div>
+                    <p style="text-align: center; color: var(--fg); margin-top: 40px;">Thank you for viewing the SVA UX
+                        Project!</p>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <section class="project-nav">
+                <div class="container">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <a href="beatdrop.html" class="nav-link prev"
+                            data-title="BeatDrop: Social Listening Experience">← Previous Project</a>
+
+                        <div class="hero-text">
+                            <nav class="breadcrumb">
+                                <a href="work.html">Back to Work</a>
+                            </nav>
+                        </div>
+
+                        <a href="mathworks.html" class="nav-link next"
+                            data-title="MathWorks: Designing for Engineers">Next Project →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+</body>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container footer-top">
+        <p>
+            <small> © <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small>
+        </p>
+        <div class="footer-links breadcrumb">
+            <a href="mailto:mtandon@pratt.edu">Email</a>
+            <a href="https://www.linkedin.com/in/manvi-tandon" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/design.manvi/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+    </div>
+    <div class="sonar-wrap">
+        <div class="sonar-layer layer-1"></div>
+        <div class="sonar-layer layer-2"></div>
+        <div class="sonar-layer layer-3"></div>
+    </div>
+</footer>
+</div>
+
+<script>
+    // Hamburger/menu
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
+    hamburger?.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Theme elements
+    const themeSwitch = document.getElementById("theme-switch");
+    const logo = document.getElementById("logo");
+    const heroLeft = document.getElementById("heroLeft"); // may be null on this page
+    const themeToggle = document.querySelector(".theme-toggle"); // wrapper for tooltip
+
+    // Safe update function
+    function updateImages() {
+        // determine the tooltip target (prefer the wrapper that has data-tooltip)
+        const tooltipTarget = themeToggle || themeSwitch;
+
+        if (!themeSwitch) return; // nothing to do if input missing
+
+        if (themeSwitch.checked) {
+            // Light mode
+            if (logo) logo.src = "assets/logolight.png";
+            if (heroLeft) heroLeft.src = "assets/heroleftlight.png";
+            document.body.classList.add("light");
+            document.body.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+
+            if (themeToggle) {
+                themeToggle.setAttribute("data-tooltip", "Switch to darker theme");
+            } else {
+                themeSwitch.title = "Switch to darker theme";
+            }
+        } else {
+            // Dark mode
+            if (logo) logo.src = "assets/logodark.png";
+            if (heroLeft) heroLeft.src = "assets/heroleftdark.png";
+            document.body.classList.add("dark");
+            document.body.classList.remove("light");
+            localStorage.setItem("theme", "dark");
+
+            if (themeToggle) {
+                themeToggle.setAttribute("data-tooltip", "Switch to lighter theme");
+            } else {
+                themeSwitch.title = "Switch to lighter theme";
+            }
+        }
+    }
+
+    // Restore saved theme
+    const savedTheme = localStorage.getItem("theme");
+    if (themeSwitch) {
+        if (savedTheme === "light") {
+            themeSwitch.checked = true;
+        } else if (savedTheme === "dark") {
+            themeSwitch.checked = false;
+        } else {
+            // optional: set a default. keeping checkbox false => dark by default
+            themeSwitch.checked = false;
+        }
+
+        // initial update (safe)
+        updateImages();
+
+        // update when toggled
+        themeSwitch.addEventListener("change", updateImages);
+    }
+
+    // Update footer year
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
+</body>
+
+</html>
