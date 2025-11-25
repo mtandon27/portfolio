@@ -240,7 +240,7 @@ body:has(.theme-switch:checked),
 }
 
 .theme-switch::after {
-  content: "🌕";
+  content: "🌑";
   position: absolute;
   top: 50%;
   left: 8px;
@@ -250,7 +250,7 @@ body:has(.theme-switch:checked),
 }
 
 .theme-switch:checked::after {
-  content: "🌑";
+  content: "🌕";
   left: auto;
   right: 6px;
 }
