@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JBFC Design System - Manvi Tandon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/details.css" />
+</head>
+
+<body>
+  <div class="site">
+<!--Global Navigation Header-->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <!-- Left side: brand group -->
+        <div class="brand-group">
+          <a href="index.html">
+            <img src="assets/logodark.png" alt="Logo" class="logo" id="logo" />
+          </a>
+        </div>
+
+        <!-- Right side -->
+        <div class="header-right">
+          <div class="theme-toggle" data-tooltip="Switch to darker theme">
+              <input
+                id="theme-switch"
+                class="theme-switch"
+                type="checkbox"
+                aria-label="Toggle color theme"
+              />
+              </div>
+
+          <!-- Hamburger toggle (mobile only) -->
+          <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Desktop nav -->
+          <nav class="nav desktop-nav" aria-label="Primary">
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Mobile nav (hidden by default) -->
+      <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+        
+      <section class="hero section--large">
+        <div class="hero-content grid grid-2">
+          <!-- Left column: text -->
+          <div class="hero-text">
+            <nav class="breadcrumb">
+              <a href="work.html">← Back to Work</a>
+            </nav>
+
+            <h1 class="hero-title">Montage Design System</h1>
+            <p class="hero-subtitle">
+              Making consistency easier
+            </p>
+
+            <div class="hero-meta grid grid-4" style="--gap: 24px;">
+              <div class="meta-item">
+                <h4>Role</h4>
+                <p>Designer</p>
+              </div>
+              <div class="meta-item">
+                <h4>Tools</h4>
+                <p>Figma, ZeroHeight, Miro</p>
+              </div>
+              <div class="meta-item">
+                <h4>Links</h4>
+                <p><a href="https://burnsfilmcenter.org" target="_blank" style="color: var(--primary);">Visit JBFC →</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- Right column: cover image -->
+          <div class="hero-image">
+            <img src="jbfc/Thumbnail.png" alt="D's Delights Jewelry Showcase" />
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- Overview -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Overview</h2>
+          <p class="section-text">
+            Jacob Burns Film Center is a non-profit cultural hub where films meet people, and where stories shape communities. 
+            
+            The JBFC website had grown without a formal design system. Some UI patterns existed, but 
+            they weren't shared or documented, leading to inconsistencies that can be seen across the website.
+          </p>
+          <p class="section-text">
+            My team and I created JBFC's first design system, Montage, to help translate 
+            an interface into something clear, reusable, and accessible.
+          </p>
+          <img src="jbfc/montage.png" alt="Existing JBFC screens with dense content highlighted">
+        </div>
+      </section>
+
+      <!-- The Problem -->
+      <section class="section" style="background: var(--card); padding: 60px 0;">
+        <div class="container">
+          <h2 class="section-title">The problem</h2>
+          <p class="section-text">
+            Design decisions were being made repeatedly across JBFC's website. Accessibility varied by screen and there was no single 
+            source of truth.
+          </p>
+          <p class="section-text">
+            Without a shared system, consistency depended on individual memory rather than structure.
+          </p>
+           <img src="jbfc/current.png" alt="Existing JBFC screens with dense content highlighted">
+          
+        </div>
+      </section>
+
+      <!-- My Role -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">My role</h2>
+          <p class="section-text">
+            I worked as a Designer on a small team creating JBFC's first design system. My focus was on:
+          </p>
+
+          <ul class="insights-list">
+            <li>Translating existing UI decisions into clear foundations (tokens, styles, variables)</li>
+            <li>Building reusable components (UI Kit)</li>
+            <li>Shaping accessibility rules and documentation</li>
+          </ul>
+
+          <p class="section-text" style="margin-top: 32px;">
+            I approached the system as <strong>both a designer and a user</strong>, making sure the design system was something I'd actually want 
+            to use in my own work.
+          </p>
+        </div>
+      </section>
+
+      <!-- Starting with what already existed -->
+      <section class="section" style="background: var(--card); padding: 60px 0;">
+        <div class="container">
+          <h2 class="section-title">Starting with what already existed</h2>
+          <p class="section-text">
+            Before designing anything new, we stepped back and looked at what JBFC already had.
+          </p>
+          <p class="section-text">
+            We created a UI inventory of all the current colors, typography, buttons, forms, and layouts across 
+            the website. Seeing everything side by side made patterns (and problems) impossible to ignore.This step grounded every decision that followed. We found:
+          </p>
+
+          <div class="grid grid-2" style="--gap: 24px; margin-top: 32px;">
+            <div>
+              <p class="section-text"><strong>Dense content</strong> with overcrowded layouts and poor hierarchy:</p>
+              <img src="jbfc/densecontent.png" alt="Existing JBFC screens with dense content highlighted">
+            </div>
+            <div>
+              <p class="section-text"><strong>Misalignment</strong> of content blocks creates a jarring reading experience:</p>
+               <img src="jbfc/jumbled.png" alt="Existing JBFC screens with dense content highlighted">
+            </div>
+                <div>
+              <p class="section-text"><strong>Repetitive content</strong> adds noise and dilutes key information.:</p>
+              <img src="jbfc/repeated.png" alt="Existing JBFC screens with dense content highlighted">
+            </div>
+            <div>
+              <p class="section-text"><strong>Mixed styles & inconsistent navigation</strong>:</p>
+               <img src="jbfc/mixed.png" alt="Existing JBFC screens with dense content highlighted">
+            </div>
+          </div>
+
+          <p class="section-text" style="margin-top: 24px;">
+            A snippet of the UI inventory: 
+          </p>
+
+          <img src="jbfc/uiinventory.png" alt="UI inventory frames and atoms-to-components breakdown">
+        </div>
+      </section>
+
+      <!-- Principles before components -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Principles before components</h2>
+          <p class="section-text">
+            Before building anything new, we defined a small set of design principles to guide decisions.
+          </p>
+          <p class="section-text">
+            They helped us:
+          </p>
+
+          <ul class="insights-list">
+            <li>Resolve disagreements without personal bias</li>
+            <li>Keep accessibility front-of-mind</li>
+            <li>Prioritize clarity over decoration</li>
+          </ul>
+
+          <p class="section-text" style="margin-top: 32px;">
+            When something felt off, the principles helped align our design decisions as a team.
+          </p>
+
+          <img src="jbfc/principles.png" alt="Design principles" style="margin-top: 40px;">
+        </div>
+      </section>
+
+      <!-- Building the foundation -->
+      <section class="section" style="background: var(--card); padding: 60px 0;">
+        <div class="container">
+          <h2 class="section-title">Building the foundation</h2>
+          <p class="section-text">Next we focused on the basics:</p>
+
+          <ul class="insights-list">
+            <li>Accessible color tokens</li>
+            <li>Clear hierarchy of typography</li>
+            <li>Consistent spacing and layout rules</li>
+          </ul>
+
+          <p class="section-text" style="margin-top: 32px;">
+            Using tokens allowed us to assign meaning to styles making decisions easier to 
+            maintain and communicate.
+          </p>
+
+          <div class="grid grid-2" style="--gap: 32px; margin-top: 40px;">
+            <div>
+              <img src="jbfc/ideation.png" alt="Color tokens and type scale">
+              <p class="image-caption">Initial explorations of design token naming conventions</p>
+            </div>
+            <div>
+              <img src="jbfc/designdecisions.png" alt="Spacing examples in context">
+              <p class="image-caption">Team ideation</p>
+            </div>
+            <div>
+              <img src="jbfc/colortokens.png" alt="Color tokens and type scale">
+              <p class="image-caption">Color tokens defined as variables in our UI Kit with semantic naming</p>
+            </div>
+            <div>
+              <img src="jbfc/spacing.png" alt="Spacing examples in context">
+              <p class="image-caption">Spacing system applied with examples for layout margins and padding</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Components that scale -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Components that scale</h2>
+          <p class="section-text">
+            From there, we built a set of components in a published <a href="https://www.figma.com/community/file/1570117395919502167/montage-ui-kit-jacob-burns-film-center" target="_blank" style="color: var(--primary)";>Community UI Kit:</a>
+          </p>
+<img src="jbfc/community.png" alt="Component library overview" >
+
+          <p class="section-text" style="margin-top: 32px;">
+            Each component was designed with our design tokens, variations, and accessibility considerations (focus state, target sizes, etc.). We provided enough 
+            guidance to support flexibility without over-prescribing use.
+          </p>
+
+          
+
+          <div class="grid grid-2" style="--gap: 32px; margin-top: 40px;">
+            <div>
+              <img src="jbfc/cards.png" alt="Card documentation">
+              <p class="image-caption">Card component with variants</p>
+            </div>
+            <div>
+              <img src="jbfc/button.png" alt="Banner documentation">
+              <p class="image-caption">Button elements with keyboard accessible states</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Documentation matters -->
+      <section class="section" style="background: var(--card); padding: 60px 0;">
+        <div class="container">
+          <h2 class="section-title">Documentation matters</h2>
+          <p class="section-text">
+            A system only works if people understand it.
+          </p>
+          <p class="section-text">
+            We treated documentation as a core part of the design system, not an afterthought:
+          </p>
+
+          <ul class="insights-list">
+            <li>A clear starting point</li>
+            <li>Short, scannable guidance</li>
+            <li>Accessibility rules that empower rather than constrain</li>
+          </ul>
+
+          <p class="section-text" style="margin-top: 32px;">
+            I focused on writing documentation the way I'd want to read it direct and easy to skim. <a href="https://zeroheight.com/1ef0ba6f3/p/45330f-getting-started" target="_blank" style="color: var(--primary)";>Montage Documentation:</a>
+          </p>
+
+          <div class="grid grid-2" style="--gap: 32px; margin-top: 40px;">
+            <div>
+              <img src="jbfc/documentation.png" alt="Getting started page">
+              <p class="image-caption">Getting started guide</p>
+            </div>
+            <div>
+              <img src="jbfc/targetsize.png" alt="Accessibility guidance">
+              <p class="image-caption">Accessibility guidelines on target size for interactive elements</p>
+            </div>
+
+             <div>
+              <img src="jbfc/components.png" alt="Components overview page">
+              <p class="image-caption">Component guidelines overview page</p>
+            </div>
+            <div>
+              <img src="jbfc/banner.png" alt="component guidance">
+              <p class="image-caption">Component guidelines with anatomy and usage best practices </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Result -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">The result</h2>
+          <p class="section-text">
+            Montage provides JBFC a shared source of truth:
+          </p>
+
+          <ul class="insights-list">
+            <li>A Figma UI kit grounded in design tokens and patterns</li>
+            <li>Clear foundations and reusable components</li>
+            <li>Principles and documentation that support better decisions</li>
+          </ul>
+
+          <p class="section-text" style="margin-top: 32px;">
+            Montage as a design system does not replace thinking, it aims to removes friction.
+          </p>
+        </div>
+      </section>
+
+      <!-- What I Learned -->
+      <section class="section" style="background: var(--card); padding: 60px 0;">
+        <div class="container">
+          <h2 class="section-title">What I learned</h2>
+          
+          <div class="quote">
+            <p class="quote-text">Design systems aren't about control. They're about trust.</p>
+          </div>
+
+          <p class="section-text" style="margin-top: 32px;">
+            When decisions are shared and explicit, teams can move faster not because they think less, but because 
+            they focus on the right problems.
+          </p>
+        </div>
+      </section>
+
+      <!-- What's Next -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">What's next</h2>
+          <p class="section-text">
+            If this work continued, I'd focus on:
+          </p>
+
+          <ul class="insights-list">
+            <li>Testing the documentation itself</li>
+            <li>Expanding components based on real product needs</li>
+            <li>Closer collaboration with developers</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Final Reflection -->
+      <section class="section" style="background: var(--card); padding: 60px 0;">
+        <div class="container">
+          <h2 class="section-title">Final reflection</h2>
+          <p class="section-text">
+            JBFC's design system isn't finished and it shouldn't be.
+          </p>
+          <p class="section-text">
+            It's a living product shaped by the people who use it. Building it taught me that the hardest part 
+            isn't creating components, it's creating shared understanding.
+          </p>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <section class="project-navigation">
+        <div class="container">
+          <a href="work.html" class="nav-link">← Back to Work</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="sonar-wrap">
+        <div class="sonar-layer layer-1"></div>
+        <div class="sonar-layer layer-2"></div>
+        <div class="sonar-layer layer-3"></div>
+      </div>
+      <div class="container footer-top">
+        <p><small>© <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small></p>
+        <div class="footer-links">
+          <a href="mailto:mtandon@pratt.edu">Email</a>
+          <a href="https://www.linkedin.com/in/manvi-tandon" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/design.manvi/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const themeSwitch = document.getElementById("theme-switch");
+    const logo = document.getElementById("logo");
+    
+    themeSwitch.addEventListener("change", () => {
+      if (themeSwitch.checked) {
+        logo.src = "assets/logolight.png";
+      } else {
+        logo.src = "assets/logodark.png";
+      }
+    });
+
+    // Hamburger menu
+    const hamburger = document.querySelector(".hamburger");
+    const mobileNav = document.querySelector(".mobile-nav");
+    
+    hamburger.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

@@ -498,7 +498,7 @@ main {
 }
 
 .insights-list li::before {
-  content: "✦";
+ 
   position: absolute;
   left: 24px;
   top: 24px;
@@ -575,4 +575,56 @@ main {
 
 .issue {
   background-color: #fef0ef;
+}
+
+/* Editorial spacing + rhythm */
+.section {
+  padding: 6rem 0;
+}
+.section narrative,
+.section narrative .container {
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+/* Headings with personality */
+h2.section-title {
+  font-size: 2rem;
+  font-weight: 550;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+/* Full-width images for narrative breaks */
+.full-width-image {
+  width: 100%;
+  margin: 3rem 0;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.07);
+}
+
+/* Pull quote styling */
+.pull-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: rgba(0,0,0,0.67);
+  border-left: 4px solid rgba(0,0,0,0.2);
+  padding-left: 1rem;
+  margin: 2rem 0;
+}
+
+/* Insight list (better than default bullets) */
+.insights-list {
+  list-style-type: none;
+  padding: 0;
+}
+.insights-list li {
+  margin: 0.75rem 0;
+  padding-left: 1rem;
+}
+.insights-list li::before {
+  
+  margin-right: 0.75rem;
+  color: rgba(0,0,0,0.6);
 }
