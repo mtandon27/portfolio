@@ -287,6 +287,7 @@ img {
   }
 }
 
+
 body:has(.theme-switch:checked) .site-header {
   background: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -298,39 +299,86 @@ main {
 
 /* HERO SECTION */
 .hero {
-  background: linear-gradient(
-    135deg,
-    rgba(217, 86, 74, 0.1),
-    rgba(155, 92, 255, 0.1)
-  );
   position: relative;
+  padding: 96px 84px 80px;
+  background: var(--bg);
   overflow: hidden;
-  padding: 40px 84px 40px;
-  z-index: 0;
-  cursor: auto !important;
+  cursor: default;
+}
+
+.hero-title {
+  font-size: clamp(2.75rem, 5vw, 3.75rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.hero-image img {
+  border-radius: 16px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 0 0 1px var(--border);
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.meta-item h4 {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+.meta-item p {
+  font-size: 14px;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-      circle at 20% 80%,
-      rgba(155, 92, 255, 0.15),
-      transparent 50%
+  background:
+    radial-gradient(
+      600px circle at 20% 20%,
+      rgba(217, 86, 74, 0.08),
+      transparent 40%
     ),
-    radial-gradient(circle at 80% 20%, rgba(0, 229, 255, 0.15), transparent 50%);
-  opacity: 0.7;
+    radial-gradient(
+      600px circle at 80% 60%,
+      rgba(155, 92, 255, 0.06),
+      transparent 45%
+    );
   pointer-events: none;
-  z-index: -1;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
-  width: min(1200px, 100%);
-  margin: 0 auto;
   align-items: center;
+  gap: 64px;
 }
 
 .breadcrumb {
