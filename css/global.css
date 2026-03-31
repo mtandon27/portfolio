@@ -525,7 +525,7 @@ body.dark .work-section {
 }
 
 .section-desc p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
   color: var(--text-muted);
   text-align: right;
@@ -534,7 +534,7 @@ body.dark .work-section {
 .section-meta {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-muted);
   padding-bottom: 16px;
   margin-bottom: 32px;
@@ -628,7 +628,7 @@ body.dark .montage-dark {
 }
 
 .newspaper-tag {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -653,7 +653,7 @@ body.dark .montage-dark {
 }
 
 .newspaper-date {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-muted);
 }
 
@@ -715,7 +715,7 @@ body.dark .work-card-2x2:hover {
 }
 
 .work-card-tag {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -874,7 +874,7 @@ body.dark .work-card-2x2:hover {
 }
 
 .carousel-tag {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1160,7 +1160,7 @@ body.dark .work-card-2x2:hover {
 }
 
 .label {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--text-muted);
   display: block;
   margin-bottom: 12px;
@@ -1405,7 +1405,7 @@ body.dark .about-accent { color: #7E97FF; }
 }
 
 .scroll-tag {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1634,7 +1634,7 @@ body.dark .about-accent { color: #7E97FF; }
 }
 
 .footer-bottom p {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--footer-text-dim);
 }
 
