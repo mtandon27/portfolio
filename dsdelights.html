@@ -103,7 +103,7 @@
     </div>
 
     <!-- OVERVIEW -->
-    <section class="case-section" id="overview">
+    <section class="case-section" id="overview-content">
       <span class="section-label">Overview</span>
       <h2>How might we create a digital presence as vibrant and empowering as the jewelry itself?</h2>
       <p>D's Delights is a Brooklyn based jewelry brand making bold, handcrafted African bead pieces that celebrate individuality. The jewelry is expressive, personal, and full of character but the website and social media presence said none of that.</p>
@@ -376,4 +376,10 @@
             });
           }
         });
-      }, { roo
+      }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
+
+      sections.forEach(s => { if (s.id) observer.observe(s); });
+    });
+  </script>
+</body>
+</html>
