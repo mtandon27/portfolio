@@ -107,8 +107,8 @@
     <section class="case-section" id="overview">
       <span class="section-label">Overview</span>
       <h2>ChatGPT is becoming essential infrastructure. But it wasn't designed for everyone.</h2>
-      <p>LLMs are no longer just tools they're embedded in how people work, learn, and manage daily life. For neurotypical users, that's a productivity boost. For users with ADHD, the same interface can create more friction than it resolves.</p>
-      <p>This project asked a simple question: is ChatGPT actually accessible for neurodivergent users? We researched the barriers, audited the interface, and proposed four feature redesigns grounded in WCAG guidelines and real user experience research.</p>
+      <p>LLMs are no longer just tools they're embedded in how people work, learn, and manage daily life. For neurotypical users it's a productivity boost. For neurodivergent users with ADHD, the same interface can create more friction than it resolves.</p>
+      <p>This project asked a simple question: is ChatGPT actually accessible for neurodivergent users? We researched the barriers, audited the interface, and proposed four feature re-designs grounded in WCAG guidelines and real user experience research.</p>
 
       <div class="outcome-strip">
         <div class="outcome-item">
@@ -129,8 +129,8 @@
     <!-- PROBLEM -->
     <section class="case-section" id="problem">
       <span class="section-label">Problem</span>
-      <h2>ADHD users rely heavily on AI and face the most friction using it.</h2>
-      <p>People with ADHD use ChatGPT specifically to compensate for executive function challenges like breaking down tasks, maintaining focus, and drafting text when words won't come. But the interface was never designed with them in mind.</p>
+      <h2>AI should feel seamless yet many users still struggle to use it.</h2>
+      <p>People with ADHD use ChatGPT specifically to compensate for executive function challenges like breaking down tasks, maintaining focus, and drafting text when words are hard to find. But the interface was never designed with them in mind.</p>
 
       <div class="approach-grid">
         <div class="approach-item">
@@ -139,7 +139,7 @@
         </div>
         <div class="approach-item">
           <h4>Two-tiered experience</h4>
-          <p>As AI becomes embedded in education and work, this gap compounds. Missing these accommodations isn't a minor inconvenience it's a structural disadvantage.</p>
+          <p>As AI becomes embedded in education and work, this gap expands. Missing these accommodations isn't a minor inconvenience it's a structural disadvantage.</p>
         </div>
         <div class="approach-item">
           <h4>No neurodivergent lens</h4>
@@ -148,8 +148,8 @@
       </div>
 
       <div class="quote-card">
-        <p>ChatGPT treats my ADHD like a problem to fix, not something to recognize and work through.</p>
-        <span>— Glazko et al., 2025</span>
+        <p>ChatGPT treats my ADHD like a problem to fix, not something to recognize and work through</p>
+        <span>— Usability participant</span>
       </div>
     </section>
 
@@ -157,13 +157,13 @@
     <section class="case-section" id="research">
       <span class="section-label">Research</span>
       <h2>Mixed-method research: academic studies, Reddit communities, and a direct interface audit.</h2>
-      <p>We didn't start with assumptions. We triangulated across three sources to understand both what research had documented and what users were actually experiencing in the moment.</p>
+      <p>We didn't start with assumptions. We pulled insights across three sources to understand both what research had documented and what users were actually experiencing in the moment.</p>
 
       <div class="process-step">
         <span class="process-num">01</span>
         <div class="process-body">
           <h4>Academic literature</h4>
-          <p>Peer-reviewed studies on neurodivergent AI use which gave us systematic evidence of the barriers ADHD users face. These weren't one-off complaints, they were consistent, documented patterns.</p>
+          <p>Peer-reviewed studies on neurodivergent AI use which provided evidence of the barriers ADHD users face. These weren't one-off complaints, they were consistent, documented patterns.</p>
         </div>
       </div>
 
@@ -182,14 +182,14 @@
           <p>We ran through ChatGPT ourselves using three ADHD-relevant scenarios: drafting a professional email, preparing for an interview, and understanding medication risks. Every friction point was documented against the user quotes from our research.</p>
         </div>
       </div>
-
-      <h3>Four barriers surfaced consistently across every source.</h3>
+<br>
+      <h3>We discovered four consistent barriers that users face.</h3>
 
       <ul class="narrative-list">
-        <li><strong>Difficulty articulating prompts.</strong> The blank text box is pure cognitive load. "The words exist, but my brain won't pull them front and center." (Glazko et al., 2025)</li>
+        <li><strong>Difficulty articulating prompts.</strong> The blank text box is pure cognitive load. "The words exist, but my brain won't pull them front and center."</li>
         <li><strong>Overwhelming output.</strong> Walls of text with no verbosity control. The response might technically answer the question but deliver it in a format that guarantees abandonment.</li>
         <li><strong>Verification and trust burden.</strong> No confidence indicators, no source transparency. For high-stakes queries (medical, legal), this is not a minor UX problem.</li>
-        <li><strong>Context loss.</strong> Long conversations drift. There's no goal anchor, no conversation map, no way to know what the model is "remembering" so users fall into rabbit holes and lose the thread entirely.</li>
+        <li><strong>Context loss.</strong> Conversational drift. There's no goal anchor, no conversation map, and no way to know what the model is "remembering" so users fall into rabbit holes and lose the thread entirely.</li>
       </ul>
     </section>
 
@@ -197,7 +197,7 @@
     <section class="case-section" id="solution">
       <span class="section-label">Solutions</span>
       <h2>Four feature redesigns each mapped directly to a documented barrier.</h2>
-      <p>Every design decision traces back to a specific user quote, a WCAG criterion, and a pattern from our research. Nothing was added speculatively.</p>
+      <p>Every design decision traces back to a specific user quote, a WCAG criterion, and a pattern from our research.</p>
 
       <!-- Solution 1 -->
       <div class="key-insight">
@@ -208,8 +208,8 @@
     </div><br>
       </div>
       <br>
-      <p>A modular prompt-building interface that structures the request into four cards: Goal, Context, Tone, Format. Only Goal is required and the rest is optional. Users can switch between guided and free-form mode at any time, and save templates for recurring tasks.</p>
-      <p>The blank input box is one of the highest-friction moments in the current interface. This replaces the "ask me anything" void with scaffolding that meets users where their words aren't.</p>
+      <p>A modular prompt-building interface that structures the request into four guided groups: Goal, Context, Tone, and Format. Only Goal is required and the rest is optional. Users can switch between guided and free-form mode at any time, and save templates for recurring tasks.</p>
+      <p>The blank input box is one of the highest-friction areas in the current interface. This guided approach replaces the "ask me anything" void with scaffolding that helps users organize their thoughts.</p>
       <p><strong>WCAG criteria:</strong> 3.3.5 Help (reduces cognitive effort to produce a clear prompt) and 3.3.3 Error Suggestion (prevents input problems before they occur).</p>
 
       <!-- Solution 2 -->
@@ -221,11 +221,11 @@
     </div><br>
       </div>
       <br>
-      <p>A persistent output settings panel that gives users control over response length (Brief / Standard / Detailed) and format. Every response begins with a TL;DR summary. Content is organized into collapsible section blocks which is closed by default and opened on demand.</p>
+      <p>An output settings menu that gives users control over response length (Brief / Standard / Detailed) and format. Every response begins with a TL;DR summary. Content is organized into collapsible section blocks which is closed by default and opened on demand.</p>
 
       <div class="quote-card">
         <p>[ChatGPT is] too much or not enough information…</p>
-        <span>— Atcheson et al., 2025</span>
+        <span>— Usability Participant</span>
       </div>
 
       <p>The non-deterministic nature of LLMs means output length is always unpredictable. Output Mode gives users a way to set expectations and reduce the cognitive cost of receiving and processing responses.</p>
@@ -240,14 +240,14 @@
     </div><br>
       </div>
       <br>
-      <p>Color coded confidence badges on each response section: High (verified sources), Medium (general consensus), Lower (individual variation), Caution (consult a professional). Sources are linked inline. High-stakes topics (medical, legal) trigger an explicit disclaimer before the response loads.</p>
+      <p>Color coded confidence badges on each response section: High (verified sources), Medium (general consensus), Low (individual variation), and Caution (consult a professional). Sources are linked inline. High-stakes topics (medical, legal) trigger an explicit disclaimer to consult a proffessional before the response loads.</p>
 
       <div class="quote-card">
-        <p>If I don't have the energy to validate, I could make myself look like a clown.</p>
-        <span>— Glazko et al., 2025</span>
+        <p>If I don't have the energy to validate, I could make myself look like a clown</p>
+        <span>— Usability Participant</span>
       </div>
 
-      <p>ADHD users reported that the verification burden was one of the most exhausting parts of using ChatGPT. This makes source reliability visible and contextual not something users have to figure out themselves after the fact.</p>
+      <p>ADHD users reported that the verification burden was one of the most exhausting aspects of using ChatGPT. This makes source reliability visible and contextual, not something users are left to question after the fact.</p>
       <p><strong>WCAG criteria:</strong> 1.3.3 Sensory Characteristics (text + colour, not colour alone) and 3.3.5 Help.</p>
 
       <!-- Solution 4 -->
@@ -259,11 +259,11 @@
     </div><br>
       </div>
       <br>
-      <p>A persistent right-side panel that tracks: the original goal, current focus, key decisions made during the conversation, a numbered conversation flow with quick-jump links, and an editable "What I'm Remembering" section exposing the model's context. Users can edit what the model holds in memory to redirect the conversation.</p>
+      <p>A persistent right-side panel that tracks: the original goal, current focus, key decisions made during the conversation, conversation flow with quick jump links, and an editable "What I'm Remembering" section exposing the model's context. Users can edit what the model holds in memory to redirect the conversation.</p>
 
       <div class="quote-card">
-        <p>It sends me down another rabbit hole…</p>
-        <span>— Glazko et al., 2025</span>
+        <p>[ChatGPT] sends me down another rabbit hole…</p>
+        <span>— Usability Participant</span>
       </div>
 
       <p>Long conversations drift and for ADHD users, losing the thread isn't a minor annoyance, it's the end of the session. The Context Panel makes the conversation's structure visible and navigable at all times.</p>
@@ -283,7 +283,7 @@
         <span class="process-num">01</span>
         <div class="process-body">
           <h4>Patronizing by design</h4>
-          <p>Features meant to support can feel condescending. Confidence badges that simplify output risk being read as "dumbed down." Opt-in design forces users to self-identify publicly. Default-on design assumes everyone wants these features. Neither is right.</p>
+          <p>Features meant to support can feel condescending. Confidence badges that simplify output risk can be viewed as "dumbing down" responses. Opt-in design forces users to self-identify publicly. Default-on design assumes everyone wants these features.</p>
         </div>
       </div>
 
@@ -299,7 +299,7 @@
         <span class="process-num">03</span>
         <div class="process-body">
           <h4>Universal design vs. targeted accommodations</h4>
-          <p>Our proposal: make all features universally available with customizable intensity rather than building an "ADHD mode" toggle. Targeted features risk stigma. Universal features risk invisibility. There's no clean answer but universality felt more realistic.</p>
+          <p>Our proposal: make all features universally available and customizable rather than building an "ADHD mode" toggle. Targeted features risk stigma. Universal features risk invisibility. There's no clear answer but universality felt more realistic.</p>
         </div>
       </div>
     </section>
