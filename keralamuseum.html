@@ -4,488 +4,393 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kerala Art Museum — Manvi Tandon</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/details.css" />
-  <link rel="icon" href="assets/mt.png" type="image/png"> 
+  <link rel="stylesheet" href="css/case-study.css" />
 </head>
+
 <body>
-  <div class="site">
-    <!-- Global Navigation Header -->
-    <header class="site-header" role="banner">
-      <div class="container header-inner">
-        <div class="brand-group">
-          <a href="index.html">
-            <img src="assets/logodark.png" alt="Logo" class="logo" id="logo" />
-          </a>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Manvi Tandon</span>
+    </a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Archive</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Side Navigation -->
+  <aside class="case-sidenav" id="caseSidenav">
+    <a href="#overview"   class="sidenav-link active">Overview</a>
+    <a href="#problem"    class="sidenav-link">Problem</a>
+    <a href="#research"   class="sidenav-link">Research</a>
+    <a href="#process"    class="sidenav-link">Process</a>
+    <a href="#solution"   class="sidenav-link">Solution</a>
+    <a href="#impact"     class="sidenav-link">Impact</a>
+    <a href="#reflection" class="sidenav-link">Reflection</a>
+  </aside>
+
+  <main class="case-study">
+    <a href="index.html#work" class="back-link">← Back</a>
+
+    <!-- HERO -->
+    <header class="case-hero" id="overview">
+      <div class="case-logo">
+        <img src="kerala/logo.png" alt="Kerala Art Museum" class="client-logo" />
+      </div>
+      <span class="case-eyebrow">Kerala Art Museum &bull; UX Research</span>
+      <h1 class="case-title">Redesigning a museum's digital experience for the community it actually serves.</h1>
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <p>UX Designer &amp;<br/>Researcher</p>
         </div>
-        <div class="header-right">
-          <div class="theme-toggle" data-tooltip="Switch to darker theme">
-              <input
-                id="theme-switch"
-                class="theme-switch"
-                type="checkbox"
-                aria-label="Toggle color theme"
-              />
-              </div>
-          <button
-            class="hamburger"
-            aria-label="Menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <nav class="nav desktop-nav" aria-label="Primary">
-            <a href="work.html">Work</a>
-            <a href="about.html">About</a>
-            <a href="blog.html">Blog</a>
-          </nav>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <p>Jan – May 2025</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Team</span>
+          <p>4 Designers &amp;<br/>Researchers</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Skills</span>
+          <p>UX Research<br/>Information Architecture<br/>Figma</p>
         </div>
       </div>
-      <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-      </nav>
     </header>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section class="hero section--large">
-        <div class="hero-content grid grid-2">
-          <!-- Left side: text -->
-          <div class="hero-text">
-            <nav class="breadcrumb">
-              <a href="work.html">← Back to Work</a>
-            </nav>
-            <h1 class="hero-title">Kerala Museum</h1>
-            <p class="hero-subtitle">
-              Collaborating with Kerala Museum to redesign a mobile-first, accessible, and community-centered digital experience.
-            </p>
-            <div class="hero-meta grid grid-4" style="--gap: 24px;">
-              <div class="meta-item">
-                <h4>Client</h4>
-                <a href="https://keralamuseum.org" target="_blank">
-                  <p class="project-link">Kerala Museum</p>
-                </a>
-              </div>
-              <div class="meta-item">
-                <h4>Timeline</h4>
-                <p>Jan – May 2025</p>
-              </div>
-              <div class="meta-item">
-                <h4>Role</h4>
-                <p>UX Designer / Researcher</p>
-              </div>
-              <div class="meta-item">
-                <h4>Team</h4>
-                <p>4 designers and researchers</p>
-              </div>
-            </div>
-          </div>
-          <!-- Right side: hero image -->
-          <div class="hero-image">
-            <img src="kerala/hero.png" alt="Kerala Museum UI preview" />
-          </div>
+    <div class="case-img-full">
+      <img src="kerala/hero.png" alt="Kerala Museum redesign" />
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="case-section" id="overview">
+      <span class="section-label">Overview</span>
+      <h2>How might we make a local museum feel accessible to everyone who belongs there?</h2>
+      <p>Kerala Museum has been a cultural institution in Kochi, India since 1987. Under new leadership, it's transformed from a tourist attraction into a genuine community hub offering lectures, performances, multi-sensory exhibitions, and events for local families and students.</p>
+      <p>But the website hadn't kept up. A team of four designers and researchers, including me, partnered directly with the museum to fix that. We were fully remote, none of us had visited in person which meant user research had to do all the heavy lifting.</p>
+
+      
+
+      <div class="quote-card">
+        <p>Kerala Museum is a progressive community center with a voice for the unvoiced.</p>
+        <span>— Community member, user interview</span>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="case-section" id="problem">
+      <span class="section-label">Problem</span>
+      <h2>The site was built for tourists. The museum had become something else entirely.</h2>
+      <p>Being remote meant we couldn't rely on instinct or a quick site visit. So we audited the existing platform carefully and the usabilitygaps were significant.</p>
+
+      <ul class="narrative-list">
+        <li><strong>Community members bypassed the site entirely.</strong> They asked staff directly, or caught updates on social media. The website wasn't a resource for the community.</li>
+        <li><strong>Accessibility and inclusion were missing.</strong> Inconsistent language, no local language support (despite serving a Malayalam speaking community), and a structure that made it hard to find anything.</li>
+        <li><strong>Navigation was overloaded.</strong> Subcategories upon subcategories. Core actions like buying tickets or finding events were buried.</li>
+      </ul>
+
+      <div class="case-img-full">
+        <img src="kerala/challenge.png" alt="Challenges with the existing site" />
+        <span class="annotation">With over 8,000 miles between the design team and Kerala Museum we had to rely on user stories to understand the community needs</span>
+      </div>
+
+      <div class="key-insight">
+        <span class="insight-label">The core tension</span>
+        <p>Kerala Museum is culturally rich and locally beloved, but its digital presence was speaking the wrong language. The redesign had to honor the museum's authentic, expressive identity while making every page feel like it was built for the community, not just described to outsiders.</p>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="case-section" id="research">
+      <span class="section-label">Research</span>
+      <h2>We couldn't visit so we interviewed, benchmarked, and tested everything.</h2>
+      <p>Our research approach was deliberately thorough. Interviews with local users and museum staff gave us ground truth. Benchmarking 13 cultural institutions showed us what good looks like. Tree testing validated whether our proposed information architecture actually made sense to real users.</p>
+
+      <div class="case-img-full">
+        <img src="kerala/affinity.jpg" alt="Affinity map" />
+        <span class="annotation">Affinity mapping across all interviews and grouping pain points, motivations, and unmet needs</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="kerala/benchmarking.jpg" alt="Competitive benchmarking" />
+        <span class="annotation">Benchmarking 13 museums, from National Museum of New Delhi to Kochi-Muziris Biennale, to understand what engagement actually looks like</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="kerala/competitive analysis.png" alt="Competitive analysis" />
+        <span class="annotation">Full competitive analysis across accessibility, digital strategy, and community engagement</span>
+      </div>
+
+      <h3>Who we were designing for</h3>
+      <p>The museum's audience is wider than it appears. We identified four distinct user groups with different needs and motivations:</p>
+
+          <div class="case-img-full">
+        <img src="kerala/users.png" alt="User personas" />
+        <span class="annotation">Four current target audiences revealed an opportunity to represent the local community more through the website</span>
+      </div>
+
+  
+    </section>
+
+    <!-- PROCESS -->
+    <section class="case-section" id="process">
+      <span class="section-label">Process</span>
+      <h2>Three principles to hold everything together.</h2>
+      <p>Rather than jumping straight to screens, we defined three design principles from our research. Every decision after that was a question of which principle it served.</p>
+
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h4>1. Foster digital community engagement</h4>
+          <p>Enhance discovery and community storytelling. Help users find what they didn't know they were looking for.</p>
         </div>
-      </section>
-
-      <!-- OVERVIEW / INTRODUCTION -->
-    <section class="section">
-        <div class="container">
-          <h2 class="section-title">What is the Kerala Museum?</h2>
-          <div class="grid grid-2" style="--gap: 40px; align-items: start;">
-            <div>
-              <h3>🏛 Evolution of the Museum</h3>
-              <p>
-                Kerala Museum, established in 1987, has undergone a <strong>remarkable transformation</strong>. 
-                Originally positioned as a tourist destination, under Director Aditi’s leadership it has evolved into a vibrant and cultural hub for the community.
-              </p>
-              <h3>🖼 Museum Offerings</h3>
-              <p>
-                The museum offers <strong>multi-sensory exhibitions</strong> of local history, engaging lectures and talks, immersive performing arts, and community events.
-              </p>
-              <blockquote class="quote">
-                <p class="quote-text">
-                  “A progressive community center with a voice for the unvoiced.”
-                </p>
-                <p class="quote-author">– Community Member</p>
-              </blockquote>
-              <img src="kerala/museum.png" alt="Kerala Museum overview image" />
-            </div>
-            <div class="image-item">
-              <img src="kerala/overview.png" alt="Kerala Museum overview image" />
-            </div>
-          </div>
-
-          <h2 class="section-header" style="margin-top: 60px;">Challenges</h2>
-          <p class="section-text">
-            <img src="kerala/challenge.png" alt="Challenges image" class="rounded-image" />
-            Because our team is remote and none of us had visited the physical museum, we needed a research-driven approach to avoid bias. From interviews, audits, and desk research, we surfaced three root issues:
-          </p>
-          <ul class="insights-list">
-            <li><strong>Gaps in Digital Engagement</strong>: Community members often bypassed the site and relied on museum staff or social media for updates.</li>
-            <li><strong>Accessibility & Inclusion Barriers</strong>: Inconsistent language, limited local‐language support, and structural complexity excluded many potential users.</li>
-            <li><strong>Usability & Navigation Issues</strong>: The site structure was overloaded with subcategories, making core actions (visits, events, tickets) hard to find.
-            </li>
-          </ul>
+        <div class="approach-item">
+          <h4>2. Ensure accessible communication</h4>
+          <p>Enable accessible communication and event interaction. Remove the barriers that were making people ask staff instead.</p>
         </div>
-      </section>
-
-      <!-- Research & Insights -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Research & Insights</h2>
-          <p class="section-text">
-            We interviewed 7 local users and museum staff, conducted benchmarking across 13 cultural institutions, and ran tree tests comparing old vs proposed information architecture. Insights from quotes, tests, and competitive audits shaped our direction.
-          </p>
-          <div class="grid grid-2" style="--gap: 40px; margin-top: 40px;">
-            <div>
-              <img src="kerala/affinity.jpg" alt="Affinity Map" class="rounded-image" />
-              <div class="image-caption">
-                Affinity mapping of user interviews and staff feedback, highlighting key pain points and opportunities
-              </div>
-            </div>
-            <div>
-              <img src="kerala/benchmarking.jpg" alt="Benchmarking" class="rounded-image" />
-              <div class="image-caption">
-                Benchmarking of competitors such as National Museum of New Delhi and Kochi-Muziris Biennale to analyze their approaches to community engagement and digital outreach
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-1" style="--gap: 40px; margin-top: 40px;">
-            <div>
-              <img src="kerala/competitive analysis.png" alt="Competitive analysis" class="rounded-image" />
-              <div class="image-caption">
-                Competitive analysis comparing digital strategies, accessibility, and user engagement across leading museums in India and globally
-              </div>
-            </div>
-          </div>
+        <div class="approach-item">
+          <h4>3. Provide a seamless and intuitive experience</h4>
+          <p>Simplify navigation and make content intuitive. One clear path to tickets, events, and visits.</p>
         </div>
-      </section>
+      </div>
 
-      <!-- KEY USERS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Key Users</h2>
-            <p class="section-text">
-              Our design needed to serve a variety of current and target audiences who interact with the museum (KM) in different ways:
-            </p>
-            <ul class="insights-list">
-              <li><strong>Local Community Members:</strong> Visitors, families, students who want easy access to events and cultural content.</li>
-              <li><strong>Researchers & Academics:</strong> Users interested in archives, exhibitions, and deeper content.</li>
-              <li><strong>Museum Staff & Curators:</strong> Internal users managing content, events, and visitor communications.</li>
-              <li><strong>Global Audience:</strong> Cultural enthusiasts abroad who want to experience Kerala Museum digitally.</li>
-            </ul>
-          </div>
-          <img src="kerala/users.png"/>
+      <div class="case-img-full">
+        <img src="kerala/legend.png" alt="Annotation legend" />
+        <span class="annotation">Our core principles informed every screen and helped us understand who it primarily serves</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h4>Sketches &amp; Low-Fi Wireframes</h4>
+          <p>We started with sketches exploring navigation models, event discovery flows, and how to handle the multilingual requirement. Going low-fi early meant we could throw out bad ideas cheaply before they got polished.</p>
         </div>
-      </section>
+      </div>
 
+      <div class="case-img-full">
+        <img src="kerala/sketches1.jpg" alt="Early sketches" />
+        <span class="annotation">Initial sketches exploring navigation structure and event discovery before touching Figma</span>
+      </div>
 
-      <!-- PROCESS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Process</h2>
+      <div class="case-img-full">
+        <img src="kerala/sketches2.png" alt="Wireframes" />
+        <span class="annotation">Low-fi wireframes testing information architecture for mobile-first layout</span>
+      </div>
 
-            <div class="grid grid-2" style="--gap: 60px; margin-bottom: 40px;">
-              <div>
-                <h3>Sketches & Wireframes</h3>
-                <p class="section-text">
-                  From sketches and low-fidelity wireframes, we moved into mid- and high-fidelity mockups in Figma. We annotated screens to reflect design rationale, following our guiding principles of explore, connect, and engage.
-                </p>
-                <img src="kerala/sketches1.jpg"/> 
-                             <div class="image-caption">
-            Initial wireframe sketches exploring navigation, event discovery, and accessibility features
-              </div>
-                <img src="kerala/sketches2.png"/>
-                             <div class="image-caption">
-            Wireframe showing basic information architecture optimized for a responsive mobile UI
-            </div>
-            </div>
-            <div>
-                <h3>Early Testing</h3>
-                <p class="section-text">
-                    We tested three core flows with seven participants (some bilingual). Feedback informed improvements in navigation labels, FAQ clarity, event filters, mobile responsiveness, and accessibility enhancements.
-                </p>
-                <img src="kerala/midfi.png"/>
-                <div class="image-caption">
-                    Mid-fidelity mockup illustrating improved navigation, event discovery, and accessibility features based on user feedback
-                </div>
-                <img src="kerala/highfi.png"/>
-                <div class="image-caption">
-                    High-fidelity screen showing final UI refinements for mobile and desktop, including accessible event filters and streamlined layouts
-                </div>
-            </div>
-          </div>
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h4>Testing Early and Often</h4>
+          <p>We tested three core flows with seven participants some bilingual in Malayalam and English. The feedback was direct navigation labels were confusing, the FAQ was necessary, and event filters were missing entirely. We iterated before going high-fidelity.</p>
         </div>
-      </section>
+      </div>
 
-      <!-- Solution -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Solution Approach</h2>
-          <p class="section-text">
-            To address the challenges, we formulated three guiding principles and aligned our design decisions accordingly:
-          </p>
-             <div class="grid grid-2" style="--gap: 40px; margin-top: 40px;">
-                <div>
-                  <ul class="insights-list">
-            <li><strong>Explore</strong>: enhance discovery and community storytelling</li>
-            <li><strong>Connect</strong>: enable accessible communication and event interaction</li>
-            <li><strong>Engage</strong>: simplify navigation and make content intuitive</li>
-          </ul>
-                <div class="journey-item">
-              <img src="kerala/legend.png" alt="annotation legend" class="rounded-image" />
-              <div class="image-caption">
-                Annotation legend of our core principles
-              </div>
-            </div>
-          </div>
-            <div lass="journey-item">
-              <img src="kerala/km.gif" alt="workflow gif" class="rounded-image" style="max-width:50%; height:auto;" />
-              <div class="image-caption">
-                Workflow animation showing the redesigned user journey from homepage exploration to event registration and ticket purchase
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-1" style="--gap: 40px; margin-top: 40px;">
-            <div class="journey-item">
-              <img src="kerala/homepage.png" alt="Annotated Homepage" class="rounded-image" />
-              <div class="image-caption">
-                Homepage annotation showing engagement zones & navigation cues — we designed a landing experience to quickly captivate and convert visitors
-              </div>
-            </div>
-            <div class="journey-item">
-              <img src="kerala/plan.png" alt="Plan a visit" class="rounded-image" />
-              <div class="image-caption">
-                Plan a visit with ease through curated messaging and strategic information flow
-              </div>
-            </div>
-            <div class="journey-item">
-              <img src="kerala/events.png" alt="Event filtering UI" class="rounded-image" />
-              <div class="image-caption">
-                Event filtering UI for easy discovery of upcoming programs, workshops, and performances
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-2" style="--gap: 40px; margin-top: 40px;">
-            <div class="journey-item">
-              <img src="kerala/pastevents.png" alt="Past Events" class="rounded-image" />
-              <div class="image-caption">
-                Past events archive with filters for year, type, and accessibility — users can browse previous programs, performances, and exhibitions
-              </div>
-            </div>
-            <div class="journey-item">
-              <img src="kerala/buytickets.png" alt="Buy tickets" class="rounded-image" />
-              <div class="image-caption">
-                Buy tickets interface with clear pricing, accessibility options, and streamlined checkout for visitors
-              </div>
-            </div>
-          </div>
+      <div class="case-img-full">
+        <img src="kerala/midfi.png" alt="Mid-fidelity screens" />
+        <span class="annotation">Mid-fidelity after round one of testing with simplified labels, restructured event discovery, and cleaner hierarchy</span>
+      </div>
 
-          <p class="section-header" style="margin-top: 40px;">
-            Explore the full design artifacts:  
-          </p>
-          <div class="magic-links">
-            <a href="https://ixd.prattsi.org/2025/05/bringing-keralas-stories-to-life-online/?_thumbnail_id=48786" target="_blank" class="magic-button">
-              Blog Post
-            </a>
-            <a href="https://www.figma.com/proto/RlV1eVHhQQok5Dkcdo5uh1/KM-Team-Final-Deliverables?t=nxPPxh5UThkZDg8I-1" target="_blank" class="magic-button">
-              Design Presentation
-            </a>
-            <a href="https://www.figma.com/proto/RlV1eVHhQQok5Dkcdo5uh1/KM-Team-Final-Deliverables?node-id=13-16051&p=f&t=ztmk37x3z72NImBi-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=13%3A16051&show-proto-sidebar=1" target="_blank" class="magic-button">
-              View Prototype
-            </a>
-          </div>
+      <div class="case-img-full">
+        <img src="kerala/highfi.png" alt="High-fidelity screens" />
+        <span class="annotation">High-fidelity refinements with accessible event filters, streamlined mobile layouts, and bilingual support added</span>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="case-section" id="solution">
+      <span class="section-label">Solution</span>
+      <h2>A redesign built to be felt, not just used.</h2>
+      <p>The final design applied our three principles across every core user journey from arriving on the homepage to buying a ticket. Here's what we shipped.</p>
+
+      <div class="case-img-full">
+        <img src="kerala/km.gif" alt="Full user journey walkthrough" />
+        <span class="annotation">The redesigned mobile experience is inviting, clear, and easy to use</span>
+      </div>
+
+      <h3>Homepage</h3>
+      <p>Designed to captivate quickly and orient visitors within seconds whether they're local regulars or first-time discoverers from abroad.</p>
+
+      <div class="case-img-full">
+        <img src="kerala/homepage.png" alt="Annotated homepage" />
+        <span class="annotation">Homepage with engagement zones annotated and navigation cues designed to guide without overwhelming</span>
+      </div>
+
+      <h3>Plan a Visit</h3>
+      <p>Curated messaging and a clear information flow replaced the old wall of text. Users can understand hours, location, accessibility, and ticketing in a single scroll.</p>
+
+      <div class="case-img-full">
+        <img src="kerala/plan.png" alt="Plan a Visit" />
+        <span class="annotation">Plan a visit contains strategic information hierarchy with accessibility details surfaced prominently</span>
+      </div>
+
+      <h3>Events</h3>
+      <p>The most requested feature was a proper event filtering system. Users can browse by type, date, and accessibility needs something the old site couldn't do at all.</p>
+
+      <div class="case-img-full">
+        <img src="kerala/events.png" alt="Event filtering" />
+        <span class="annotation">Event discovery with filters for type, date, and accessibility; upcoming and past events separated clearly</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="kerala/pastevents.png" alt="Past events archive" />
+        <span class="annotation">Past events archive that are browsable by year and type for community memory and documentation</span>
+      </div>
+
+      <h3>Ticketing</h3>
+      <p>A streamlined checkout flow with clear pricing, accessibility options front and center, and no buried steps.</p>
+
+      <div class="case-img-full">
+        <img src="kerala/buytickets.png" alt="Buy tickets" />
+        <span class="annotation">Buy tickets with pricing visible upfront, accessibility options integrated, and minimal steps to complete purchase</span>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="https://ixd.prattsi.org/2025/05/bringing-keralas-stories-to-life-online/?_thumbnail_id=48786" target="_blank" class="cta-btn">Read Blog Post →</a>
+        <a href="https://www.figma.com/proto/RlV1eVHhQQok5Dkcdo5uh1/KM-Team-Final-Deliverables?node-id=13-16051&p=f&t=ztmk37x3z72NImBi-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=13%3A16051&show-proto-sidebar=1" target="_blank" class="cta-btn secondary">View Prototype →</a>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="case-section" id="impact">
+      <span class="section-label">Impact</span>
+      <h2>Users noticed the difference immediately.</h2>
+      <p>We ran usability testing on the final designs with participants drawn from our target audience groups. The feedback validated the core decisions and flagged a few things we refined before handoff.</p>
+
+      <div class="quote-card">
+        <p>Woah, this site is beautiful! I love the use of colors.</p>
+        <span>— Participant, usability testing</span>
+      </div>
+
+      <p>Beyond aesthetics, users found navigation clearer, event discovery faster, and the ticket flow far less confusing than the original. We refined FAQ language, event filter labels, and mobile touch targets based on their input.</p>
+
+      <h3>Built to grow</h3>
+      <p>The redesign is designed as a flexible framework, not a static mockup. It supports:</p>
+
+      <ul class="narrative-list">
+        <li><strong>Dynamic event and exhibition updates</strong> — the CMS-ready structure makes it easy for staff to publish without technical help.</li>
+        <li><strong>Malayalam and English</strong> — bilingual support is baked into the information architecture, not added on.</li>
+        <li><strong>Social media integration</strong> — the platform can pull real-time content from the museum's existing social channels.</li>
+        <li><strong>Modular staff tools</strong> — curators and administrators can manage content and events without developer involvement.</li>
+      </ul>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="case-section" id="reflection">
+      <span class="section-label">Reflection</span>
+      <h2>What I learned</h2>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Remote UX means research has to do double duty.</h4>
+          <p>Without the ability to walk through the physical museum or observe visitors in context, every assumption had to be validated through interviews and testing. It made us more rigorous but it also made us more humble about what we didn't know.</p>
         </div>
-      </section>
+      </div>
 
-      <!-- Impact & Future -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Impact & User Feedback</h2>
-          <div class="grid grid-2" style="--gap: 40px;">
-            <div>
-              <h3>User Feedback</h3>
-              <div class="quote">
-                <p class="quote-text">“Woah, this site is beautiful! I love the use of colors.”</p>
-                <p class="quote-author">-User quote</p>
-              </div>
-              <p class="section-text">
-                Users praised the visual clarity, improved navigation, and inclusive language. We refined the FAQ, event flows, and mobile layouts based on their input.
-              </p>
-            </div>
-            <div>
-              <h3>Looking Ahead</h3>
-              <p class="section-text">
-                Built as a flexible framework, the redesign supports:
-                <ul class="insights-list">
-                  <li>Dynamic event & exhibition updates</li>
-                  <li>Content in Malayalam & English</li>
-                  <li>Social media integration for real-time content</li>
-                  <li>Modular CMS tools for staff curation & scaling</li>
-                </ul>
-              </p>
-            </div>
-          </div>
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Cultural context shapes interface decisions more than aesthetics do.</h4>
+          <p>The color choices, the copy, and the language support weren't just visual decisions. They were statements about who the museum thinks it's for. Getting that right required ongoing conversation with the museum staff and local participants, not just design judgment.</p>
         </div>
-      </section>
+      </div>
 
-      <!-- NEXT STEPS & TAKEAWAYS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Next Steps & Lessons Learned</h2>
-            <div class="grid grid-2" style="--gap: 60px;">
-              <div>
-                <h3>Future Implementation</h3>
-                <p class="section-text">
-                  Integrate CMS systems, enable community content submissions, refine localization (Malayalam/English), and build dynamic tools for staff engagement and feedback.
-                </p>
-              </div>
-              <div>
-                <h3>Lessons Learned</h3>
-                <ul class="insights-list">
-                  <li>Remote UX work demands deep empathy, local input, and rigorous testing.</li>
-                  <li>Cultural context must drive interface choices, not just aesthetics.</li>
-                  <li>Modular design and clear navigation help scale complexity gracefully.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Modular systems make complexity manageable.</h4>
+          <p>A museum's content is inherently complex with events, archives, exhibitions, tickets, multilingual support. Designing with modular components and a clear hierarchy meant the system could handle that complexity without overwhelming any individual page.</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-<!-- Navigation -->
-<section class="project-nav">
-  <div class="container">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <a href="mathworks.html" 
-         class="nav-link prev" 
-         data-title="MathWorks: Feature Modeling">← Previous Project</a>
-
-<div class="hero-text">
-    <nav class="breadcrumb">
-      <a href="work.html">Back to Work</a>
+    <!-- Project Navigation -->
+    <nav class="case-nav">
+      <a href="mathworks.html" class="case-nav-link prev">
+        <span class="nav-direction">← Previous</span>
+        <span class="nav-project">MathWorks</span>
+      </a>
+      <a href="beatdrop.html" class="case-nav-link next">
+        <span class="nav-direction">Next →</span>
+        <span class="nav-project">BeatDrop</span>
+      </a>
     </nav>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer case-footer">
+    <div class="footer-main">
+      <h2>Let's Collaborate</h2>
+      <a href="mailto:mtandon@pratt.edu" class="footer-cta">Get in touch</a>
     </div>
-
-      <a href="beatdrop.html" 
-         class="nav-link next" 
-         data-title="BeatDrop: Social Listening Experience">Next Project →</a>
+    <div class="footer-cols">
+      <div class="footer-col footer-col-nav">
+        <span class="label">( Navigate )</span>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#projects">Archive</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">( Connect )</span>
+        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+      </div>
     </div>
-  </div>
-</section>
-    </main>
+    <div class="footer-bottom">
+      <p>© 2025 Manvi Tandon</p>
+    </div>
+  </footer>
 
-    <!-- FOOTER -->
-      <footer class="site-footer">
-        <div class="container footer-top">
-          <p>
-           <small> © <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small>
-          </p>
-          <div class="footer-links breadcrumb">
-            <a href="mailto:mtandon@pratt.edu">Email</a>
-            <a
-              href="https://www.linkedin.com/in/manvi-tandon"
-              target="_blank"
-              rel="noreferrer"
-              >LinkedIn</a
-            >
-            <a href="https://www.instagram.com/design.manvi/" target="_blank" rel="noreferrer"
-              >Insgtagram</a
-            >
-          </div>
-        </div>
-        <div class="sonar-wrap">
-          <div class="sonar-layer layer-1"></div>
-          <div class="sonar-layer layer-2"></div>
-          <div class="sonar-layer layer-3"></div>
-        </div>
-      </footer>
-  </div>
-
+  <script src="script.js"></script>
   <script>
-      // Hamburger/menu
-      const hamburger = document.querySelector(".hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
-      hamburger?.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("open");
-        hamburger.setAttribute("aria-expanded", isOpen);
-      });
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.case-section[id], .case-hero[id]');
+      const navLinks = document.querySelectorAll('.sidenav-link');
 
-      // Theme elements
-      const themeSwitch = document.getElementById("theme-switch");
-      const logo = document.getElementById("logo");
-      const heroLeft = document.getElementById("heroLeft"); // may be null on this page
-      const themeToggle = document.querySelector(".theme-toggle"); // wrapper for tooltip
-
-      // Safe update function
-      function updateImages() {
-        // determine the tooltip target (prefer the wrapper that has data-tooltip)
-        const tooltipTarget = themeToggle || themeSwitch;
-
-        if (!themeSwitch) return; // nothing to do if input missing
-
-        if (themeSwitch.checked) {
-          // Light mode
-          if (logo) logo.src = "assets/logolight.png";
-          if (heroLeft) heroLeft.src = "assets/heroleftlight.png";
-          document.body.classList.add("light");
-          document.body.classList.remove("dark");
-          localStorage.setItem("theme", "light");
-
-          if (themeToggle) {
-            themeToggle.setAttribute("data-tooltip", "Switch to darker theme");
-          } else {
-            themeSwitch.title = "Switch to darker theme";
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              }
+            });
           }
-        } else {
-          // Dark mode
-          if (logo) logo.src = "assets/logodark.png";
-          if (heroLeft) heroLeft.src = "assets/heroleftdark.png";
-          document.body.classList.add("dark");
-          document.body.classList.remove("light");
-          localStorage.setItem("theme", "dark");
+        });
+      }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
 
-          if (themeToggle) {
-            themeToggle.setAttribute("data-tooltip", "Switch to lighter theme");
-          } else {
-            themeSwitch.title = "Switch to lighter theme";
-          }
-        }
-      }
-
-      // Restore saved theme
-      const savedTheme = localStorage.getItem("theme");
-      if (themeSwitch) {
-        if (savedTheme === "light") {
-          themeSwitch.checked = true;
-        } else if (savedTheme === "dark") {
-          themeSwitch.checked = false;
-        } else {
-          // optional: set a default. keeping checkbox false => dark by default
-          themeSwitch.checked = false;
-        }
-
-        // initial update (safe)
-        updateImages();
-
-        // update when toggled
-        themeSwitch.addEventListener("change", updateImages);
-      }
-
-      // Update footer year
-      const yearEl = document.getElementById("year");
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-    </script>
+      sections.forEach(s => { if (s.id) observer.observe(s); });
+    });
+  </script>
 </body>
 </html>

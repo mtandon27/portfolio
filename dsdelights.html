@@ -1,632 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>D's Delights - Manvi Tandon</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-     <link rel="stylesheet" href="css/global.css" />
-     <link rel="stylesheet" href="css/details.css" />
-    <link rel="icon" href="assets/mt.png" type="image/png"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D's Delights — Manvi Tandon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+  <style>
+    /* D's Delights client logo — bigger */
+    .case-logo { width: auto; margin-bottom: 28px; }
+    .client-logo { height: 72px; width: auto; }
+
+    /* Light/dark logo swap */
+    .logo-dark { display: none; }
+    body.dark .logo-light { display: none; }
+    body.dark .logo-dark  { display: block; }
+  </style>
 </head>
 
-  <body>
-   <div class="site">
-      <!--Global Navigation Header-->
-      <header class="site-header" role="banner">
-        <div class="container header-inner">
-          <!-- Left side: brand group -->
-          <div class="brand-group">
-       <a href="index.html">
-            <img src="assets/logodark.png" alt="Logo" class="logo" id="logo" />
-            </a>
-          </div>
-
-          <!-- Right side -->
-          <div class="header-right">
-            <div class="theme-toggle" data-tooltip="Switch to darker theme">
-              <input
-                id="theme-switch"
-                class="theme-switch"
-                type="checkbox"
-                aria-label="Toggle color theme"
-              />
-              </div>
-
-            <!-- Hamburger toggle (mobile only) -->
-            <button
-              class="hamburger"
-              aria-label="Menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-
-            <!-- Desktop nav -->
-            <nav class="nav desktop-nav" aria-label="Primary">
-              <a href="work.html">Work</a>
-              <a href="about.html">About</a>
-              <a href="blog.html">Blog</a>
-            </nav>
-          </div>
-        </div>
-
-        <!-- Mobile nav (hidden by default) -->
-        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
-          <a href="work.html">Work</a>
-          <a href="about.html">About</a>
-          <a href="blog.html">Blog</a>
-        </nav>
-      </header>
-
-    <main>
-      <!-- HERO SECTION -->
-      <section class="hero section--large">
-      <div class="hero-content grid grid-2">
-  <!-- Left column: text -->
-  <div class="hero-text">
-    <nav class="breadcrumb">
-      <a href="work.html">← Back to Work</a>
-    </nav>
-    
-    <h1 class="hero-title">D's Delights</h1>
-    <p>Bold Jewelry ✨ = Bold Digital Design ✨ </p>
-    <p class="hero-subtitle">
-    A digital transformation for D's Delights, a handcrafted African bead jewelry brand in Brooklyn, NY. My team and I designed an e-commerce site, social media rebranding, and brand guideline.
-    </p>
-    
-    <div class="hero-meta grid grid-4" style="--gap: 24px;">
-      <div class="meta-item">
-        <h4>Client</h4>
-        <a href="https://dsdelightsbklyn.com/" target="_blank">
-          <p class="project-link">D's Delights</p>
-        </a>
-      </div>
-      <div class="meta-item">
-        <h4>Timeline</h4>
-        <p>Oct - Dec 2024</p>
-      </div>
-      <div class="meta-item">
-        <h4>Role</h4>
-        <p>Lead UX Designer</p>
-      </div>
-      <div class="meta-item">
-        <h4>Team</h4>
-        <p>4 designers & researchers</p>
-      </div>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Manvi Tandon</span>
+    </a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Archive</a>
     </div>
-  </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-  <!-- Right column: cover image -->
-  <div class="hero-image">
-    <img src="dsdelights/coverds.png" alt="D's Delights Jewelry Showcase" />
-  </div>
-</div>
+  <!-- Side Navigation -->
+  <aside class="case-sidenav" id="caseSidenav">
+    <a href="#overview"   class="sidenav-link active">Overview</a>
+    <a href="#problem"    class="sidenav-link">Problem</a>
+    <a href="#research"   class="sidenav-link">Research</a>
+    <a href="#process"    class="sidenav-link">Process</a>
+    <a href="#solution"   class="sidenav-link">Solution</a>
+    <a href="#social"     class="sidenav-link">Social</a>
+    <a href="#impact"     class="sidenav-link">Impact</a>
+    <a href="#reflection" class="sidenav-link">Reflection</a>
+  </aside>
 
-      </section>
+  <main class="case-study">
+    <a href="index.html#work" class="back-link">← Back</a>
 
-      <!-- OVERVIEW -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Project Overview</h2>
-            <div class="grid grid-2" style="--gap: 60px;">
-              <div>
-                <p class="section-text">
-                 D’s Delights is a Brooklyn based jewelry brand known for bold, handcrafted African bead pieces that celebrate individuality. 
-                 However, its digital presence didn’t reflect the same vibrancy and empowerment its jewelry promised. 
-                 My team and I partnered with owner, Deidra, to increase digital user impressions and conversion rates.
-                  We designed D's Delights website, social media content, and brand guideline.
-                </p>
-                   <div class="quote">
-                  <p class="quote-text">"How might we create a cohesive digital presence that embodies D's Delights' bold essence while increasing engagement and conversions?"</p>
-                  <p class="quote-author">— Project Goal</p>
-                </div>
-              </div>
-              <div>
-                <h3 style="font-size: 1.25rem; color: var(--accent);">Social Media Impact</h3>
-                
-                <div class="stats-grid">
-                  <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Positive follower response</div>
-                  </div>
-              
-                </div>
-                <p class="image-caption">
-                  Social media followers responded positively to new branded content, resulting in double digit increase in engagement.
-                </p>
-      
-            </div>
-            </div>
-       
-      </section>
-
-       <!-- FINAL PROTOTYPE -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Website and Social Media Redesign</h2>
-            <p class="section-text">
-                We redesigned D's Delights' website and social media presence to create a cohesive, bold, and user-friendly digital experience that reflects the brand's vibrant identity.
-            </p>
-
-           <div class="grid grid-2" style="--gap: 40px; margin: 40px 0;">
-                  <div >
-                <div class="image-item">
-                <img src="dsdelights/coverds.gif" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-                <div class="image-caption">
-                  Complete website redesign with improved navigation, product discovery, and mobile responsiveness<br><br>
-                  <a href="#contact" class="section-subtitle">View Prototype →</a>
-                </div>
-                </div>
-                </div>
-              <div class="image-item">
-                <div>
-                <img src="dsdelights/socialmediads.png" style="max-width: 100%; max-height: 50%; object-fit: contain;" />
-                <div class="image-caption">
-                  Social media overhaul with consistent branding, engaging content, and strategic posting schedule<br><br>
-                  <a href="https://www.instagram.com/dsdelightsbklyn/" target="_blank" class="section-subtitle">View Instagram →</a>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
+    <!-- HERO -->
+    <header class="case-hero" id="overview">
+      <div class="case-logo">
+        <img src="dsdelights/logo.png" alt="D's Delights" class="client-logo logo-light" />
+        <img src="dsdelights/logodark.png" alt="D's Delights" class="client-logo logo-dark" />
+      </div>
+      <span class="case-eyebrow">D's Delights &bull; Brand & Web Design</span>
+      <h1 class="case-title">Giving a Brooklyn jewelry brand a digital presence as bold as its pieces.</h1>
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <p>Lead UX Designer</p>
         </div>
-      </section>
-
-      <!-- BRAND GUIDELINES -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Brand Guidelines</h2>
-            <p class="section-text">
-              We documented all findings in D's Delights Brand Guidelines, covering styles, dimensions, and standards that optimize the content creation process. The guidelines include component templates and rules that align all digital platforms to brand and accessibility standards.
-            </p>
-
-            <div class="grid grid-1" style="--gap: 40px; margin: 40px 0;">
-              <div class="image-item">
-                <div>
-                  <img src="dsdelights/brandguidelinesds.png" alt="Brand Guidelines Excerpt" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-                </div>
-                <div class="image-caption">
-                    Reusable design components and templates<br><br>
-                <a href="https://www.figma.com/proto/l8FK81M2sAiypP0kesBfxU/D-s-Delights-Brand-Guideline?node-id=3501-1623&node-type=frame&t=ISFjXxpPNt4ErofR-1&scaling=min-zoom&content-scaling=fixed&page-id=2911%3A800&starting-point-node-id=3633%3A3223" target="_blank" class="section-subtitle">View Full Guidelines →</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <p>Oct – Dec 2024</p>
         </div>
-      </section>
-
-      <!-- TOOLS USED -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Tools & Methods</h2>
-            <div class="grid grid-6" style="--gap: 24px;">
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">Figma</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">🧠</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">FigJam</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">Miro</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">🎭</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">Adobe Illustrator</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">✏️</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">Sketch</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">User Research</p>
-              </div>
-            </div>
-          </div>
+        <div class="meta-item">
+          <span class="meta-label">Team</span>
+          <p>4 Designers &amp;<br/>Researchers</p>
         </div>
-      </section>
-
-
-      <!-- RESEARCH INSIGHTS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Research & Discovery</h2>
-            <p class="section-text">
-              We conducted extensive user research to understand the current pain points and opportunities. Through interviews with 12+ users, surveys, and contextual inquiries, we gathered crucial insights about user behavior and preferences.
-            </p>
-            
-            <div class="stats-grid grid grid-3">
-              <div class="stat-item">
-                <div class="stat-number">70%</div>
-                <div class="stat-label">More likely to buy with reviews</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">90%</div>
-                <div class="stat-label">Preferred jewelry on models</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Wanted personable & trustworthy feel</div>
-              </div>
-            </div>
-
-            <h3 style="font-size: 1.5rem; margin: 48px 0 24px; color: var(--fg);">Key Insights</h3>
-            <ul class="insights-list">
-              <li>The current website had significant usability issues, particularly with Information Architecture (IA)</li>
-              <li>Navigation items were hidden in a side hamburger menu, making discovery difficult</li>
-              <li>Categories were poorly organized with too many menu options for users to browse</li>
-              <li>Inconsistencies in flow and branding created confusion and reduced trust</li>
-            </ul>
-
-            <div class="grid grid-2" style="--gap: 40px; margin: 40px 0;">
-                  <div>
-                <div>
-                <img src="dsdelights/original.png" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-                <div class="image-caption">
-                    Original website with cluttered navigation and poor IA<br><br>
-                The current landing page had all of the navigation items hidden in a side hamburger menu, 
-                there were an extensive amount of menu options for the user to browse through.
-                 
-                </div>
-                </div>
-                </div>
-              <div>
-                <div>
-                <img src="dsdelights/revised.png" style="max-width: 100%; max-height: 50%; object-fit: contain;" />
-                <div class="image-caption">
-                    Redesigned website with streamlined navigation and clear categories<br><br>
-                  To make sure that the site’s information architecture was aligned with user expectations,
-                   we held a remote card sorting session using Figjam. Our goal was to find intuitive groupings for 
-                   the existing 28 menu options. After organizing the data, we ended up with 3 clearly defined global 
-                   navigation categories ('Jewelry', 'Home', and 'About').
-                  
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <div class="quote">
-              <p class="quote-text">"Categories here are simpler and better organized"</p>
-              <p class="quote-author">— Usability Participant</p>
-            </div>
-          </div>
+        <div class="meta-item">
+          <span class="meta-label">Skills</span>
+          <p>UX Design<br/>Brand Identity<br/>Social Strategy</p>
         </div>
-      </section>
+      </div>
+    </header>
 
-      <!-- DESIGN PROCESS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Design Process</h2>
-            
-            <div class="grid grid-2" style="--gap: 60px; margin-bottom: 60px;">
-              <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Wireframing & Testing</h3>
-                <p class="section-text">
-                  I began with low-fidelity sketches and wireframes to visualize ideas from our ideation phase. Using Figma, I translated sketches into mid-fidelity wireframes and conducted A/B testing with 3-4 moderated interviews.
-                </p>
-              </div>
-              <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Key Features Tested</h3>
-                <ul style="list-style: none; padding: 0;">
-                  <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--primary);">•</span>
-                    Cleaner layouts and improved navigation
-                  </li>
-                  <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--primary);">•</span>
-                    New product filtering feature
-                  </li>
-                  <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--primary);">•</span>
-                    Compelling CTAs like "Be Bold, Shop Now"
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <div class="case-img-full">
+      <img src="dsdelights/coverds.png" alt="D's Delights jewelry showcase" />
+    </div>
 
-            <div class="grid grid-2" style="--gap: 40px; margin: 40px 0;">
-                  <div>
-                <div>
-                <img src="dsdelights/sketches.png" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-                <div class="image-caption">
-                    Initial sketches and wireframes<br><br>
-                I began with low-fidelity sketches and wireframes to visualize ideas from our ideation phase
-                 
-                </div>
-                </div>
-                </div>
-              <div>
-                <div>
-                <img src="dsdelights/abtesting.png" style="max-width: 100%; max-height: 50%; object-fit: contain;" />
-                <div class="image-caption">
-                    A/B testing with users<br><br>
-                  Using Figma, I translated sketches into mid-fidelity wireframes and conducted A/B testing with 3-4 moderated interviews.
-                  
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SOCIAL MEDIA STRATEGY -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Social Media Transformation</h2>
-            <p class="section-text">
-              Using user feedback, we completely redesigned D's Delights' Instagram profile with a focus on consistency, authenticity, and engagement.
-            </p>
-
-                        <div class="grid grid-2" style="--gap: 40px; margin: 40px 0;">
-                  <div>
-                <div>
-                <img src="dsdelights/socialmedia1.png" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-                <div class="image-caption">
-                     A structured mix of feed posts, carousels, reels, and video content ensures diversity in content presentation.
-
-                </div>
-                </div>
-                </div>
-              <div>
-                <div>
-                <img src="dsdelights/socialmedia2.png" style="max-width: 100%; max-height: 50%; object-fit: contain;" />
-                <div class="image-caption">
-                    Consistent use of brand colors, fonts, and imagery across all posts enhances brand recognition and trust.
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <h3 style="font-size: 1.5rem; margin: 48px 0 24px; color: var(--fg);">Content Strategy</h3>
-            <p class="section-text">
-              By creating a content calendar we increased user satisfaction and engagement. A lot of the content was 
-              based around giving Deidra a platform to show the behind the scenes of her jewelry and her story. People we interviewed 
-              repeatedly requested more authentic social media content to understand what makes D's Delights special. 
-            </p>
-            <div class="grid grid-3" style="--gap: 24px;">
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px;">
-                <h4 style="color: var(--primary); margin-bottom: 12px;">Post Types</h4>
-                <p style="font-size: 14px; color: var(--muted); margin: 0;">Balanced mix of feed posts, carousels, reels, and video content</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px;">
-                <h4 style="color: var(--primary); margin-bottom: 12px;">Content Themes</h4>
-                <p style="font-size: 14px; color: var(--muted); margin: 0;">Inspirational, educational, behind-the-scenes, and customer testimonials</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px;">
-                <h4 style="color: var(--primary); margin-bottom: 12px;">80-20 Strategy</h4>
-                <p style="font-size: 14px; color: var(--muted); margin: 0;">80% value-driven content, 20% promotional material</p>
-              </div>
-            </div>
-        </div>
-      </section>
-
-      <!-- FINAL RESULTS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Final Results</h2>
-            <div class="grid-1" style="--gap: 40px; margin: 40px 0;">
-                <div >
-                  <div>
-                    <img src="dsdelights/mobile.png" alt="final mobile designs" class="journey-item" />
-                  </div>
-                  <div class="image-caption">
-                        Mobile-responsive design for seamless shopping on any device
-                 </div>
-                 </div>
-            
-            <div class="quote mb-3">
-              <p class="quote-text">"This version would make me stay on the page much longer"</p>
-              <p class="quote-author">— Usability Participant</p>
-            </div>
-
-            <div class="grid grid-2" style="--gap: 60px;">
-              <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Website Impact</h3>
-                <div class="stats-grid">
-                  <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Customer satisfaction rate</div>
-                  </div>
-                </div>
-                <p class="section-text">
-                  Customers praised the website for its seamless navigation, striking visuals, and streamlined product discovery process.
-                </p>
-            </div>
-                 <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Social Media Impact</h3>
-                <div class="stats-grid">
-                  <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Customer satisfaction rate</div>
-                  </div>
-                </div>
-                <p class="section-text">
-                    Social media followers responded positively to new branded content, resulting in higher conversions and explorations.
-                </p>
-            </div>
-                 </div>
-                </div>
-            </div>
-            </section>
-
-      <!-- NEXT STEPS & TAKEAWAYS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Next Steps & Key Takeaways</h2>
-            
-            <div class="grid grid-2" style="--gap: 60px;">
-              <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Implementation & Future</h3>
-                <p class="section-text">
-                  It was incredible working with D's Delights to bring Deidra's beautiful work to the spotlight it deserves!
-                </p>
-                <p class="section-text">
-                  With more time, we would develop automated content template to streamline the content creation process.
-                </p>
-              </div>
-              <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Key Learnings</h3>
-                <ul class="insights-list">
-                  <li>The importance of blending bold visuals with meaningful storytelling in e-commerce</li>
-                  <li>How consistent branding builds trust and turns curiosity into loyalty</li>
-                  <li>The power of balancing bold design with usability to stand out in the market</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- OVERVIEW -->
+    <section class="case-section" id="overview">
+      <span class="section-label">Overview</span>
+      <h2>How might we create a digital presence as vibrant and empowering as the jewelry itself?</h2>
+      <p>D's Delights is a Brooklyn based jewelry brand making bold, handcrafted African bead pieces that celebrate individuality. The jewelry is expressive, personal, and full of character but the website and social media presence said none of that.</p>
+      <p>My team partnered directly with the owner of D's Delights to fix that. Over three months we redesigned the e-commerce site, overhauled the Instagram presence, and created brand guidelines to keep everything cohesive going forward.</p>
 
       
+    </section>
 
-<!-- Navigation -->
-<section class="project-nav">
-  <div class="container">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <a href="beatdrop.html" 
-         class="nav-link prev" 
-         data-title="BeatDrop: Social Listening Experience">← Previous Project</a>
+    <!-- PROBLEM -->
+    <section class="case-section" id="problem">
+      <span class="section-label">Problem</span>
+      <h2>The jewelry was doing all the work. The website wasn't helping.</h2>
+      <p>The existing site had usability problems and lacked a clear visual identity to build user trust. When we audited the website and social media and talked to users, the issues were evident.</p>
 
-<div class="hero-text">
-    <nav class="breadcrumb">
-      <a href="work.html">Back to Work</a>
+      <ul class="narrative-list">
+        <li><strong>Navigation was buried in a hamburger menu.</strong> Every single item hidden and hard to discover. Users couldn't browse without hunting for the menu first.</li>
+        <li><strong>28 menu options with no clear groupings.</strong> Nobody could find what they were looking for because the categories didn't match how people think about jewelry.</li>
+        <li><strong>Inconsistent branding created distrust.</strong> Different styles, conflicting type choices, and no visual cohesion made the site feel unprofessional which doesn't convert.</li>
+      </ul>
+
+      <div class="case-img-full">
+        <img src="dsdelights/original.png" alt="Original D's Delights website" />
+        <span class="annotation">The original site Information Architecture with navigation hidden in a hamburger menu consisting of 28 menu items</span>
+      </div>
+
+      <div class="key-insight">
+        <span class="insight-label">The real ask</span>
+        <p>D's Delights jewelry is genuinely special it is handcrafted, personal, and rooted in cultural identity. The design work wasn't about making digital experiences that were pretty. It was about making the website worthy of the product, and giving D's Delights tools to actually use to keep things consistent.</p>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="case-section" id="research">
+      <span class="section-label">Research</span>
+      <h2>We interviewed 12+ users. The same three things came up every time.</h2>
+      <p>Interviews, surveys, and contextual inquiries with customers and potential buyers gave us clear signal fast. The data wasn't surprising but it was exactly what we needed to make confident decisions.</p>
+
+      <div class="outcome-strip">
+        <div class="outcome-item">
+          <span class="outcome-num">70%</span>
+          <span class="outcome-label">More likely to buy with reviews</span>
+        </div>
+        <div class="outcome-item">
+          <span class="outcome-num">90%</span>
+          <span class="outcome-label">Preferred jewelry shown on models</span>
+        </div>
+        <div class="outcome-item">
+          <span class="outcome-num">100%</span>
+          <span class="outcome-label">Wanted personable, trustworthy feel</span>
+        </div>
+      </div>
+
+      <p>The numbers pointed to the same insight: people weren't buying because they couldn't picture themselves in the jewelry, and they didn't yet trust the brand. Both problems were solvable through design.</p>
+
+      <h3>Fixing the information architecture</h3>
+      <p>The 28 item navigation was the most urgent structural problem. We ran a remote card sorting session in FigJam with users to find natural groupings for everything in the site. The result was three clear global navigation categories: Jewelry, Home, and About that matched how users actually thought about the content.</p>
+
+      <div class="case-img-full">
+        <img src="dsdelights/revised.png" alt="Redesigned navigation" />
+        <span class="annotation">After card sorting 28 items collapsed into 3 intuitive categories that users recognized immediately</span>
+      </div>
+
+      <div class="quote-card">
+        <p>Categories here are simpler and better organized.</p>
+        <span>— Usability testing participant</span>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="case-section" id="process">
+      <span class="section-label">Process</span>
+      <h2>Sketches to A/B tests in three weeks.</h2>
+      <p>We moved quickly because the scope was clear. Low-fi sketches let us explore navigation models and layout ideas before committing anything to Figma. A/B testing with moderated interviews validated the decisions that mattered most.</p>
+
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h4>Low-Fi Sketches</h4>
+          <p>Paper sketches to explore layout directions, CTA placement, and product discovery flows. The goal was to externalize ideas fast and throw out the bad ones before touching Figma.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="dsdelights/sketches.png" alt="Initial sketches and wireframes" />
+        <span class="annotation">Early sketches of navigation models, product grid layouts, and CTA placement explored on paper</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h4>A/B Testing</h4>
+          <p>We tested three key decisions with 3–4 moderated interviews each: navigation layout, product filtering, and CTA copy. "Be Bold, Shop Now" won consistently over generic alternatives it matched the brand voice and users responded to it.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="dsdelights/abtesting.png" alt="A/B testing" />
+        <span class="annotation">A/B test comparisons of two navigation approaches, two filter layouts, two CTA variants side by side</span>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="case-section" id="solution">
+      <span class="section-label">Solution</span>
+      <h2>A website that finally matches the jewelry.</h2>
+      <p>The redesigned site leads with bold visuals, clear navigation, and product discovery that actually works. Every decision traces back to something a user told us.</p>
+
+      <div class="case-img-full">
+        <img src="dsdelights/coverds.gif" alt="Website redesign walkthrough" />
+        <span class="annotation">The redesigned site with improved navigation, product filtering, and mobile-responsive throughout</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="dsdelights/mobile.png" alt="Mobile designs" />
+        <span class="annotation">Mobile-first design since the majority of D's customers shop on phones</span>
+      </div>
+
+      <a href="https://dsdelightsbklyn.com/" target="_blank" class="cta-btn">View Website →</a>
+      <br> <br>
+
+      <h3>Brand guidelines</h3>
+      <p>One of the most important deliverables wasn't the website it was the brand guidelines. D's Delights needed to be able to create content independently after the project was complete. The guidelines document every style decision, include reusable templates, and give clear rules for keeping all platforms consistent.</p>
+
+      <div class="case-img-full">
+        <img src="dsdelights/brandguidelinesds.png" alt="Brand guidelines" />
+        <span class="annotation">D's Delights brand guidelines of color, type, component templates, and rules for every platform</span>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="https://www.figma.com/proto/l8FK81M2sAiypP0kesBfxU/D-s-Delights-Brand-Guideline?node-id=3501-1623&node-type=frame&t=ISFjXxpPNt4ErofR-1&scaling=min-zoom&content-scaling=fixed&page-id=2911%3A800&starting-point-node-id=3633%3A3223" target="_blank" class="cta-btn">View Brand Guidelines →</a>
+      </div>
+    </section>
+
+    <!-- SOCIAL -->
+    <section class="case-section" id="social">
+      <span class="section-label">Social Media</span>
+      <h2>Users kept asking for the real story behind the jewelry. So we gave them that.</h2>
+      <p>Every person we interviewed said the same thing: they wanted to understand the story behind the jewelry. Who makes it, why, and what it means. The original Instagram was all product shots that were beautiful, but impersonal.</p>
+      <p>We redesigned the entire content strategy around authenticity. Behind-the-scenes process videos, the story behind D's Delights, and customer spotlights. We built a content calendar on the 80-20 rule: 80% value-driven storytelling and 20% promotional.</p>
+
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h4>Post Types</h4>
+          <p>Balanced mix of feed posts, carousels, reels, and video witheach format used for what it does best.</p>
+        </div>
+        <div class="approach-item">
+          <h4>Content Themes</h4>
+          <p>Behind-the-scenes process, meet the creator content, customer testimonials, and cultural context for each collection.</p>
+        </div>
+        <div class="approach-item">
+          <h4>80-20 Strategy</h4>
+          <p>80% value-driven content to build trust and community, 20% promotional to drive conversions.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="dsdelights/socialmediads.png" alt="Social media redesign" />
+        <span class="annotation">The redesigned Instagram presence with consistent branding, diverse content formats, and authentic storytelling</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="dsdelights/socialmedia1.png" alt="Social media content mix" />
+        <span class="annotation">Brand Guidelines cover content variety of feed posts, carousels, and reels planned in advance using a content calendar with Adobe XD</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="dsdelights/socialmedia2.png" alt="Consistent branding across posts" />
+        <span class="annotation">Visual consistency across every post using the same colors, type, and photography style throughout</span>
+      </div>
+      <a href="https://www.instagram.com/dsdelightsbklyn/" target="_blank" class="cta-btn secondary">View Instagram →</a>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="case-section" id="impact">
+      <span class="section-label">Impact</span>
+      <h2>100% positive feedback. Users wanted to stay longer and come back.</h2>
+      <p>We tested the final designs with usability participants and shared the new social content with Deidra's existing followers. The response validated every major decision we'd made.</p>
+
+      <div class="quote-card">
+        <p>This version would make me stay on the page much longer.</p>
+        <span>— Usability testing participant</span>
+      </div>
+
+      <p>Participants praised the navigation clarity, the visual boldness, and said the site now felt as trustworthy as the jewelry deserved. Social media followers responded positively to the new branded content with a double-digit increase in engagement.</p>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="case-section" id="reflection">
+      <span class="section-label">Reflection</span>
+      <h2>What I learned</h2>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Bold visuals only work when they're anchored in a real story.</h4>
+          <p>The design could be striking, but if users couldn't understand who Deidra was and why she makes what she makes, it wouldn't convert. Every visual decision was in service of making the brand's story legible not just beautiful.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Consistent branding is the single biggest trust signal in e-commerce.</h4>
+          <p>Users told us directly: visual inconsistency made them less likely to buy. Not because they couldn't find what they wanted, but because the site felt unreliable. The brand guidelines were as important as the redesign itself.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Design the handoff, not just the deliverable.</h4>
+          <p>Deidra needed to keep creating content after we wrapped. That meant the brand guidelines had to be genuinely usable written for someone without a design background, with templates she could actually open and edit. Designing for the handoff made the whole project more valuable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <nav class="case-nav">
+      <a href="beatdrop.html" class="case-nav-link prev">
+        <span class="nav-direction">← Previous</span>
+        <span class="nav-project">BeatDrop</span>
+      </a>
+      <a href="mathworks.html" class="case-nav-link next">
+        <span class="nav-direction">Next →</span>
+        <span class="nav-project">MathWorks</span>
+      </a>
     </nav>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer case-footer">
+    <div class="footer-main">
+      <h2>Let's Collaborate</h2>
+      <a href="/cdn-cgi/l/email-protection#ef829b8e818b8081af9f9d8e9b9bc18a8b9a" class="footer-cta">Get in touch</a>
     </div>
-
-      <a href="mathworks.html" 
-         class="nav-link next" 
-         data-title="MathWorks: Designing for Engineers">Next Project →</a>
+    <div class="footer-cols">
+      <div class="footer-col footer-col-nav">
+        <span class="label">( Navigate )</span>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#projects">Archive</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">( Connect )</span>
+        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+      </div>
     </div>
-  </div>
-</section>
-    </main>
+    <div class="footer-bottom">
+      <p>© 2025 Manvi Tandon</p>
+    </div>
+  </footer>
 
-  </body>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <!-- FOOTER -->
-      <footer class="site-footer">
-        <div class="container footer-top">
-          <p>
-           <small> © <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small>
-          </p>
-          <div class="footer-links breadcrumb">
-            <a href="mailto:mtandon@pratt.edu">Email</a>
-            <a
-              href="https://www.linkedin.com/in/manvi-tandon"
-              target="_blank"
-              rel="noreferrer"
-              >LinkedIn</a
-            >
-            <a href="https://www.instagram.com/design.manvi/" target="_blank" rel="noreferrer"
-              >Instagram</a
-            >
-          </div>
-        </div>
-        <div class="sonar-wrap">
-          <div class="sonar-layer layer-1"></div>
-          <div class="sonar-layer layer-2"></div>
-          <div class="sonar-layer layer-3"></div>
-        </div>
-      </footer>
-  </div>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
   <script>
-      // Hamburger/menu
-      const hamburger = document.querySelector(".hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
-      hamburger?.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("open");
-        hamburger.setAttribute("aria-expanded", isOpen);
-      });
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.case-section[id], .case-hero[id]');
+      const navLinks = document.querySelectorAll('.sidenav-link');
 
-      // Theme elements
-      const themeSwitch = document.getElementById("theme-switch");
-      const logo = document.getElementById("logo");
-      const heroLeft = document.getElementById("heroLeft"); // may be null on this page
-      const themeToggle = document.querySelector(".theme-toggle"); // wrapper for tooltip
-
-      // Safe update function
-      function updateImages() {
-        // determine the tooltip target (prefer the wrapper that has data-tooltip)
-        const tooltipTarget = themeToggle || themeSwitch;
-
-        if (!themeSwitch) return; // nothing to do if input missing
-
-        if (themeSwitch.checked) {
-          // Light mode
-          if (logo) logo.src = "assets/logolight.png";
-          if (heroLeft) heroLeft.src = "assets/heroleftlight.png";
-          document.body.classList.add("light");
-          document.body.classList.remove("dark");
-          localStorage.setItem("theme", "light");
-
-          if (themeToggle) {
-            themeToggle.setAttribute("data-tooltip", "Switch to darker theme");
-          } else {
-            themeSwitch.title = "Switch to darker theme";
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              }
+            });
           }
-        } else {
-          // Dark mode
-          if (logo) logo.src = "assets/logodark.png";
-          if (heroLeft) heroLeft.src = "assets/heroleftdark.png";
-          document.body.classList.add("dark");
-          document.body.classList.remove("light");
-          localStorage.setItem("theme", "dark");
-
-          if (themeToggle) {
-            themeToggle.setAttribute("data-tooltip", "Switch to lighter theme");
-          } else {
-            themeSwitch.title = "Switch to lighter theme";
-          }
-        }
-      }
-
-      // Restore saved theme
-      const savedTheme = localStorage.getItem("theme");
-      if (themeSwitch) {
-        if (savedTheme === "light") {
-          themeSwitch.checked = true;
-        } else if (savedTheme === "dark") {
-          themeSwitch.checked = false;
-        } else {
-          // optional: set a default. keeping checkbox false => dark by default
-          themeSwitch.checked = false;
-        }
-
-        // initial update (safe)
-        updateImages();
-
-        // update when toggled
-        themeSwitch.addEventListener("change", updateImages);
-      }
-
-      // Update footer year
-      const yearEl = document.getElementById("year");
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-    </script>
-</body>
-</html>
+        });
+      }, { roo

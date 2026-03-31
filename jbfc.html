@@ -1,619 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Montage Design System - Manvi Tandon</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/details.css" />
-    <link rel="icon" href="assets/mt.png" type="image/png"> 
-    <style>
-      /* NEW: Project Specs Grid (Role, Time, Tools) */
-      .specs-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2x2 on mobile */
-        gap: 24px;
-        margin-top: 48px;
-        padding-top: 24px;
-        border-top: 1px solid var(--border);
-      }
-      @media (min-width: 768px) {
-        .specs-grid {
-          grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
-        }
-      }
-      .spec-item h4 {
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--muted);
-        margin: 0 0 8px 0;
-      }
-      .spec-item p {
-        font-size: 0.95rem;
-        margin: 0;
-        line-height: 1.5;
-        font-weight: 500;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montage — Manvi Tandon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+</head>
 
-      /* NEW: Stats Grid for Outcomes */
-      .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
-        margin-bottom: 32px;
-      }
-      .stat-card {
-        background: var(--card);
-        padding: 24px;
-        border-radius: var(--radius);
-        text-align: center;
-        border: 1px solid var(--border);
-      }
-      .stat-number {
-        display: block;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 8px;
-      }
-      .stat-label {
-        font-size: 0.9rem;
-        color: var(--muted);
-      }
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Manvi Tandon</span>
+    </a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Archive</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-      /* Comparison Grid styling */
-      .comparison-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 24px;
-        margin-top: 32px;
-      }
-      @media (min-width: 768px) {
-        .comparison-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      .comparison-item img {
-        width: 100%;
-        height: auto;
-        border-radius: var(--radius);
-        border: 1px solid var(--border);
-      }
-      .caption {
-        font-size: 0.9rem;
-        color: var(--muted);
-        margin-bottom: 8px;
-        display: block;
-        font-weight: 500;
-      }
+  <!-- Side Navigation -->
+  <aside class="case-sidenav" id="caseSidenav">
+    <a href="#overview"   class="sidenav-link active">Overview</a>
+    <a href="#problem"    class="sidenav-link">Problem</a>
+    <a href="#solution"   class="sidenav-link">Solution</a>
+    <a href="#process"    class="sidenav-link">Process</a>
+    <a href="#impact"     class="sidenav-link">Impact</a>
+    <a href="#reflection" class="sidenav-link">Reflection</a>
+  </aside>
 
-      /* Process & Documentation Steps Styling */
-      .process-step, .doc-section {
-        margin-bottom: 40px;
-      }
-      .process-step h3, .doc-section h4 {
-        color: var(--fg);
-        margin-bottom: 12px;
-      }
-      .process-step p, .doc-section p {
-        color: var(--muted);
-        line-height: 1.6;
-        margin-bottom: 16px;
-      }
-      
-      /* Image Grids */
-      .grid-2 {
-        display: grid; 
-        grid-template-columns: 1fr; 
-        gap: 16px; 
-        margin-top: 16px;
-      }
-      @media (min-width: 768px) {
-        .grid-2 {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      .image-caption {
-        font-size: 0.85rem;
-        color: var(--muted);
-        margin-top: 8px;
-        text-align: center;
-        font-style: italic;
-      }
-      .journey-item img {
-        width: 100%;
-        border-radius: var(--radius);
-        border: 1px solid var(--border);
-      }
-    </style>
-  </head>
+  <main class="case-study">
+    <a href="index.html#work" class="back-link">← Back</a>
 
-  <body>
-    <div class="site">
-      <header class="site-header" role="banner">
-        <div class="container header-inner">
-          <div class="brand-group">
-            <a href="index.html">
-              <img
-                src="assets/logodark.png"
-                alt="Logo"
-                class="logo"
-                id="logo"
-              />
-            </a>
-          </div>
-
-          <div class="header-right">
-            <div class="theme-toggle" data-tooltip="Switch to darker theme">
-              <input
-                id="theme-switch"
-                class="theme-switch"
-                type="checkbox"
-                aria-label="Toggle color theme"
-              />
-            </div>
-
-            <button
-              class="hamburger"
-              aria-label="Menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-
-            <nav class="nav desktop-nav" aria-label="Primary">
-              <a href="index.html#work">Work</a>
-              <a href="about.html">About</a>
-              <a href="blog.html" target="_blank">Blog</a>
-            </nav>
-          </div>
+    <!-- HERO -->
+    <header class="case-hero" id="overview">
+      <div class="case-logo">
+        <img src="jbfc/montagelight.png" alt="Montage" class="light-only" />
+        <img src="jbfc/montagedark.png"  alt="Montage" class="dark-only"  />
+      </div>
+      <span class="case-eyebrow">Montage &bull; Design System</span>
+      <h1 class="case-title">Building a design system for a nonprofit film center from scratch.</h1>
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <p>Product Designer</p>
         </div>
-      </header>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <p>4 Months (2025)</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Team</span>
+          <p>4 Designers<br/>&amp; Researchers</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Skills</span>
+          <p>Design Systems<br/>Figma<br/>Documentation</p>
+        </div>
+      </div>
+    </header>
 
-      <div class="mobile-nav" id="mobile-menu">
-        <a href="index.html#work">Work</a>
-        <a href="about.html">About</a>
-        <a href="blog.html" target="_blank">Blog</a>
+   
+
+    <!-- OVERVIEW -->
+    <section class="case-section" id="overview">
+      <span class="section-label">Overview</span>
+      <h2>JBFC needs a design system that actually scales.</h2>
+      <p>The Jacob Burns Film Center is a nonprofit film and arts center in Pleasantville, NY. The center provides educational and film programs for the community. Their site is informative but inconsistent, every page seems like someone was reinventing the wheel.</p>
+       <div class="case-img-full">
+      <img src="jbfc/montage.png" alt="Montage Design System overview" />
+    </div>
+      <p>I worked with a team of four designers to build <strong>Montage</strong> a full design system to unify JBFC's platform, make it accessible, and give the internal team tools they'd actually want to use.</p>
+
+    
+
+      <h3>Our approach</h3>
+
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h4>Start with the mess</h4>
+          <p>We ran a full UI inventory before touching Figma. That was the easiest way to understand the problem before solving it.</p>
+        </div>
+        <div class="approach-item">
+          <h4>Accessibility first</h4>
+          <p>We incorporated WCAG into every component's definition and anatomy.</p>
+        </div>
+        <div class="approach-item">
+          <h4>Build for adoption</h4>
+          <p>We wanted to design a system that people would actually use, not just well-organized files.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section class="case-section" id="problem">
+      <span class="section-label">Problem</span>
+      <h2>The site had grown organically disjointed.</h2>
+      <p>When we audited the live site, the scope of design debt was evident. The current site had:</p>
+
+      <ul class="narrative-list">
+        <li><strong>20+ shades of gray:</strong> all used inconsistently throughout the site.</li>
+        <li><strong>No shared components:</strong> each page rebuilt the same buttons and cards from scratch, in a different way.</li>
+        <li><strong>Accessibility wasn't on the radar:</strong> contrast failures and missing focus states throughout every core flow.</li>
+      </ul>
+
+      <div class="case-img-full">
+        <img src="jbfc/densecontent.png" alt="The existing JBFC site" />
+        <span class="annotation">The existing site is dense, inconsistent, and inaccessible. Every page was slightly different and information was scattered.</span>
       </div>
 
-      <main>
-        <section class="section">
-          <div class="container">
-            <p class="section-subheader">Design System</p>
-            <h1 class="hero-title" style="margin-top: 16px; margin-bottom: 24px;">
-              Montage
-            </h1>
-            <p class="hero-text" style="font-size: 1.25rem; max-width: 60ch; line-height: 1.6;">
-              An accessible-first design system for the Jacob Burns Film Center.
-            </p>
-            
-            <div class="specs-grid">
-              <div class="spec-item">
-                <h4>Role</h4>
-                <p>Product Designer</p>
-              </div>
-              <div class="spec-item">
-                <h4>Timeline</h4>
-                <p>4 Months (2025)</p>
-              </div>
-              <div class="spec-item">
-                <h4>Tools</h4>
-                <p>Figma, Zeroheight, CSS</p>
-              </div>
-              <div class="spec-item">
-                <h4>Team</h4>
-                <p>4 Designers/Researchers</p>
-              </div>
-            </div>
+    
+    </section>
 
-            <div style="margin-top: 48px; padding-left: 16px; border-left: 2px solid var(--primary);">
-              <p style="color: var(--muted); margin: 0;">
-                <strong>About the JBFC:</strong> The <a href="https://burnsfilmcenter.org/" target="blank"; class="project-links"; style="color: var(--primary);">Jacob Burns Film Center</a> is a nonprofit cultural arts center for film, education, and community located in Pleasantville, NY. 
-              </p>
-              <img
-                src="jbfc/montage.png"
-                alt="Montage Design System Hero"
-                class="full-width-image"
-                style="margin-top: 40px; border-radius: var(--radius)"
-              />
-            </div>
-          </div>
-        </section>
+    <!-- SOLUTION -->
+    <section class="case-section" id="solution">
+      <span class="section-label">Solution</span>
+      <h2>Montage: 50+ components, semantic tokens, living docs.</h2>
+      <p>The system covers the full stack of color and type tokens, reusable components with documented variants, and full page templates. All synced to a Zeroheight site that updates automatically when Figma does.</p>
 
-        <section class="section section--border">
-          <div class="container">
-            <h2 class="section-title"><i class="fas fa-magnifying-glass" style="font-size: 0.8em; color: var(--primary); margin-right: 12px;"></i>The Challenge</h2>
-            <p class="section-text" style="margin-bottom: 32px;">
-              I led the design of Montage to solve a critical issue: <strong>inconsistency</strong>. Without a shared design system, the platform suffered from fragmented UI and accessibility gaps. An audit revealed:
-            </p>
-            
-            <ul class="pain-point-list">
-              <li>
-                <strong>Visual Inconsistency:</strong> Dense content, minimal padding, and varying styles disrupted the reading flow
-              </li>
-              <li>
-                <strong>Fragmented UI:</strong> Navigation bars and buttons lacked consistent behaviors across pages
-              </li>
-              <li>
-                <strong>Repetitive Information:</strong> Redundant content in cards and tags led to user confusion
-              </li>
-            </ul>
+      <div class="case-img-full">
+        <img src="jbfc/components.png" alt="Montage component library" />
+        <span class="annotation">The component library consists of buttons, cards, navigation, tags, and more with all states documented</span>
+      </div>
 
-            <div class="comparison-grid">
-              <div class="comparison-item">
-                <span class="caption">Existing Site (Dense & Overwhelming)</span>
-                <img 
-                    src="jbfc/densecontent.png" 
-                    alt="Existing JBFC screens with dense content" 
-                />
-              </div>
-              <div class="comparison-item">
-                <span class="caption">Existing Site (Misaligned Elements)</span>
-                <img 
-                    src="jbfc/jumbled.png" 
-                    alt="Jumbled rows with misaligned content" 
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+      <h3>Validating our solution</h3>
+      <p>We ran internal sprints where participants built landing pages entirely from Montage components. A page that used to take a full day took under an hour. And it came out more consistent than anything made before the system existed.</p>
 
-        <section class="section section--border">
-          <div class="container">
-            <h2 class="section-title"><i class="fas fa-bullseye" style="font-size: 0.8em; color: var(--primary); margin-right: 12px;"></i>Strategy</h2>
-            <p class="section-text" style="margin-bottom: 40px;">
-              We established three strategic pillars to guide the development of Montage:
-            </p>
+      <div class="case-img-full">
+        <img src="jbfc/draganddrop.gif" alt="Drag and drop page building with Montage" />
+        <span class="annotation">Drag, configure, and ship with Montage. No CSS edits, no detaching instances, and no worrying about accessibility</span>
+      </div>
 
-            <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-              <div class="card">
-                <h3><i class="fas fa-layer-group" style="color: var(--primary); margin-right: 8px;"></i>Consistency</h3>
-                <p>Creating a cohesive experience where standardized patterns make every page feel intentional</p>
-              </div>
-              <div class="card">
-                <h3><i class="fas fa-bolt" style="color: var(--primary); margin-right: 8px;"></i>Efficiency</h3>
-                <p>Enabling smaller teams to build high-quality pages twice as fast through reusable components</p>
-              </div>
-              <div class="card">
-                <h3><i class="fas fa-expand" style="color: var(--primary); margin-right: 8px;"></i>Scalability</h3>
-                <p>Allowing for future platform shifts and evolution without disrupting the user experience</p>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div class="cta-buttons">
+        <a href="https://www.figma.com/community/file/1570117395919502167/montage-ui-kit-jacob-burns-film-center" target="_blank" class="cta-btn">View Figma Kit →</a>
+        <a href="https://zeroheight.com/1ef0ba6f3/p/45330f-getting-started" target="_blank" class="cta-btn secondary">View Documentation →</a>
+      </div>
+      <br> <br> 
 
-        <section class="section section--border">
-            <div class="container">
-                <h2 class="section-title"><i class="fas fa-cogs" style="font-size: 0.8em; color: var(--primary); margin-right: 12px;"></i>The Process</h2>
-                <p class="section-text" style="margin-bottom: 48px;">
-                    We approached Montage not just as a visual update, but as an infrastructure project. The process required balancing aesthetics with strict accessibility standards while simultaneously building documentation to ensure adoption.
-                </p>
+      <h3>Before &amp; after</h3>
+      <p>We applied Montage to JBFC's two highest-traffic journeys: the homepage and membership flow. </p>
 
-                <div class="process-step">
-                    <h3>01. UI Inventory & Audit</h3>
-                    <p>
-                        We started by dismantling the current site into its atomic parts. We cataloged every instance of typography, color, and form, identifying over 20 different shades of gray and inconsistent button styles. This <strong>inventory of atoms and molecules</strong> helped us understand the scope of debt we needed to address.
-                    </p>
-                    <img
-                        src="jbfc/inventory.png"
-                        alt="UI Inventory Audit"
-                        class="full-width-image"
-                        style="border-radius: var(--radius)"
-                    />
-                </div>
+      <div class="case-img-full wide">
+        <img src="jbfc/beforeafter.png" alt="Homepage redesign" />
+        <span class="annotation">Homepage with Montage: intentional whitespace, a consistent type scale, and components that actually talk to each other</span>
+      </div>
 
-                <div class="process-step">
-                    <h3>02. Semantic Design Tokens</h3>
-                    <p>
-                        To bridge the gap between design and engineering, we established a system of <strong>design tokens that mirrored CSS variables</strong>. Instead of just "Red," we mapped variables to semantic meanings (e.g., <code>--color-active-warning</code>).
-                    </p>
-                    <div class="image-showcase grid grid-2">
-                        <div class="journey-item">
-                          <img
-                            src="jbfc/colordesigntokens.png"
-                            alt="Figma Variables"
-                          />
-                          <p class="image-caption">Figma Variables mapped to tokens</p>
-                        </div>
-                        <div class="journey-item">
-                          <img
-                            src="jbfc/zeroheightcolor.png"
-                            alt="Zeroheight Token Documentation"
-                          />
-                          <p class="image-caption">Live token docs in Zeroheight</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="case-img-full wide">
+        <img src="jbfc/beforeafter2.png" alt="Membership page redesign" />
+        <span class="annotation">Membership with Montage: same offerings, clearer messaging, and still unmistakably JBFC</span>
+      </div>
 
-                <div class="process-step">
-                    <h3>03. Component Architecture & Variants</h3>
-                    <p>
-                        We leveraged Figma's <strong>Component Properties</strong> (Booleans, Instance Swaps, and Nested Variants) to create a flexible, maintainable library. By building a "master" component with toggleable properties, we reduced the number of detached instances and empowered designers to customize layouts.
-                    </p>
-                    <div style="background: var(--card); padding: 24px; border-radius: var(--radius); border: 1px solid var(--border);">
-                         <h4 style="margin-top: 0; color: var(--primary);">Figma Customizability</h4>
-                         <p style="font-size: 0.9rem;">Designers can insert an instance and toggle "Show Tag," swap "Description," or change "State" directly from the sidebar without detaching components.</p>
-                         <img
-                            src="jbfc/card.gif"
-                            alt="GIF showing component variants in Figma"
-                            style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border); margin-top: 16px;"
-                          />
-                    </div>
-                </div>
+      <h3>Documentation that doesn't go stale</h3>
+      <p>We built the docs on Zeroheight, which syncs directly with Figma. Token updates and new components are reflected immediately with no manual exports, no PDFs, and no outdated screenshots.</p>
 
-                <div class="process-step">
-                    <h3>04. Accessibility Validation</h3>
-                    <p>
-                        Every component was tested for <strong>keyboard accessibility</strong> and focus states. We balanced the creative aesthetic with WCAG compliance.
-                    </p>
-                    <div class="image-showcase grid grid-2">
-                        <div class="journey-item">
-                          <img
-                            src="jbfc/accessibility1.png"
-                            alt="Accessibility check for color contrast"
-                          />
-                          <p class="image-caption">Automated contrast checking</p>
-                        </div>
-                        <div class="journey-item">
-                           <img
-                            src="jbfc/keyboard.png" 
-                            alt="Focus state documentation"
-                          />
-                          <p class="image-caption">Documented keyboard navigation with accessible color contrast built-in</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="case-img-full">
+        <img src="jbfc/documentation.png" alt="Montage docs on Zeroheight" />
+        <span class="annotation">The living documentation site contains usage guidance, do/don't examples, and embedded Figma components</span>
+      </div>
+    </section>
 
-        <section class="section section--border">
-          <div class="container">
-            <h2 class="section-title"><i class="fas fa-star" style="font-size: 0.8em; color: var(--primary); margin-right: 12px;"></i>Design Principles</h2>
-            <p class="section-text" style="margin-bottom: 40px;">
-              By building Montage, we set the foundation for a new culture at JBFC where every decision is guided by clear principles:
-            </p>
-            
-            <img 
-                src="jbfc/principles.png" 
-                alt="Design principles visual overview" 
-                class="full-width-image" 
-                style="margin-top: 40px; border-radius: var(--radius);" 
-            />
-            <div class="magic-links" style="justify-content: center; margin-top: 32px; border-top: 1px solid var(--border); padding-top: 24px;">
-                <a href="https://www.figma.com/community/file/1570117395919502167/montage-ui-kit-jacob-burns-film-center" target="_blank" class="magic-button">
-                  View Community UI Kit <i class="fas fa-external-link-alt" style="margin-left: 8px;"></i>
-                </a>
-            </div>
-          </div>
-        </section>
+    <!-- PROCESS -->
+    <section class="case-section" id="process">
+      <span class="section-label">Process</span>
+      <h2>We started with the messy stuff and it made everything else better.</h2>
+      <p>Good design systems don't start with pretty components. They start with a thorough audit of what currently exists.</p>
 
-        <section class="section section--border">
-            <div class="container">
-              <h2 class="section-title"><i class="fas fa-book" style="font-size: 0.8em; color: var(--primary); margin-right: 12px;"></i>Documentation</h2>
-              <p class="section-text">
-                We used <strong>Zeroheight</strong> to create a centralized "source of truth." This wasn't just a static PDF, but a living website that synced directly with Figma and our design tokens.
-              </p>
-
-              <div class="block" style="background: var(--card); padding: 32px; border-radius: var(--radius); margin-top: 32px; border: 1px solid var(--border);">
-                  <div style="display: flex; align-items: center; margin-bottom: 24px;">
-                      <h3 style="margin: 0;">The Montage Knowledge Base</h3>
-                  </div>
-                  <img src="jbfc/documentation.png" class="full-width-image" style="border-radius: var(--radius); margin-bottom: 40px;" alt="Montage Documentation Home">
-                  
-                  <div class="doc-section">
-                      <h4 style="color: var(--primary);">01. Getting Started</h4>
-                      <p>Onboarding guides for new designers and developers, including "How to use the Figma Library" and installation steps.</p>
-                      <div class="image-showcase grid grid-2">
-                          <div class="journey-item">
-                              <img src="jbfc/accessibilitysizing.png" alt="Getting Started Guide">
-                            <p class="image-caption">Accessibility Guidelines & Best Practices</p>
-                          </div>
-                          <div class="journey-item">
-                              <img src="jbfc/resources.png" alt="Installation Guide">
-                              <p class="image-caption">Resources & Tools</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="doc-section">
-                      <h4 style="color: var(--primary);">02. Foundations</h4>
-                      <p>Core visual elements including Color Semantics, Typography scales, Spacing, and Grid systems.</p>
-                      <div class="image-showcase grid grid-2">
-                          <div class="journey-item">
-                              <img src="jbfc/icons.png" alt="Icons">
-                              <p class="image-caption">Iconography categorized into sets </p>
-                          </div>
-                          <div class="journey-item">
-                              <img src="jbfc/typography.png" alt="Typography Scale">
-                              <p class="image-caption">Typography Scale (body text and headers)</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="doc-section">
-                      <h4 style="color: var(--primary);">03. Components</h4>
-                      <p>Usage and anatomy for all components with "Do's and Don'ts" for best practice.</p>
-                      <div class="image-showcase grid grid-2">
-                          <div class="journey-item">
-                              <img src="jbfc/components.png" alt="Components Overview">
-                              <p class="image-caption">Component Library Overview</p>
-                          </div>
-                          <div class="journey-item">
-                              <img src="jbfc/banner.png" alt="Banner Component Anatomy">
-                              <p class="image-caption">Banner Component Anatomy</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="doc-section">
-                      <h4 style="color: var(--primary);">04. Support & Help</h4>
-                      <p>Contribution guidelines for the team to propose new patterns or report bugs.</p>
-                      <div class="image-showcase grid grid-2">
-                          <div class="journey-item">
-                              <img src="jbfc/contributions.png" alt="Contribution Flow">
-                              <p class="image-caption">Contribution contact information and resources</p>
-                          </div>
-                        
-                      </div>
-                  </div>
-
-                  <div class="magic-links" style="justify-content: center; margin-top: 32px; border-top: 1px solid var(--border); padding-top: 24px;">
-                      <a href="https://zeroheight.com/1ef0ba6f3/p/45330f-getting-started" target="_blank" class="magic-button">
-                        View Live Documentation <i class="fas fa-external-link-alt" style="margin-left: 8px;"></i>
-                      </a>
-                  </div>
-              </div>
-            </div>
-        </section>
-
-        <section class="section section--border">
-            <div class="container">
-                <h2 class="section-title"><i class="fas fa-video" style="font-size: 0.8em; color: var(--primary); margin-right: 12px;"></i>Pitching the System</h2>
-                <p class="section-text" style="margin-bottom: 32px;">
-                    I demonstrated the system's value by showing the real impact Montage makes. Using Montage, a landing page that used to take days could now be assembled in minutes.
-                </p>
-                
-                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card);">
-                    <img src="jbfc/draganddrop.gif" alt="Landing page demonstration using montage">
-                </div>
-                <p class="caption" style="text-align: center; margin-top: 12px;">Demo: Building the JBFC landing page in under 2 minutes.</p>
-            </div>
-        </section>
-
-        <section class="section section--border">
-          <div class="container">
-            <h2 class="section-title"><i class="fas fa-wand-magic-sparkles" style="font-size: 0.8em; color: var(--primary); margin-right: 12px;"></i>The Montage Moment</h2>
-            <p class="section-text" style="margin-bottom: 32px;">
-              The "Magic Moment" occurred when we applied the system to the core user journeys. Resulting in a Landing Page and Membership flow that felt modern but still distinctly JBFC.
-            </p>
-            <span class="caption">The redesigned Homepage: Cleaner, bolder, and more accessible:</span>
-            <img src="jbfc/beforeafter.png" alt="Homepage After Montage Implementation" class="full-width-image" style="border-radius: var(--radius);" />
-            <span class="caption">The new Membership page: streamlined, visually engaging, and fully accessible:</span>
-            <img src="jbfc/beforeafter2.png" alt="Homepage After Montage Implementation" class="full-width-image" style="border-radius: var(--radius);" />
-            
-          </div>
-          
-        </section>
-
-        <section class="section section--border">
-          <div class="container">
-            <h2 class="section-title"><i class="fas fa-chart-line" style="font-size: 0.8em; color: var(--primary); margin-right: 12px;"></i>Outcomes</h2>
-            <p class="section-text" style="margin-bottom: 32px;">
-              By user testing with designers we were able to make sure the system not only looks better but performs better.
-            </p>
-
-            <div class="stats-grid">
-               <div class="stat-card">
-                  <span class="stat-number">2x</span>
-                  <span class="stat-label">Faster Build Times</span>
-               </div>
-               <div class="stat-card">
-                  <span class="stat-number">100%</span>
-                  <span class="stat-label">Accessible (WCAG)</span>
-               </div>
-               <div class="stat-card">
-                  <span class="stat-number">1</span>
-                  <span class="stat-label">Unified Source of Truth</span>
-               </div>
-            </div>
-
-            <div class="block" style="background: var(--card); padding: 24px; border-radius: var(--radius); margin-top: 24px;">
-              
-              <p>Feedback from designers highlighted efficiency gains:</p>
-              <blockquote style="border-left: 3px solid var(--primary); padding-left: 16px; font-style: italic; margin: 16px 0;">
-                “The components are clean and intuitive and save me so much time.”
-              </blockquote>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section--border">
-          <div class="container">
-            <h2 class="section-title"><i class="fas fa-lightbulb" style="font-size: 0.8em; color: var(--primary); margin-right: 12px;"></i>Takeaways</h2>
-            <p class="section-text" style="margin-bottom: 40px;">
-              Reflecting on the 4-month journey of building Montage, my biggest learnings went beyond just Figma and CSS.
-            </p>
-
-            <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-              <div class="card">
-                <h3><i class="fas fa-puzzle-piece" style="color: var(--primary); margin-right: 8px;"></i>Systems Thinking</h3>
-                <p>I learned to shift my mindset from designing individual pages to creating scalable patterns that serve the whole ecosystem.</p>
-              </div>
-              <div class="card">
-                <h3><i class="fas fa-users" style="color: var(--primary); margin-right: 8px;"></i>Advocacy is Key</h3>
-                <p>A system is only successful if people use it. Pitching the value to stakeholders was just as important as the pixel-perfect design.</p>
-              </div>
-              <div class="card">
-                <h3><i class="fas fa-universal-access" style="color: var(--primary); margin-right: 8px;"></i>Inclusive by Default</h3>
-                <p>Adding accessibility into an existing product can be tricky. Baking it into the core components from day one made the entire platform more robust.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section--border" style="background: var(--card);">
-            <div class="container" style="text-align: center; padding: 40px 0;">
-                <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--primary); margin-bottom: 24px; display: block;"></i>
-                <h2 style="font-size: 1.8rem; max-width: 30ch; margin: 0 auto; line-height: 1.4;">
-                    "Design systems are culture change disguised as a UI kit"
-                </h2>
-                <p style="margin-top: 24px; color: var(--muted);">— Lauren LoPrete</p>
-            </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div class="sonar-wrap">
-          <div class="sonar-layer layer-1"></div>
-          <div class="sonar-layer layer-2"></div>
-          <div class="sonar-layer layer-3"></div>
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h4>UI Inventory &amp; Audit</h4>
+          <p>We dismantled the existing site into atomic parts documenting every color, type style, spacing value, and UI pattern cataloged. The inventory revealed 20+ gray values, four distinct button styles, and three navigation patterns that all behaved differently. Seeing the full picture in one view was the easiest way to understand the scope of the problem.</p>
         </div>
-        <div class="container footer-top">
-          <p>
-            <small>© <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small>
-          </p>
-          <div class="footer-links">
-            <a href="mailto:mtandon@pratt.edu">Email</a>
-            <a href="https://www.linkedin.com/in/manvi-tandon" target="_blank">LinkedIn</a>
-            <a href="https://www.instagram.com/design.manvi/" target="_blank">Instagram</a>
-          </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="jbfc/inventory.png" alt="UI inventory" />
+        <span class="annotation">The UI inventory of the current site revealed every inconsistency before we redesigned anything</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h4>Semantic Design Tokens</h4>
+          <p>Instead of "gray-4" we created <code>--color-surface-background</code>. Instead of "red" we created <code>--color-link-hover</code>. Every token maps to a meaning, not just a value and they live in Figma Variables mapped 1:1 to CSS design tokens. We structured this so design-to-dev handoff can be frictionless.</p>
         </div>
-      </footer>
+      </div>
+
+      <div class="case-img-full">
+        <img src="jbfc/colordesigntokens.png" alt="Design tokens" />
+        <span class="annotation">Semantic color tokens where every value has a role, not just a hex</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">03</span>
+        <div class="process-body">
+          <h4>Component Architecture</h4>
+          <p>We used Figma's Component Properties like Booleans, Instance Swaps, Nested Variants to build a library that's flexible without being fragile. Designers configure size, state, and content from the sidebar. No detaching or manual overrides that break on update.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="jbfc/card.gif" alt="Component variants" />
+        <span class="annotation">Toggling states and sizes entirely from the sidebar to keep customization and usage flexible</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">04</span>
+        <div class="process-body">
+          <h4>Accessibility as a Constraint, Not a Checklist</h4>
+          <p>Every component required passing contrast checks, keyboard navigation review, and focus-state testing before it could ship. We used Figma's Contrast plugin alongside manual browser testing. Accessibility was written into the component's definition not added at the end.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="jbfc/accessibility1.png" alt="Accessibility testing" />
+        <span class="annotation">Contrast ratios at every interactive state to ensure accessibility across default, hover, focus, and disabled states</span>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="case-section" id="impact">
+      <span class="section-label">Impact</span>
+      <h2>It not only looks better but it works better.</h2>
+      <p>We validated Montage with internal designer testing. The results were evident, designers were able to create faster builds, achieve full accessibility compliance, and were excited to use it.</p>
+
+      
+
+      <div class="quote-card">
+        <p>"The components are clean and intuitive and save me so much time."</p>
+        <span>— Designer feedback, internal usability testing</span>
+      </div>
+        <div class="case-img-full">
+        <img src="jbfc/banner.png" alt="Accessibility testing" />
+        <span class="annotation">Montage makes it easy to create accessible designs that scale with the site</span>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="case-section" id="reflection">
+      <span class="section-label">Reflection</span>
+      <h2>What I learned</h2>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Adoption is a design problem too.</h4>
+          <p>The hardest part wasn't building the components it was getting people to trust them. It was crucial to keep JBFC's spirit alive in the new system while also adding efficiency, consistency, and accessibility. A design system is a tool that designers and developers use, not just a collection of files.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Retrofitting accessibility is ten times harder than starting with it.</h4>
+          <p>The audit showed exactly how fast issues compound. When accessibility is a constraint from day one it makes a system easier to maintain and scale.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Think in patterns, not pages.</h4>
+          <p>The biggest mindset shift was moving from "how should this page look?" to "what pattern does this page need?" When you're designing the system itself, you start catching inconsistencies before they ever get built.</p>
+        </div>
+      </div>
+
+      <div class="quote-card" style="margin-top: 56px;">
+        <p>"Design systems are culture change disguised as a UI kit."</p>
+        <span>— Lauren LoPrete</span>
+      </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <nav class="case-nav">
+      <a href="beatdrop.html" class="case-nav-link prev">
+        <span class="nav-direction">← Previous</span>
+        <span class="nav-project">BeatDrop</span>
+      </a>
+      <a href="keralamuseum.html" class="case-nav-link next">
+        <span class="nav-direction">Next →</span>
+        <span class="nav-project">Kerala Museum</span>
+      </a>
+    </nav>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer case-footer">
+    <div class="footer-main">
+      <h2>Let's Collaborate</h2>
+      <a href="/cdn-cgi/l/email-protection#1d70697c737972735d6d6f7c696933787968" class="footer-cta">Get in touch</a>
     </div>
+    <div class="footer-cols">
+      <div class="footer-col footer-col-nav">
+        <span class="label">( Navigate )</span>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#projects">Archive</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">( Connect )</span>
+        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manvi Tandon</p>
+    </div>
+  </footer>
 
-    <script>
-      // Year
-      document.getElementById("year").textContent = new Date().getFullYear();
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.case-section[id], .case-hero[id]');
+      const navLinks = document.querySelectorAll('.sidenav-link');
 
-      // Theme toggle
-      const themeSwitch = document.getElementById("theme-switch");
-      const logo = document.getElementById("logo");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
 
-      themeSwitch.addEventListener("change", () => {
-        if (themeSwitch.checked) {
-          logo.src = "assets/logolight.png";
-        } else {
-          logo.src = "assets/logodark.png";
-        }
-      });
-
-      // Hamburger menu
-      const hamburger = document.querySelector(".hamburger");
-      const mobileNav = document.querySelector(".mobile-nav");
-
-      hamburger.addEventListener("click", () => {
-        const expanded = hamburger.getAttribute("aria-expanded") === "true" || false;
-        hamburger.setAttribute("aria-expanded", !expanded);
-        mobileNav.classList.toggle("open");
-      });
-    </script>
-  </body>
+      sections.forEach(s => { if (s.id) observer.observe(s); });
+    });
+  </script>
+</body>
 </html>

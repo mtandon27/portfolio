@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT for ADHD — Manvi Tandon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Manvi Tandon</span>
+    </a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Archive</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">&#10005;</button>
+    <a href="index.html#work" class="mobile-link">Work</a>
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="index.html#projects" class="mobile-link">Archive</a>
+    <div class="mobile-menu-bottom">
+      <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+      <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+    </div>
+  </div>
+
+  <aside class="case-sidenav" id="caseSidenav">
+    <a href="#overview"   class="sidenav-link active">Overview</a>
+    <a href="#problem"    class="sidenav-link">Problem</a>
+    <a href="#research"   class="sidenav-link">Research</a>
+    <a href="#solution"   class="sidenav-link">Solutions</a>
+    <a href="#limits"     class="sidenav-link">Limits</a>
+    <a href="#reflection" class="sidenav-link">Reflection</a>
+  </aside>
+
+  <main class="case-study">
+
+    <a href="index.html#projects" class="back-link">← Back</a>
+
+    <!-- HERO -->
+    <header class="case-hero" id="overview">
+      <div class="case-logo">
+        <img src="chatgpt/chatgptlogo.png" alt="ChatGPT" class="client-logo" />
+      </div>
+      <span class="case-eyebrow">Digital Accessibility &bull; Concept Design</span>
+      <h1 class="case-title">Re-designing ChatGPT for neurodivergent users.</h1>
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <p>UX Researcher<br/>&amp; Designer</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Partner</span>
+          <p>Aayushi Bharadwaj</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <p>Digital Accessibility</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tools</span>
+          <p>Prototyping<br/>Research<br/>AI Interfaces</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="case-img-full">
+      <img src="chatgpt/chatgptcover.gif" alt="ChatGPT ADHD redesign" />
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="case-section" id="overview">
+      <span class="section-label">Overview</span>
+      <h2>ChatGPT is becoming essential infrastructure. But it wasn't designed for everyone.</h2>
+      <p>LLMs are no longer just tools they're embedded in how people work, learn, and manage daily life. For neurotypical users, that's a productivity boost. For users with ADHD, the same interface can create more friction than it resolves.</p>
+      <p>This project asked a simple question: is ChatGPT actually accessible for neurodivergent users? We researched the barriers, audited the interface, and proposed four feature redesigns grounded in WCAG guidelines and real user experience research.</p>
+
+      <div class="outcome-strip">
+        <div class="outcome-item">
+          <span class="outcome-num">4</span>
+          <span class="outcome-label">Barriers identified</span>
+        </div>
+        <div class="outcome-item">
+          <span class="outcome-num">4</span>
+          <span class="outcome-label">Design solutions</span>
+        </div>
+        <div class="outcome-item">
+          <span class="outcome-num">8</span>
+          <span class="outcome-label">WCAG criteria addressed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="case-section" id="problem">
+      <span class="section-label">Problem</span>
+      <h2>ADHD users rely heavily on AI and face the most friction using it.</h2>
+      <p>People with ADHD use ChatGPT specifically to compensate for executive function challenges like breaking down tasks, maintaining focus, and drafting text when words won't come. But the interface was never designed with them in mind.</p>
+
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h4>Cognitive load gap</h4>
+          <p>Neurotypical users get productivity gains. ADHD users expend more effort to achieve the same outcome, the tool that's meant to help adds friction instead.</p>
+        </div>
+        <div class="approach-item">
+          <h4>Two-tiered experience</h4>
+          <p>As AI becomes embedded in education and work, this gap compounds. Missing these accommodations isn't a minor inconvenience it's a structural disadvantage.</p>
+        </div>
+        <div class="approach-item">
+          <h4>No neurodivergent lens</h4>
+          <p>ChatGPT's interface was designed around neurotypical interaction patterns. There's no scaffolding, no output control, and no context anchoring for users who need it.</p>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <p>ChatGPT treats my ADHD like a problem to fix, not something to recognize and work through.</p>
+        <span>— Glazko et al., 2025</span>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="case-section" id="research">
+      <span class="section-label">Research</span>
+      <h2>Mixed-method research: academic studies, Reddit communities, and a direct interface audit.</h2>
+      <p>We didn't start with assumptions. We triangulated across three sources to understand both what research had documented and what users were actually experiencing in the moment.</p>
+
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h4>Academic literature</h4>
+          <p>Peer-reviewed studies on neurodivergent AI use which gave us systematic evidence of the barriers ADHD users face. These weren't one-off complaints, they were consistent, documented patterns.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h4>Reddit community posts</h4>
+          <p>Subreddits like r/Neurodiversity gave us the emotional anchoring that academic papers miss. Real users describing the frustration in their own words, in real time.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">03</span>
+        <div class="process-body">
+          <h4>ChatGPT interaction audit</h4>
+          <p>We ran through ChatGPT ourselves using three ADHD-relevant scenarios: drafting a professional email, preparing for an interview, and understanding medication risks. Every friction point was documented against the user quotes from our research.</p>
+        </div>
+      </div>
+
+      <h3>Four barriers surfaced consistently across every source.</h3>
+
+      <ul class="narrative-list">
+        <li><strong>Difficulty articulating prompts.</strong> The blank text box is pure cognitive load. "The words exist, but my brain won't pull them front and center." (Glazko et al., 2025)</li>
+        <li><strong>Overwhelming output.</strong> Walls of text with no verbosity control. The response might technically answer the question but deliver it in a format that guarantees abandonment.</li>
+        <li><strong>Verification and trust burden.</strong> No confidence indicators, no source transparency. For high-stakes queries (medical, legal), this is not a minor UX problem.</li>
+        <li><strong>Context loss.</strong> Long conversations drift. There's no goal anchor, no conversation map, no way to know what the model is "remembering" so users fall into rabbit holes and lose the thread entirely.</li>
+      </ul>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="case-section" id="solution">
+      <span class="section-label">Solutions</span>
+      <h2>Four feature redesigns each mapped directly to a documented barrier.</h2>
+      <p>Every design decision traces back to a specific user quote, a WCAG criterion, and a pattern from our research. Nothing was added speculatively.</p>
+
+      <!-- Solution 1 -->
+      <div class="key-insight">
+        <span class="insight-label">Solution 01 — Prompt Builder</span>
+        <p>Addresses: <strong>difficulty articulating prompts</strong></p><br>
+        <div class="case-img-full">
+      <img src="chatgpt/prompt.gif" alt="ChatGPT ADHD redesign" />
+    </div><br>
+      </div>
+      <br>
+      <p>A modular prompt-building interface that structures the request into four cards: Goal, Context, Tone, Format. Only Goal is required and the rest is optional. Users can switch between guided and free-form mode at any time, and save templates for recurring tasks.</p>
+      <p>The blank input box is one of the highest-friction moments in the current interface. This replaces the "ask me anything" void with scaffolding that meets users where their words aren't.</p>
+      <p><strong>WCAG criteria:</strong> 3.3.5 Help (reduces cognitive effort to produce a clear prompt) and 3.3.3 Error Suggestion (prevents input problems before they occur).</p>
+
+      <!-- Solution 2 -->
+      <div class="key-insight">
+        <span class="insight-label">Solution 02 — Output Mode</span>
+        <p>Addresses: <strong>information overload</strong></p><br>
+        <div class="case-img-full">
+      <img src="chatgpt/output.gif" alt="ChatGPT ADHD redesign" />
+    </div><br>
+      </div>
+      <br>
+      <p>A persistent output settings panel that gives users control over response length (Brief / Standard / Detailed) and format. Every response begins with a TL;DR summary. Content is organized into collapsible section blocks which is closed by default and opened on demand.</p>
+
+      <div class="quote-card">
+        <p>[ChatGPT is] too much or not enough information…</p>
+        <span>— Atcheson et al., 2025</span>
+      </div>
+
+      <p>The non-deterministic nature of LLMs means output length is always unpredictable. Output Mode gives users a way to set expectations and reduce the cognitive cost of receiving and processing responses.</p>
+      <p><strong>WCAG criteria:</strong> 2.2.2 Pause/Stop/Hide and 3.1.5 Reading Level.</p>
+
+      <!-- Solution 3 -->
+      <div class="key-insight">
+        <span class="insight-label">Solution 03 — Verification &amp; Confidence Layer</span>
+        <p>Addresses: <strong>trust and accuracy burden</strong></p><br>
+        <div class="case-img-full">
+      <img src="chatgpt/verify.gif" alt="ChatGPT ADHD redesign" />
+    </div><br>
+      </div>
+      <br>
+      <p>Color coded confidence badges on each response section: High (verified sources), Medium (general consensus), Lower (individual variation), Caution (consult a professional). Sources are linked inline. High-stakes topics (medical, legal) trigger an explicit disclaimer before the response loads.</p>
+
+      <div class="quote-card">
+        <p>If I don't have the energy to validate, I could make myself look like a clown.</p>
+        <span>— Glazko et al., 2025</span>
+      </div>
+
+      <p>ADHD users reported that the verification burden was one of the most exhausting parts of using ChatGPT. This makes source reliability visible and contextual not something users have to figure out themselves after the fact.</p>
+      <p><strong>WCAG criteria:</strong> 1.3.3 Sensory Characteristics (text + colour, not colour alone) and 3.3.5 Help.</p>
+
+      <!-- Solution 4 -->
+      <div class="key-insight">
+        <span class="insight-label">Solution 04 — Context Panel</span>
+        <p>Addresses: <strong>context loss and rabbit holes</strong></p><br>
+        <div class="case-img-full">
+      <img src="chatgpt/chatgpt.gif" alt="ChatGPT ADHD redesign" />
+    </div><br>
+      </div>
+      <br>
+      <p>A persistent right-side panel that tracks: the original goal, current focus, key decisions made during the conversation, a numbered conversation flow with quick-jump links, and an editable "What I'm Remembering" section exposing the model's context. Users can edit what the model holds in memory to redirect the conversation.</p>
+
+      <div class="quote-card">
+        <p>It sends me down another rabbit hole…</p>
+        <span>— Glazko et al., 2025</span>
+      </div>
+
+      <p>Long conversations drift and for ADHD users, losing the thread isn't a minor annoyance, it's the end of the session. The Context Panel makes the conversation's structure visible and navigable at all times.</p>
+      <p><strong>WCAG criteria:</strong> 2.4.5 Multiple Ways (additional navigation methods) and 3.3.2 Labels or Instructions.</p>
+
+      <div class="cta-buttons">
+        <a href="https://www.figma.com/proto/feE1VRqXVSoVuA4ehKSXsO/Wireframes?node-id=86-1417&t=8xoqF61bSf65wQZP-1&scaling=scale-down&content-scaling=fixed&page-id=5%3A37&starting-point-node-id=86%3A1417" target="_blank" class="cta-btn">View Prototype in Figma →</a>
+      </div>
+    </section>
+
+    <!-- LIMITS -->
+    <section class="case-section" id="limits">
+      <span class="section-label">Limitations</span>
+      <h2>Three tensions we couldn't fully resolve.</h2>
+
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h4>Patronizing by design</h4>
+          <p>Features meant to support can feel condescending. Confidence badges that simplify output risk being read as "dumbed down." Opt-in design forces users to self-identify publicly. Default-on design assumes everyone wants these features. Neither is right.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h4>Technical feasibility</h4>
+          <p>Real-time context anchoring and granular verbosity controls would require significant changes to how LLMs process and present information. Some of what we designed assumes backend capabilities that don't currently exist.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">03</span>
+        <div class="process-body">
+          <h4>Universal design vs. targeted accommodations</h4>
+          <p>Our proposal: make all features universally available with customizable intensity rather than building an "ADHD mode" toggle. Targeted features risk stigma. Universal features risk invisibility. There's no clean answer but universality felt more realistic.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="case-section" id="reflection">
+      <span class="section-label">Reflection</span>
+      <h2>What I learned</h2>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>The blank text box is a design decision, not a neutral starting point.</h4>
+          <p>"Ask me anything" is a design choice that assumes users arrive knowing what they want to say. For ADHD users and many others that assumption creates immediate friction. Scaffolding isn't hand-holding, it's removing an unnecessary barrier.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Accessibility research needs emotional context, not just clinical data.</h4>
+          <p>The Reddit posts told us things that peer-reviewed papers couldn't like the frustration, the embarrassment, the way users described giving up in their own words. Mixed-method research isn't just more rigorous. It's more honest.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Designing for edge cases usually improves the default experience.</h4>
+          <p>TL;DR summaries, collapsible output, confidence indicators, and conversation structure are features that are not exclusively useful for ADHD users. Every person benefits from less cognitive load. Accessible design is just good design with the volume turned up.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nav -->
+    <nav class="case-nav">
+      <a href="sva.html" class="case-nav-link prev">
+        <span class="nav-direction">← Previous</span>
+        <span class="nav-project">SVA Eye-Tracking</span>
+      </a>
+      <a href="spicelife.html" class="case-nav-link next">
+        <span class="nav-direction">Next →</span>
+        <span class="nav-project">Spice Life</span>
+      </a>
+    </nav>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer case-footer">
+    <div class="footer-main">
+      <h2>Let's Collaborate</h2>
+      <a href="mailto:mtandon@pratt.edu" class="footer-cta">Get in touch</a>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col footer-col-nav">
+        <span class="label">( Navigate )</span>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#projects">Archive</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">( Connect )</span>
+        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manvi Tandon. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.case-section[id], .case-hero[id]');
+      const navLinks = document.querySelectorAll('.sidenav-link');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+          }
+        });
+      }, { rootMargin: '-20% 0px -65% 0px' });
+      sections.forEach(s => { if (s.id) observer.observe(s); });
+    });
+  </script>
+</body>
+</html>

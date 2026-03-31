@@ -1,474 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MathWorks Feature Modeling - Manvi Tandon</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-     <link rel="stylesheet" href="css/global.css" />
-     <link rel="stylesheet" href="css/details.css" />
-     <link rel="icon" href="assets/mt.png" type="image/png"> 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathWorks — Manvi Tandon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+</head>
 
-  <body>
-   <div class="site">
-      <!--Global Navigation Header-->
-      <header class="site-header" role="banner">
-        <div class="container header-inner">
-          <div class="brand-group">
-            <a href="index.html">
-              <img src="assets/logodark.png" alt="Logo" class="logo" id="logo" />
-            </a>
-          </div>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Manvi Tandon</span>
+    </a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Archive</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-          <div class="header-right">
-            <div class="theme-toggle" data-tooltip="Switch to darker theme">
-              <input
-                id="theme-switch"
-                class="theme-switch"
-                type="checkbox"
-                aria-label="Toggle color theme"
-              />
-              </div>
+  <!-- Side Navigation -->
+  <aside class="case-sidenav" id="caseSidenav">
+    <a href="#overview"   class="sidenav-link active">Overview</a>
+    <a href="#problem"    class="sidenav-link">Problem</a>
+    <a href="#users"      class="sidenav-link">Users</a>
+    <a href="#process"    class="sidenav-link">Process</a>
+    <a href="#solution"   class="sidenav-link">Solution</a>
+    <a href="#impact"     class="sidenav-link">Impact</a>
+    <a href="#reflection" class="sidenav-link">Reflection</a>
+  </aside>
 
-            <button
-              class="hamburger"
-              aria-label="Menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+  <main class="case-study">
+    <a href="index.html#work" class="back-link">← Back</a>
 
-            <nav class="nav desktop-nav" aria-label="Primary">
-              <a href="work.html">Work</a>
-              <a href="about.html">About</a>
-              <a href="blog.html">Blog</a>
-            </nav>
-          </div>
+    <!-- HERO -->
+    <header class="case-hero" id="overview">
+      <div class="case-logo">
+        <img src="mathworks/logo.png" alt="MathWorks" class="client-logo" />
+      </div>
+      <span class="case-eyebrow">MathWorks &bull; Enterprise UX</span>
+      <h1 class="case-title">Designing 3D modeling tools for engineers at Bosch, Hyundai, and Cummins.</h1>
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <p>Senior UX Designer</p>
         </div>
-
-        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
-          <a href="work.html">Work</a>
-          <a href="about.html">About</a>
-          <a href="blog.html">Blog</a>
-        </nav>
-      </header>
-
-    <main>
-      <!-- HERO SECTION -->
-      <section class="hero section--large">
-      <div class="hero-content grid grid-2">
-        <!-- Left column: text -->
-        <div class="hero-text">
-          <nav class="breadcrumb">
-            <a href="work.html">← Back to Work</a>
-          </nav>
-          <h1 class="hero-title">Feature Modeling Apps</h1>
-          <p class="hero-subtitle">
-            0-1 design of Feature Modeling applications to enhance system modeling for engineers using MATLAB and Simulink.
-          </p>
-          <div class="hero-meta grid grid-4" style="--gap: 24px;">
-            <div class="meta-item">
-              <h4>Client</h4>
-              <a href="https://www.mathworks.com/products/simulink.html" target="_blank">
-                <p class="project-link">MathWorks - Simulink</p>
-              </a>
-            </div>
-            <div class="meta-item">
-              <h4>Timeline</h4>
-              <p>May - Aug 2023</p>
-            </div>
-            <div class="meta-item">
-              <h4>Role</h4>
-              <p>Senior UX Designer</p>
-            </div>
-            <div class="meta-item">
-              <h4>Team</h4>
-              <p>1 UX researcher & engineers</p>
-            </div>
-          </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <p>May 2023 – Aug 2024</p>
         </div>
-
-        <!-- Right column: cover image -->
-        <div class="hero-image">
-          <img src="mathworks/hero.png" alt="Feature Modeling Dashboard" />
+        <div class="meta-item">
+          <span class="meta-label">Team</span>
+          <p>1 UX Researcher<br/>&amp; Engineers</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Skills</span>
+          <p>Enterprise UX<br/>Prototyping<br/>User Interviews</p>
         </div>
       </div>
-      </section>
+    </header>
 
-      <!-- OVERVIEW -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Project Overview</h2>
-            <div class="grid grid-2" style="--gap: 60px;">
-              <div>
-                <p class="section-text">
-                    MathWorks' Simulink is a leading platform for system modeling and simulation. However, users often struggle with selecting relevant features from large datasets, leading to suboptimal model performance. 
-                    This project aimed to design intuitive feature modeling applications that streamline the feature selection process, enhance model accuracy, and improve user experience for engineers and developers.
-                </p>
-                <div class="quote">
-                  <p class="quote-text">
-                    "The goal is to simplify feature selection, making it more intuitive and efficient for users to build accurate models."
-                  </p>
-                  <p class="quote-author">— Project Goal</p>
-                </div>
-              </div>
-              <div>
-                <h3 style="font-size: 1.25rem; color: var(--accent);">
-                    Key Metrics
-                </h3>
-                <div class="stats-grid">
-                  <div class="stat-item">
-                    <div class="stat-number">
-                        100%
-                    </div>
-                    <div class="stat-label">
-                        User Acquisition
-                    </div>
-                  </div>
-                </div>
-                <p class="image-caption">
-                    User research indicated a 100% interest in improved feature selection tools among interviewed 
-                    engineers and key customers like Hyundai and Bosch.
-                </p>
-              </div>
-            </div>
-          </div>
+    <div class="case-img-full">
+      <img src="mathworks/hero.png" alt="Feature Modeling App interface" />
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="case-section" id="overview">
+      <span class="section-label">Overview</span>
+      <h2>How might we make feature modeling intuitive for engineers who live in MATLAB all day?</h2>
+      <p>MathWorks' Simulink is one of the leading platforms for system modeling and simulation. Engineers at automotive, aerospace, and industrial companies use it to build and test complex systems.</p>
+      <p>As Senior UX Designer, I led the 0-to-1 design of a new class of Feature Modeling applications inside Simulink. The goal was to let engineers define and manage product lines (collections of possible features, parameters, assets, and constraints).</p>
+
+
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="case-section" id="problem">
+      <span class="section-label">Problem</span>
+      <h2>The existing tools were built for experts. Everyone else was drowning.</h2>
+      <p>Engineers at Bosch, Hyundai, and Cummins were doing something genuinely hard: managing complex product lines with hundreds of features, parameters, and interdependencies. The existing UML and modeling tools in the market made that harder due to their complexity and lack of customization. <br> <br>Current software pain points include:</p>
+
+      <ul class="narrative-list">
+        <li><strong>Cluttered interfaces</strong> where data was hard to read and even harder to act on. Engineers spent more time deciphering the UI than making engineering decisions.</li>
+        <li><strong>Rigid workflows</strong> that assumed a single "correct" process. Real engineering is iterative and nonlinear the current tools did not account for that.</li>
+        <li><strong>No customization.</strong> Different teams at the same company had fundamentally different needs, but had no way to adapt the tools to fit them.</li>
+        <li><strong>Steep learning curves.</strong> Onboarding a new engineer to the existing workflows required manual review of documentation.</li>
+      </ul>
+
+      <div class="key-insight">
+        <span class="insight-label">The core question</span>
+        <p>These are highly technical users with deep domain expertise. The design challenge wasn't to dumb things down it was to remove the friction that was getting between them and their actual work. A cluttered UI doesn't make you smarter, it just makes you slower.</p>
+      </div>
+    </section>
+
+    <!-- USERS -->
+    <section class="case-section" id="users">
+      <span class="section-label">Users</span>
+      <h2>Systems engineers who build cars, aircraft, and industrial machinery.</h2>
+      <p>Before designing anything, I needed to understand how these engineers actually worked not how the product team imagined they worked. I ran user interviews and contextual inquiries with engineers at key MathWorks customers to map real workflows and capture the gaps between what the tools offered and what people actually needed.</p>
+
+      <div class="case-img-full">
+        <img src="mathworks/users.png" alt="User personas and workflow mapping" />
+        <span class="annotation">User personas revealed systems engineers at automotive companies with fundamentally different modeling needs</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="mathworks/matrix.png" alt="Research synthesis matrix" />
+        <span class="annotation">Research synthesis included mapping pain points, workflow patterns, and opportunity areas across user segments</span>
+      </div>
+
+      <p>Every interview surfaced the same underlying frustration: engineers knew exactly what they needed to accomplish, but the tools kept getting in the way. The research validated the opportunity clearly, 100% of interviewed engineers wanted better feature selection tools.</p>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="case-section" id="process">
+      <span class="section-label">Process</span>
+      <h2>Cross-functional workshops, iterative prototypes, and one surprising A/B test result.</h2>
+      <p>This was a 0-to-1 project, which meant there was no existing design to iterate on and no established patterns to follow. I started with structured discovery and stayed close to engineers throughout the entire process.</p>
+
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h4>Discovery &amp; Kickoff</h4>
+          <p>I ran a kickoff session with PMs, engineers, and key stakeholders to align on scope and opportunity space before any design work began. Getting everyone's mental models into the open early saved us from painful misalignment later.</p>
         </div>
-      </section>
+      </div>
 
-      <!-- FINAL PROTOTYPE -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Prototype & Testing</h2>
-            <p class="section-text">
-              I partnered with engineers to build interactive prototypes to visualize and test feature modeling concepts. 
-              The prototypes allowed users to explore feature selection, model performance, and simulation results in an intuitive interface.
-            </p>
-
-            <div class="grid grid-2" style="--gap: 40px; margin: 40px 0;">
-              <div>
-                <div class="image-item">
-                  <img src="mathworks/featureapp.png" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-                  <div class="image-caption">
-                    Feature Modeling App Interface mid-fidelity version for iterative testing.
-                    <br><br>
-                  </div>
-                </div>
-              </div>
-              <div >
-                <div>
-                  <img src="mathworks/app.gif" style="max-width: 100%; max-height: 50%; object-fit: contain; border-color: black; border: 2px;" />
-                  <div class="image-caption">
-                    Interactive prototype demonstrating feature selection and model evaluation workflow.
-                    <br><br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h4>Cross-Functional Sketching Workshops</h4>
+          <p>I facilitated sketching sessions in Miro with engineers, PMs, and domain experts using dot-voting and affinity mapping to converge on feature priorities. Getting engineers (not just designers) sketching interfaces surfaced constraints and opportunities that wouldn't have come up any other way.</p>
         </div>
-      </section>
+      </div>
 
-       <!-- CHALLENGE -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Challenge</h2>
-            <p class="section-text">
-              Engineers at organizations like Bosch, Hyundai, and Cummins struggled with existing UML and modeling tools that were cluttered, rigid, and required deep expertise. 
-              They needed a way to define and maintain “product lines”—collections of possible features, parameters, assets, and constraints—without losing control or drowning in complexity.  
-            </p>
-            <h3>Current Pain Points</h3>
-            <ul class="insights-list">
-              <li>Cluttered interfaces made data hard to interpret</li>
-              <li>Rigid workflows slowed engineering iteration</li>
-              <li>Limited customization restricted efficiency</li>
-              <li>Steep learning curves demanded extensive documentation</li>
-            </ul>
-          </div>
+      <div class="case-img-full">
+        <img src="mathworks/sketching.png" alt="Cross-functional sketching workshop" />
+        <span class="annotation">Miro sketching workshop of engineers and designers working side-by-side to map feature priorities and interface concepts</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">03</span>
+        <div class="process-body">
+          <h4>Iterative Design &amp; Engineering Collaboration</h4>
+          <p>I reviewed designs iteratively with PMs and engineers throughout development. This wasn't a handoff it was a continuous back-and-forth. We refined the toolstrip navigation, multi-panel workspace layout, customizable catalogs, and hierarchical data views across multiple rounds before anything was considered stable.</p>
         </div>
-      </section>
+      </div>
 
-      <!-- TOOLS USED -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Tools & Methods</h2>
-            <div class="grid grid-6" style="--gap: 24px;">
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">💻</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">MATLAB/Simulink</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">📊</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">Interviews</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">🔬</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">Data Analysis</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">📈</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">A/B Testing</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">🧪</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">Iteration</p>
-              </div>
-              <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center;">
-                <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
-                <p style="font-size: 14px; font-weight: 500; margin: 0;">Validation</p>
-              </div>
-            </div>
-          </div>
+      <div class="case-img-full">
+        <img src="mathworks/iterations.png" alt="Design iterations" />
+        <span class="annotation">Iterative design reviews to tailor the toolstrip navigation, workspace layouts, and data hierarchy</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">04</span>
+        <div class="process-body">
+          <h4>A/B Testing: Minimalist vs. Data-Rich</h4>
+          <p>We ran A/B tests comparing a minimalist UI approach against a data-rich interface. The result was clear and somewhat counterintuitive: engineers overwhelmingly preferred the data-rich version. These users wanted more information visible at once, the minimalist approach felt like it was hiding things they needed. We also tested different labeling strategies; clearer, more explicit labels won every time.</p>
         </div>
-      </section>
+      </div>
 
-       <!-- KEY USERS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Key Users</h2>
-            <p class="section-text">
-                Primary users included systems engineers and developers at companies that build complex machinery like cars. 
-                They required efficient tools to manage complex feature sets and constraints while maintaining flexibility for custom workflows.
-            </p>
-             <img src="mathworks/users.png" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+      <div class="case-img-full">
+        <img src="mathworks/validation.png" alt="A/B testing and validation" />
+        <span class="annotation">A/B test results refelcted in refined user flows; data-rich interfaces outperformed minimalist ones for this user group; explicit labels reduced errors significantly</span>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="case-section" id="solution">
+      <span class="section-label">Solution</span>
+      <h2>Feature Modeling Apps: a workspace for managing product lines in Simulink.</h2>
+      <p>The final design is a multi-panel workspace with a structured toolstrip, customizable catalogs, and hierarchical data views giving engineers visibility and control without overwhelming them. Every component reflects something a user asked for directly.</p>
+
+      <div class="case-img-full">
+        <img src="mathworks/featureapp.png" alt="Feature Modeling App interface" />
+        <span class="annotation">Feature Modeling App landing page includes toolstrip navigation, multi-panel workspace, customizable catalog on the left, and hierarchical data view on the right</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="mathworks/app.gif" alt="Interactive prototype walkthrough" />
+        <span class="annotation">Prototype walkthrough of feature selection workflow, model configuration, and constraint management in a single workflow</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="mathworks/cover2.png" alt="Final shipped design" />
+        <span class="annotation">The shipped product deployed to key customers including Bosch, Hyundai, and Cummins</span>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="case-section" id="impact">
+      <span class="section-label">Impact</span>
+      <h2>Shipped to key customers.</h2>
+      <p>The Feature Modeling Apps shipped to MathWorks' key enterprise customers. Post-launch surveys and workflow analysis validated both the usability improvements and the efficiency gains.</p>
+
+      <div class="outcome-strip">
+        <div class="outcome-item">
+          <span class="outcome-num">95%</span>
+          <span class="outcome-label">User satisfaction rate</span>
         </div>
-      </section>
-
-       <!-- PROCESS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Design Process</h2>
-
-            <div class="grid grid-2" style="--gap: 60px; margin-bottom: 40px;">
-              <div>
-                <img src="mathworks/matrix.png" style="max-width:100%; object-fit:contain;" />
-                <h3>Discovery & Research</h3>
-                <p class="section-text">
-                  I conducted user interviews and contextual inquiries to capture real workflows and pain points. I also ran a kick-off session with PMs and developers to align project scope and opportunities.
-                </p>
-                <br><br>
-                   <div>
-                    <img src="mathworks/iterations.png" style="max-width:100%; object-fit:contain;" />
-                <h3>Design Iteration & Collaboration</h3>
-                <p class="section-text">
-                  I reviewed designs iteratively with PMs and engineers. We refined UI components such as a toolstrip navigation, multi-panel workspace, customizable catalogs, and hierarchical data views.  
-                </p>
-              </div>
-              </div>
-              <div>
-                <img src="mathworks/sketching.png" style="max-width:100%; object-fit:contain;" />
-                <h3>Sketching & Ideation</h3>
-                <p class="section-text">
-                  I facilitated cross-functional sketching workshops via Miro using dot-voting and affinity mapping to converge on feature priorities. From there, I mapped workflows, target goals, and feature maps for the app.
-                </p>
-                <br><br>
-                    <div>
-                <img src="mathworks/validation.png" style="max-width:100%; object-fit:contain;" />
-                <h3>Validation & Metrics</h3>
-                <p class="section-text">
-                  I conducted A/B testing: comparing minimalist UI vs data-rich UI, and different user workflow patterns. Engineers preferred structured, rich interfaces—and clearer labeling. Based on the feedback, I reworked the information architecture and visual hierarchy.
-                </p>
-              </div>
-              </div>
-            </div>
-          </div>
+        <div class="outcome-item">
+          <span class="outcome-num">20%</span>
+          <span class="outcome-label">Reduction in computation time</span>
         </div>
-      </section>
-
-      <!-- FINAL RESULTS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Final Results</h2>
-            <img src="mathworks/cover2.png" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-            <div class="grid grid-2" style="--gap: 60px;">
-              <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Model Accuracy</h3>
-                <div class="stats-grid">
-                  <div class="stat-item">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">User satisfaction</div>
-                  </div>
-                </div>
-                <p class="section-text">
-                    Post-launch surveys indicated a 95% satisfaction rate with the new feature modeling tools, highlighting improved usability and efficiency.
-                </p>
-              </div>
-              <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Efficiency Gains</h3>
-                <div class="stats-grid">
-                  <div class="stat-item">
-                    <div class="stat-number">20%</div>
-                    <div class="stat-label">Reduced computation time</div>
-                  </div>
-                </div>
-                <p class="section-text">
-                  Optimized feature modeling workflows led to a 20% reduction in model training and simulation times, enhancing overall workflow efficiency.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="outcome-item">
+          <span class="outcome-num">100%</span>
+          <span class="outcome-label">Engineer interest validated pre-launch</span>
         </div>
-      </section>
+      </div>
 
-      <!-- NEXT STEPS & TAKEAWAYS -->
-      <section class="section">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="section-title">Next Steps & Key Takeaways</h2>
-            <div class="grid grid-2" style="--gap: 60px;">
-              <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Implementation & Future</h3>
-                <p class="section-text">
-                  The feature modeling apps are shipped for key customers. Future plans include expanding customization options, integrating AI-driven feature recommendations, and enhancing collaboration tools for team-based modeling.
-                </p>
-              </div>
-              <div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 16px; color: var(--fg);">Key Learnings</h3>
-                <ul class="insights-list">
-                  <li>User-centered design is crucial for complex engineering tools</li>
-                  <li>Interactive prototypes help stakeholders understand model behavior</li>
-                  <li>Consistent validation ensures reliability of predictive analytics</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <p>Engineers at Bosch, Hyundai, and Cummins reported that the new tools reduced the time spent on feature selection workflows and made model configuration significantly less error-prone. The 20% reduction in computation time came directly from engineers spending less time fighting the interface and more time making good engineering decisions.</p>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="case-section" id="reflection">
+      <span class="section-label">Reflection</span>
+      <h2>What I learned</h2>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Don't design for the average user when your users are experts.</h4>
+          <p>Every instinct in UX pushes toward simplification. For most products, that's right. For expert tools, simplifying the wrong things creates friction by hiding information that power users need to see and abstracting controls that engineers want direct access to. The A/B test confirmed this: our most sophisticated users wanted more visibility, not less.</p>
         </div>
-      </section>
+      </div>
 
- <!-- Navigation -->
-<section class="project-nav">
-  <div class="container">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <a href="dsdelights.html" 
-         class="nav-link prev" 
-         data-title="D's Delights: Bold Design">← Previous Project</a>
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Get engineers sketching. It changes the conversation.</h4>
+          <p>Facilitated sketching workshops with cross-functional teams surfaced constraints and possibilities that wouldn't have appeared in any interview or design review. When an engineer draws their ideal interface, they reveal mental models you can't reach through questions alone.</p>
+        </div>
+      </div>
 
-<div class="hero-text">
-    <nav class="breadcrumb">
-      <a href="work.html">Back to Work</a>
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>0-to-1 design requires more alignment work upfront, not less.</h4>
+          <p>When there's no existing product to anchor discussions, every stakeholder has a different vision in their head. The kickoff session and early research were the most curcial part of the process. Getting alignment before the first frame was drawn meant every subsequent decision had a foundation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <nav class="case-nav">
+      <a href="dsdelights.html" class="case-nav-link prev">
+        <span class="nav-direction">← Previous</span>
+        <span class="nav-project">D's Delights</span>
+      </a>
+      <a href="keralamuseum.html" class="case-nav-link next">
+        <span class="nav-direction">Next →</span>
+        <span class="nav-project">Kerala Museum</span>
+      </a>
     </nav>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer case-footer">
+    <div class="footer-main">
+      <h2>Let's Collaborate</h2>
+      <a href="mailto:mtandon@pratt.edu" class="footer-cta">Get in touch</a>
     </div>
-
-      <a href="keralamuseum.html" 
-         class="nav-link next" 
-         data-title="Kerala Art Museum: Unbiased Stories">Next Project →</a>
+    <div class="footer-cols">
+      <div class="footer-col footer-col-nav">
+        <span class="label">( Navigate )</span>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#projects">Archive</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">( Connect )</span>
+        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+      </div>
     </div>
-  </div>
-</section>
+    <div class="footer-bottom">
+      <p>© 2025 Manvi Tandon</p>
+    </div>
+  </footer>
 
-     <!-- FOOTER -->
-      <footer class="site-footer">
-        <div class="container footer-top">
-          <p>
-           <small> © <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small>
-          </p>
-          <div class="footer-links breadcrumb">
-            <a href="mailto:mtandon@pratt.edu">Email</a>
-            <a
-              href="https://www.linkedin.com/in/manvi-tandon/"
-              target="_blank"
-              rel="noreferrer"
-              >LinkedIn</a
-            >
-            <a href="https://www.instagram.com/design.manvi/" target="_blank" rel="noreferrer"
-              >Instagram</a
-            >
-          </div>
-        </div>
-        <div class="sonar-wrap">
-          <div class="sonar-layer layer-1"></div>
-          <div class="sonar-layer layer-2"></div>
-          <div class="sonar-layer layer-3"></div>
-        </div>
-      </footer>
-  </div>
-
+  <script src="script.js"></script>
   <script>
-      // Hamburger/menu
-      const hamburger = document.querySelector(".hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
-      hamburger?.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("open");
-        hamburger.setAttribute("aria-expanded", isOpen);
-      });
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.case-section[id], .case-hero[id]');
+      const navLinks = document.querySelectorAll('.sidenav-link');
 
-      // Theme elements
-      const themeSwitch = document.getElementById("theme-switch");
-      const logo = document.getElementById("logo");
-      const heroLeft = document.getElementById("heroLeft"); // may be null on this page
-      const themeToggle = document.querySelector(".theme-toggle"); // wrapper for tooltip
-
-      // Safe update function
-      function updateImages() {
-        // determine the tooltip target (prefer the wrapper that has data-tooltip)
-        const tooltipTarget = themeToggle || themeSwitch;
-
-        if (!themeSwitch) return; // nothing to do if input missing
-
-        if (themeSwitch.checked) {
-          // Light mode
-          if (logo) logo.src = "assets/logolight.png";
-          if (heroLeft) heroLeft.src = "assets/heroleftlight.png";
-          document.body.classList.add("light");
-          document.body.classList.remove("dark");
-          localStorage.setItem("theme", "light");
-
-          if (themeToggle) {
-            themeToggle.setAttribute("data-tooltip", "Switch to darker theme");
-          } else {
-            themeSwitch.title = "Switch to darker theme";
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              }
+            });
           }
-        } else {
-          // Dark mode
-          if (logo) logo.src = "assets/logodark.png";
-          if (heroLeft) heroLeft.src = "assets/heroleftdark.png";
-          document.body.classList.add("dark");
-          document.body.classList.remove("light");
-          localStorage.setItem("theme", "dark");
+        });
+      }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
 
-          if (themeToggle) {
-            themeToggle.setAttribute("data-tooltip", "Switch to lighter theme");
-          } else {
-            themeSwitch.title = "Switch to lighter theme";
-          }
-        }
-      }
-
-      // Restore saved theme
-      const savedTheme = localStorage.getItem("theme");
-      if (themeSwitch) {
-        if (savedTheme === "light") {
-          themeSwitch.checked = true;
-        } else if (savedTheme === "dark") {
-          themeSwitch.checked = false;
-        } else {
-          // optional: set a default. keeping checkbox false => dark by default
-          themeSwitch.checked = false;
-        }
-
-        // initial update (safe)
-        updateImages();
-
-        // update when toggled
-        themeSwitch.addEventListener("change", updateImages);
-      }
-
-      // Update footer year
-      const yearEl = document.getElementById("year");
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-    </script>
+      sections.forEach(s => { if (s.id) observer.observe(s); });
+    });
+  </script>
 </body>
 </html>

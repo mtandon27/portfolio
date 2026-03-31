@@ -1,526 +1,458 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buckets - Manvi Tandon</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-     <link rel="stylesheet" href="css/global.css" />
-     <link rel="stylesheet" href="css/details.css" />
-    <link rel="icon" href="assets/mt.png" type="image/png"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buckets — Manvi Tandon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
 </head>
 
-  <body>
-   <div class="site">
-      <!--Global Navigation Header-->
-      <header class="site-header" role="banner">
-        <div class="container header-inner">
-          <!-- Left side: brand group -->
-          <div class="brand-group">
-       <a href="index.html">
-            <img src="assets/logodark.png" alt="Logo" class="logo" id="logo" />
-            </a>
-          </div>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Manvi Tandon</span>
+    </a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Archive</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-          <!-- Right side -->
-          <div class="header-right">
-            <div class="theme-toggle" data-tooltip="Switch to darker theme">
-              <input
-                id="theme-switch"
-                class="theme-switch"
-                type="checkbox"
-                aria-label="Toggle color theme"
-              />
-          </div>
-            <!-- Hamburger toggle (mobile only) -->
-            <button
-              class="hamburger"
-              aria-label="Menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+  <!-- Side Navigation -->
+  <aside class="case-sidenav" id="caseSidenav">
+    <a href="#overview"   class="sidenav-link active">Overview</a>
+    <a href="#problem"    class="sidenav-link">Problem</a>
+    <a href="#solution"   class="sidenav-link">Solution</a>
+    <a href="#research"   class="sidenav-link">Research</a>
+    <a href="#process"    class="sidenav-link">Process</a>
+    <a href="#visuals"    class="sidenav-link">Visual Identity</a>
+    <a href="#finals"     class="sidenav-link">Final Designs</a>
+    <a href="#reflection" class="sidenav-link">Reflection</a>
+  </aside>
 
-            <!-- Desktop nav -->
-            <nav class="nav desktop-nav" aria-label="Primary">
-              <a href="work.html">Work</a>
-              <a href="about.html">About</a>
-              <a href="blog.html">Blog</a>
-            </nav>
+  <main class="case-study">
+    <a href="index.html#work" class="back-link">← Back</a>
+
+    <!-- HERO -->
+    <header class="case-hero" id="overview">
+      <div class="case-logo">
+        <img src="buckets/bucket.png" alt="Buckets" class="client-logo" />
+      </div>
+      <span class="case-eyebrow">Buckets &bull; Product Design</span>
+      <h1 class="case-title">What if making friends online felt more like something you actually wanted to do?</h1>
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <p>Lead Designer<br/>&amp; Researcher</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <p>Jan – May 2025</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Team</span>
+          <p>2 Designers<br/>2 Researchers</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Skills</span>
+          <p>Product Design<br/>User Research<br/>Prototyping</p>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- OVERVIEW -->
+    <section class="case-section" id="overview">
+      <span class="section-label">Overview</span>
+      <h2>Making friends as an adult is harder than it should be. We designed a better way.</h2>
+      <p>Most friendship apps are just dating apps wearing a different hat, they emphasize creating a profile, swiping on people, and prioritize first impressions rather than second hangouts.</p>
+      <p>Buckets flips the model. Instead of browsing people, you browse <em>activities</em> actual things you've been meaning to try and waiting to find the right person to do with. The shared activity becomes the icebreaker and the friendship follows.</p>
+
+          <div class="case-img-full">
+      <img src="buckets/intro.png" alt="Buckets app overview" />
+    </div>
+
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="case-section" id="problem">
+      <span class="section-label">Problem</span>
+      <h2>There is no convenient way to build lasting friendships as an adult. Just apps that feel like the wrong tool for the job.</h2>
+      <p>We talked to young adults (18–35) in NYC who had recently moved, changed jobs, or gone through a life transition. The same two things came up in almost every conversation.</p>
+
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h4>1. Apps feel like dating apps.</h4>
+          <p>Profile first interfaces put the emphasis on appearance and self-promotion. Users feel judged before they've said a word.</p>
+        </div>
+        <div class="approach-item">
+          <h4>2. One-off meetups don't stick.</h4>
+          <p>Research on friendship formation shows that you need repeated exposure over time. Most apps optimize for a single hangout and then leave users to figure out the rest.</p>
+        </div>
+      </div>
+
+      
+
+      
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="case-section" id="solution">
+      <span class="section-label">Solution</span>
+      <h2>Buckets: activity driven friendship. Browse what you want to do, find people to do it with.</h2>
+      <p>The core flow is simple, you post something from your bucket list, or browse others' listings, and join the ones that interest you. A group chat opens automatically and after the activity, the app prompts you to plan the next one with the same people.</p>
+      
+
+      <h3>1. Create an activity, find people to try it with</h3>
+
+      <div class="flow-card">
+        <div class="flow-media-wrap">
+          <div class="flow-media gif-frame">
+            <img src="buckets/step1.gif" alt="Creating a listing" />
           </div>
+          <span class="annotation">Create a new listing from your Bucket List page</span>
+        </div>
+        <div class="flow-text">
+          <h4>Create a bucket list item</h4>
+          <p>Post an activity you've been meaning to try like a new hiking trail, a pottery class, or a new restaurant. Set a date range, group size, and when you want to meet. </p>
+        </div>
+      </div>
+<br><br>
+      <h3>2. Discover activities near you</h3>
+
+      <div class="flow-card reverse">
+        <div class="flow-media-wrap">
+          <div class="flow-media gif-frame">
+            <img src="buckets/step2.gif" alt="Exploring listings" />
+          </div>
+          <span class="annotation">Browse by category, distance, or type to find bucket list items to join</span>
+        </div>
+        <div class="flow-text">
+          <h4>Discover &amp; Join</h4>
+          <p>Browse activities near you. Filter by category, distance, or type. Each listing shows who's already going so you can get a sense of the group before requesting to join.</p>
+        </div>
+      </div>
+      <br><br>
+
+      <h3>3. Plan together, come back again</h3>
+
+      <div class="flow-card">
+        <div class="flow-media-wrap">
+          <div class="flow-media gif-frame">
+            <img src="buckets/step3.gif" alt="Chatting and planning" />
+          </div>
+          <span class="annotation">Group chat opens automatically to coordinate details, share photos, and plan the next one</span>
+        </div>
+        <div class="flow-text">
+          <h4>Chat &amp; Plan</h4>
+          <p>Once joined, a group chat opens automatically. After the activity, the app prompts you to schedule another meet up with the same people. Friendships form through repeated exposure so we built that into the product instead of leaving it to chance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="case-section" id="research">
+      <span class="section-label">Research</span>
+      <h2>11 interviews. Four patterns came up every time.</h2>
+      <p>We focused on people in transitional moments, fresh out of grad school, recently out of a long relationship, or new to a city. These are the moments when existing friend groups scatter and people have to rebuild from scratch.</p>
+
+      <div class="case-img-full">
+        <img src="buckets/research2.png" alt="User quotes" />
+        
+      </div>
+
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h4>Repetition is essential.</h4>
+          <p>Strong friendships require seeing the same people multiple times. One-off meetups almost never convert.</p>
+        </div>
+        <div class="approach-item">
+          <h4>Small groups reduce pressure.</h4>
+          <p>2–4 people felt right. One-on-one felt like a date and large groups felt like a networking event.</p>
+        </div>
+        <div class="approach-item">
+          <h4>Activities create comfort.</h4>
+          <p>Having something to do together makes first meetings less awkward. You already have a topic that isn't "so what do you do?"</p>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <p>As a young adult who values meaningful connections, I want an easy way to build strong, long-lasting friendships so that I can have an emotional support system around me.</p>
+        <span>— User goal</span>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="case-section" id="process">
+      <span class="section-label">Process</span>
+      <h2>Four iterations. Each one answered a question the last one raised.</h2>
+      <p>Early testing revealed users felt overwhelmed by too many choices upfront. We stripped onboarding back to three essentials: interests, location, and one bucket list item.</p>
+
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h4>Sketches &amp; Concept Exploration</h4>
+          <p>We explored a wide range of concepts before committing like memory scrapbooks and event-based social networks. Sketching helped us throw out ideas that sounded good until they were on paper. We landed on the shared bucket list model because it was the only concept that addressed both the "reason to meet" and the "reason to come back" problems at once.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="buckets/sketches.png" alt="Early sketches" />
+        <span class="annotation">Early sketches of directions we explored before converging on the bucket list model</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="buckets/ideation.png" alt="Concept exploration" />
+        <span class="annotation">Concept mapping of user journeys and feature priorities across different directions</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h4>Low-Fi Wireframes</h4>
+          <p>Testing basic flows for onboarding, creating listings, and exploring activities. We learned early that onboarding was asking too much with 6 screens of preferences before users could do anything. We cut it down to 3.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="buckets/lowfi.png" alt="Low-fi wireframes" />
+        <span class="annotation">Low-fi wireframes of navigation structure, onboarding flow, and activity card layout tested before any visual design was introduced</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">03</span>
+        <div class="process-body">
+          <h4>Usability Testing</h4>
+          <p>7 usability tests surfaced one critical confusion: users couldn't distinguish "join" (request to participate) from "save" (bookmark for later). They kept doing one when they meant the other. We redesigned the action hierarchy and re-tested until it was clear.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="buckets/midfi.png" alt="Mid-fidelity screens" />
+        <span class="annotation">Mid-fi after testing of simplified onboarding, clearer join/save distinction, and restructured explore flow</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="buckets/testing.png" alt="Usability testing" />
+        <span class="annotation">Usability testing where we observed participants navigate revealed the join/save confusion we couldn't have caught from interviews alone</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">04</span>
+        <div class="process-body">
+          <h4>High-Fidelity</h4>
+          <p>Final mockups brought the visual identity to life with vibrant colors that feel energetic without being overwhelming, Poppins for its friendly rounded warmth, activity cards designed to surface the image first because that's what people actually looked at.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img src="buckets/midtohigh.png" alt="Mid to high fidelity" />
+        <span class="annotation">Mid to high fidelity of profile screens where we kept the information minimal and focused on the active bucket list listings</span>
+      </div>
+    </section>
+
+    <!-- VISUAL IDENTITY -->
+    <section class="case-section" id="visuals">
+      <span class="section-label">Visual Identity</span>
+      <h2>Energetic, warm, and approachable.</h2>
+      <p>We chose sanga red and golden yellow for energy and cyan blue for calm. We used Poppins for its rounded friendliness. Every component was designed to feel inviting.</p>
+
+      <div class="case-img-full">
+        <img src="buckets/BrandGuideline2.png" alt="Color palette" />
+        <span class="annotation">Color palette of primary and secondary colors balanced for energy without overwhelming</span>
+      </div>
+      <div class="case-img-full">
+        <img src="buckets/BrandGuideline.png" alt="Typography" />
+        <span class="annotation">Typography Poppins for its friendly rounded character, scaled across heading and body sizes</span>
+      </div>
+      <div class="case-img-full">
+        <img src="buckets/components.png" alt="UI Components" />
+        <span class="annotation">Component library of activity cards, profile chips, interest tags, and action buttons built for scalability</span>
+      </div>
+    </section>
+
+    <!-- FINAL DESIGNS -->
+    <section class="case-section" id="finals">
+      <span class="section-label">Final Designs</span>
+      <h2>A complete journey from onboarding to meetup.</h2>
+      <p>Six core screens, each addressing a specific friction point from research. Click a tab to explore.</p>
+
+      <div class="screen-tabs-wrap">
+        <div class="screen-tabs" role="tablist">
+        <button class="screen-tab active" data-tab="0">Onboarding</button>
+        <button class="screen-tab" data-tab="1">Explore</button>
+        <button class="screen-tab" data-tab="2">Create</button>
+        <button class="screen-tab" data-tab="3">Manage</button>
+        <button class="screen-tab" data-tab="4">Chat</button>
+        <button class="screen-tab" data-tab="5">Profile</button>
         </div>
 
-        <!-- Mobile nav (hidden by default) -->
-        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
-          <a href="work.html">Work</a>
-          <a href="about.html">About</a>
-          <a href="blog.html">Blog</a>
-        </nav>
-      </header>
+      <div class="screen-panel active" data-panel="0">
+          <img src="buckets/homefinal.png" alt="Onboarding" />
+          <p class="screen-caption"><strong>Onboarding:</strong> For new users to get started quickly and feel welcome.</p>
+        </div>
+      <div class="screen-panel" data-panel="1">
+          <img src="buckets/explorefinal.png" alt="Explore" />
+          <p class="screen-caption"><strong>Explore:</strong> Browse bucket lists to join by category, distance, or type. Each listing shows who's already going so you can gauge the group before committing.</p>
+        </div>
+      <div class="screen-panel" data-panel="2">
+          <img src="buckets/createfinal.png" alt="Create" />
+          <p class="screen-caption"><strong>Create:</strong> List an activity and enter details like date range, group size, and where you want to meet.</p>
+        </div>
+      <div class="screen-panel" data-panel="3">
+          <img src="buckets/managefinal.png" alt="Manage" />
+          <p class="screen-caption"><strong>Manage:</strong> Track RSVPs, see joined listings, and manage your activities.</p>
+        </div>
+      <div class="screen-panel" data-panel="4">
+          <img src="buckets/chatfinal.png" alt="Chat" />
+          <p class="screen-caption"><strong>Chat:</strong> Group chat opens automatically when you join a bucket list. Activity details are pinned so everyone stays on the same page.</p>
+        </div>
+      <div class="screen-panel" data-panel="5">
+          <img src="buckets/profilefinal.png" alt="Profile" />
+          <p class="screen-caption"><strong>Profile:</strong> Your bucket list becomes your social identity. Shared experiences build your profile over time not a photo and a bio.</p>
+        </div>
+      </div>
+    </section>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section class="hero section--large">
-      <div class="hero-content grid grid-2">
-  <!-- Left column: text -->
-  <div class="hero-text">
-    <nav class="breadcrumb">
-      <a href="work.html">← Back to Work</a>
+    <!-- REFLECTION -->
+    <section class="case-section" id="reflection">
+      <span class="section-label">Reflection</span>
+      <h2>What I learned</h2>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Become your users, especially for something this personal.</h4>
+          <p>I tried existing friendship apps and experienced the awkwardness of not knowing how to start a conversation myself. That experience changed how I made decisions. You can't interview your way to empathy, at some point you have to feel it yourself.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Design for the second hangout, not the first.</h4>
+          <p>Every other friendship app was optimizing for the initial match. We kept asking: what makes someone come back? That reframe changed which features we prioritized like the post-activity prompt, the group chat persistence, the ability to plan future meetups from within the app.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>When users are confused, observe why.</h4>
+          <p>We wouldn't have caught the join/save confusion from interviews alone. Watching participants navigate the prototype in silence revealed it in under two minutes. Usability testing wasn't a validation step it was one of the generative research method we used.</p>
+        </div>
+      </div>
+
+      <div class="case-thanks">
+        <img src="buckets/ty.png" alt="Thank you" />
+      </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <nav class="case-nav">
+      <a href="beatdrop.html" class="case-nav-link prev">
+        <span class="nav-direction">← Previous</span>
+        <span class="nav-project">BeatDrop</span>
+      </a>
+      <a href="mathworks.html" class="case-nav-link next">
+        <span class="nav-direction">Next →</span>
+        <span class="nav-project">MathWorks</span>
+      </a>
     </nav>
-    
-    <h1 class="hero-title">Buckets</h1>
-    <p class="hero-subtitle">
-    A friendship making app that helps you meet people who want to do the same things.
-    </p>
-    
-    <div class="hero-meta grid grid-4" style="--gap: 24px;">
-      <div class="meta-item">
-        <h4>Timeline</h4>
-        <p>Jan - May 2025</p>
-      </div>
-      <div class="meta-item">
-        <h4>Role</h4>
-        <p>Lead UX Designer</p>
-      </div>
-      <div class="meta-item">
-        <h4>Team</h4>
-        <p>4 designers & researchers</p>
-      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-main">
+      <h2>Collaborate</h2>
+      <a href="/cdn-cgi/l/email-protection#95f8e1f4fbf1fafbd5e5e7f4e1e1bbf0f1e0" class="footer-cta">Contact me</a>
     </div>
-  </div>
-
-  <!-- Right column: cover image -->
-  <div class="hero-image">
-    <img src="buckets/bucketslogo.gif" alt="Buckets cover" />
-  </div>
-</div>
-
-      </section>
-
-        <!-- INTRO PROBLEM -->
-        <section class="section section--light">
-          <div class="container">
-            <h2 class="section-title"> Have you ever found it difficult to make friends in your area?</h2>
-            <p class="section-text">
-            </p>
-            <div class="grid grid-2">
-              <div class="image-item">
-                <img src="buckets/research1.png" alt="Buckets stat" />
-              </div>
-              <div class="image-item">
-                <img src="buckets/research2.png" alt="Buckets stat" />
-              </div>
-            </div>
-            <br>
-            <p> 
-                Our research and own experiences helped to shape our problem statement: 
-            </p>
-            <div class="quote">
-                <div class="quote-text">
-                    As a young adult who values meaningful connections, I want an easy way to build strong, long-lasting friendships so that I can have an emotional support system around me.
-                </div>
-            </div>
-             </div>
-        </section>
-
-         <!-- INTRODUCING BUCKETS -->
-        <section class="section section--light">
-          <div class="container">
-            <h2 class="section-title">Introducing Buckets</h2>
-           
-            <p class="section-text">
-              Buckets is a social app designed to help young adults form
-              meaningful friendships by turning shared bucket list items into
-              real-world experiences. Unlike traditional friendship apps that
-              often feel transactional or one-time, Buckets encourages ongoing
-              group activities where connections can grow over time.
-            </p>
-             <div >
-                <img src="buckets/intro.png" alt="App steps illustration" />
-              </div>
-
-            <div class="grid grid-3">
-              <div class="gifs">
-                <img src="buckets/step1.gif" alt="Making a new listing" />
-                <p class="image-caption">
-                   Start your Buckets journey by making a new listing for something you want to do.<br>
-                   Set details like activity, location, and time.
-                </p>
-              </div>
-              <div class="gifs">
-                <img src="buckets/step2.gif" alt="Exploring and joining activities" />
-                <p class="image-caption">Now other users can explore and request to join your listing</p>
-              </div>
-              <div class="gifs">
-                <img src="buckets/step3.gif" alt="Completing activities together" />
-              <p class="image-caption">
-              Now you can accept new friends and start planning your meet up!
-            </p>
-            </div>
-        </section>
-
-<!-- RESEARCH -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Research Insights</h2>
-    <p class="section-text">
-      To understand the challenges of making friends as an adult, we conducted
-      user interviews and synthesized findings into key themes. Our research
-      focused on young adults in New York City navigating transitional life
-      stages, where building new social connections is a high priority.
-    </p>
-
-    <!-- Target Audience -->
-    <div class="quote">
-      <h3 class="quote-text">Target Audience</h3>
-      <p class="section-text">
-        Digitally fluent young adults, ages 18–35, living in NYC. This group is
-        socially active, often moving for work or school, and values meaningful
-        friendships that provide emotional support. We chose NYC for its 
-        fast-paced culture that can feel isolating despite population density.
-      </p>
-    </div>
-
-    <!-- Interview Findings -->
-    <div class="journey-item">
-        <div class="grid grid-2">
-        <div>
-      <h3 class="section-subtitle">Interview Findings</h3>
-      <ul class="insights-list">
-        <li>Strong friendships require repetitive contact and maintenance.</li>
-        <li>Participants prefer meeting new people in small group settings.</li>
-        <li>Shared identity and interests help build trust and comfort.</li>
-        <li>Trying new activities makes first-time meetups less awkward.</li>
-        <li>Users struggle to initiate conversations without mutual context.</li>
-      </ul>
+    <div class="footer-cols">
+      <div class="footer-col footer-col-nav">
+        <span class="label">( Navigate )</span>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#projects">Archive</a>
+        <a href="index.html#about">About</a>
       </div>
-      <div>
-      <img src="buckets/quotes.png"/>
-      </div>
+      <div class="footer-col">
+        <span class="label">( Find Me )</span>
+        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
       </div>
     </div>
-  </div>
-</section>
-
-
-       <!-- DESIGN PROCESS --> 
-        <section class="section section--light"> 
-            <div class="container"> 
-                <h2 class="section-title">Design Process</h2> 
-                <p class="section-text"> 
-                    Our design journey moved from rough sketches and ideation to high-fidelity 
-                    mockups and user testing. Each step was informed by feedback from potential users. 
-                </p> 
-                <div class="grid grid-2">
-                <!-- SKETCHES --> 
-                 <div class="journey-item"> 
-                    <div class="image-item"> 
-                        <img src="buckets/sketches.png" alt="Paper sketches" /> </div> 
-                        <p>
-                            Our initial paper sketches helped us visualize user flows and brainstorm ideas, 
-                            focusing on how users could easily discover and maintain meaningful friendships. 
-                            These rough drawings guided early design decisions and highlighted opportunities.
-                            </p> 
-                            </div> 
-                <!-- CONCEPT IDEATION --> 
-                 <div class="journey-item"> 
-                    <div class="image-item"> 
-                        <img src="buckets/ideation.png" alt="Concept ideation" /> 
-                    </div>
-                     <p>
-                        We explored multiple concepts: from memory scrapbooks to duo apps, 
-                        eventually converging on the shared bucket list model.</p> 
-                    </div> 
-                <!-- LOW-FI --> 
-                 <div class="journey-item"> 
-                    <div class="image-item"> 
-                        <img src="buckets/lowfi.png" alt="Low fidelity wireframes" /> 
-                    </div> <p>
-                        Low-fidelity wireframes helped us test basic flows for onboarding, 
-                        creating a listing, and exploring activities.</p> 
-                    </div> 
-                    <!-- MID-FI --> 
-                     <div class="journey-item"> 
-                        <div class="image-item"> 
-                        <img src="buckets/midfi.png" alt="Mid fidelity screens" /> 
-                    </div> <p>
-                        Mid-fidelity screens allowed us to refine navigation, clarify group activity flows, 
-                        and iterate on the Explore experience based on user feedback.
-                    </p> 
-                    </div> 
-                    <!-- TESTING --> 
-                     <div class="journey-item"> <div class="image-item"> 
-                        <img src="buckets/testing.png" alt="Mid fidelity testing" /> 
-                    </div> <p>
-                        Through 7 usability tests, we learned users wanted clearer onboarding, 
-                        more context in Explore, and an easier way to manage requests.</p> 
-                    </div> 
-                    <!-- HIGH-FI --> 
-                     <div class="journey-item"> 
-                        <div class="image-item"> 
-                            <img src="buckets/midtohigh.png" alt="The move to high fidelity" /> 
-                        </div> <p>
-                        High-fidelity mockups brought our vision to life, showcasing polished UI, 
-                        vibrant colors, and intuitive interactions. These screens helped us validate 
-                        final design choices and communicate the app’s experience to users.
-</p> 
-                        </div> 
-                    </div> 
-                </div>
-                </section>
-
-    
-        <!-- BRANDING & VISUAL DESIGN -->
-        <section class="section section--light">
-          <div class="container">
-            <h2 class="section-title">Branding & Visual Design</h2>
-            <p class="section-text">
-              To unify Buckets’ identity across the app, we created a cohesive
-              visual system including colors, typography, reusable components,
-              and design tokens. The goal was to balance energy and
-              approachability — reflecting the excitement of trying new things
-              while remaining welcoming and accessible.
-            </p>
-
-            <!-- UI KIT -->
-            <div class="journey-item">
-              <div>
-                <img src="buckets/BrandGuideline2.png" alt="Buckets UI Kit" />
-                 <p>
-                 We defined a palette of energetic colors, playful gradients, and rounded shapes to evoke warmth and approachability. 
-                 Typography and iconography were chosen for clarity and friendliness, supporting a consistent brand experience across screens.
-              </p>
-              <br>
-                <img src="buckets/BrandGuideline.png" alt="Buckets UI Kit" />
-              </div>
-              <p>
-                UI Kit with primary colors (Sanga Red, Golden Yellow, Cyan Blue),
-                typography guidelines (Poppins), spacing rules that we transformed into reuseable design tokens in Figma.
-              </p>
-            </div>
-            <br>
-            <!-- COMPONENTS -->
-            <div class="journey-item">
-              <div class="image-item">
-                <img src="buckets/components.png" alt="Components" />
-              </div>
-              <p>
-                Reusable UI components like buttons, input fields, and cards were designed for consistency and scalability. 
-                These elements ensure a unified look and feel throughout the app, making it easy to maintain and extend the 
-                design system as new features are added.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- HIGH-FIDELITY WIREFRAMES -->
-        <section class="section section--light">
-          <div class="container">
-            <h2 class="section-title">High-Fidelity Wireframes</h2>
-            <p class="section-text">
-              Building on our research and iterative design process, we created
-              high-fidelity wireframes to validate visual decisions and prepare
-              for usability testing. These flows demonstrate how users discover,
-              join, and complete bucket list activities with friends.
-            </p>
-
-            <div class="image-showcase grid grid-2">
-              <div class="journey-item">
-                <img src="buckets/homefinal.png" alt="Hi-fi onboarding screens" />
-                <p class="image-caption">Onboarding flow with app purpose</p>
-              </div>
-              <div class="journey-item">
-                <img src="buckets/profilefinal.png" alt="Hi-fi profile page" />
-                <p class="image-caption">Minimal profile highlighting interests & joined activities</p>
-              </div>
-            </div>
-
-            <div class="image-showcase grid grid-2">
-              <div class="journey-item">
-                <img src="buckets/explorefinal.png" alt="Hi-fi explore page" />
-                <p class="image-caption">Explore page showing activity cards with interest + attendees</p>
-              </div>
-              <div class="journey-item">
-                <img src="buckets/createfinal.png" alt="Hi-fi create listing" />
-                <p class="image-caption">Creating a new bucket list activity by setting details, or using prompts for inspiration.</p>
-              </div>
-            </div>
-
-             <div class="image-showcase grid grid-2">
-              <div class="journey-item">
-                <img src="buckets/managefinal.png" alt="Hi-fi Manage listings page" />
-                <p class="image-caption">Manage your bucket list activities, view requests, and accept new friends to join your group.</p>
-              </div>
-              <div class="journey-item">
-                <img src="buckets/chatfinal.png" alt="Hi-fi chat" />
-                <p class="image-caption">Chat feature for planning meetups and staying connected with new friends.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- OUTCOMES -->
-        <section class="section section--light">
-          <div class="container">
-            <h2 class="section-title">Impact & Learnings</h2>
-            <div class="grid grid-2">
-                <div>
-                 <p class="section-text">
-              Usability testing revealed the importance of clear app purpose,
-              and easy onboarding. Meaningful connections are hard to build, even for people who are open to friendship. 
-              While friendship means different things to different people, we found that continuous in-person experiences 
-              over time are the most common path to lasting connections.
-            </p>
-                <p class="section-text">Next steps include more features to support maintaining friendships 
-                    like a shared memories feature and smart notifications to continue meeting up
-                </p>
-                <img src="buckets/ty.png" alt="graphic" />
-                </div>
-                 <div class="journey-item">
-                <img src="buckets/nextsteps.png" alt="Next Steps" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-<!-- Navigation -->
-<section class="project-nav">
-  <div class="container">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <a href="beatdrop.html" 
-         class="nav-link prev" 
-         data-title="BeatDrop: Social Listening Experience">← Previous Project</a>
-
-<div class="hero-text">
-    <nav class="breadcrumb">
-      <a href="work.html">Back to Work</a>
-    </nav>
+    <div class="footer-bottom">
+      <a href="#overview" class="back-top">Back to top ↑</a>
+      <p>© 2026 Manvi Tandon. All rights reserved.</p>
+      <span class="footer-logo">Manvi ◒ Tandon</span>
     </div>
+  </footer>
 
-      <a href="mathworks.html" 
-         class="nav-link next" 
-         data-title="MathWorks: Designing for Engineers">Next Project →</a>
-    </div>
-  </div>
-</section>
-    </main>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Sidenav
+      const sections = document.querySelectorAll('.case-section[id], .case-hero[id]');
+      const navLinks = document.querySelectorAll('.sidenav-link');
+      new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(l => {
+              l.classList.toggle('active', l.getAttribute('href') === `#${id}`);
+            });
+          }
+        });
+      }, { rootMargin: '-20% 0px -65% 0px' }).observe
+      sections.forEach(s => { if (s.id) {
+        new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) navLinks.forEach(l => {
+              l.classList.toggle('active', l.getAttribute('href') === `#${e.target.id}`);
+            });
+          });
+        }, { rootMargin: '-20% 0px -65% 0px' }).observe(s);
+      }});
 
-  </body>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-       <!-- FOOTER -->
-      <footer class="site-footer">
-        <div class="container footer-top">
-          <p>
-           <small> © <span id="year">2025</span> Manvi Tandon. Built with HTML, CSS & ♥️</small>
-          </p>
-          <div class="footer-links breadcrumb">
-            <a href="mailto:mtandon@pratt.edu">Email</a>
-            <a
-              href="https://www.linkedin.com/in/manvi-tandon"
-              target="_blank"
-              rel="noreferrer"
-              >LinkedIn</a
-            >
-            <a href="https://www.instagram.com/design.manvi/" target="_blank" rel="noreferrer"
-              >Instagram</a
-            >
-          </div>
-        </div>
-        <div class="sonar-wrap">
-          <div class="sonar-layer layer-1"></div>
-          <div class="sonar-layer layer-2"></div>
-          <div class="sonar-layer layer-3"></div>
-        </div>
-      </footer>
-    </div>
-
-    <script>
-      // Hamburger/menu
-      const hamburger = document.querySelector(".hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
-      hamburger?.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("open");
-        hamburger.setAttribute("aria-expanded", isOpen);
+      // Screen tabs
+      document.querySelectorAll('.screen-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const idx = tab.dataset.tab;
+          document.querySelectorAll('.screen-tab').forEach(t => t.classList.remove('active'));
+          document.querySelectorAll('.screen-panel').forEach(p => p.classList.remove('active'));
+          tab.classList.add('active');
+          document.querySelector(`.screen-panel[data-panel="${idx}"]`).classList.add('active');
+        });
       });
-
-      // Theme elements
-      const themeSwitch = document.getElementById("theme-switch");
-      const logo = document.getElementById("logo");
-      const heroLeft = document.getElementById("heroLeft"); // may be null on this page
-      const themeToggle = document.querySelector(".theme-toggle"); // wrapper for tooltip
-
-      // Safe update function
-      function updateImages() {
-        // determine the tooltip target (prefer the wrapper that has data-tooltip)
-        const tooltipTarget = themeToggle || themeSwitch;
-
-        if (!themeSwitch) return; // nothing to do if input missing
-
-        if (themeSwitch.checked) {
-          // Light mode
-          if (logo) logo.src = "assets/logolight.png";
-          if (heroLeft) heroLeft.src = "assets/heroleftlight.png";
-          document.body.classList.add("light");
-          document.body.classList.remove("dark");
-          localStorage.setItem("theme", "light");
-
-          if (themeToggle) {
-            themeToggle.setAttribute("data-tooltip", "Switch to darker theme");
-          } else {
-            themeSwitch.title = "Switch to darker theme";
-          }
-        } else {
-          // Dark mode
-          if (logo) logo.src = "assets/logodark.png";
-          if (heroLeft) heroLeft.src = "assets/heroleftdark.png";
-          document.body.classList.add("dark");
-          document.body.classList.remove("light");
-          localStorage.setItem("theme", "dark");
-
-          if (themeToggle) {
-            themeToggle.setAttribute("data-tooltip", "Switch to lighter theme");
-          } else {
-            themeSwitch.title = "Switch to lighter theme";
-          }
-        }
-      }
-
-      // Restore saved theme
-      const savedTheme = localStorage.getItem("theme");
-      if (themeSwitch) {
-        if (savedTheme === "light") {
-          themeSwitch.checked = true;
-        } else if (savedTheme === "dark") {
-          themeSwitch.checked = false;
-        } else {
-          // optional: set a default. keeping checkbox false => dark by default
-          themeSwitch.checked = false;
-        }
-
-        // initial update (safe)
-        updateImages();
-
-        // update when toggled
-        themeSwitch.addEventListener("change", updateImages);
-      }
-
-      // Update footer year
-      const yearEl = document.getElementById("year");
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>

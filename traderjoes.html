@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trader Joe's App — Manvi Tandon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+</head>
+
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Manvi Tandon</span>
+    </a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Archive</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">&#10005;</button>
+    <a href="index.html#work" class="mobile-link">Work</a>
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="index.html#projects" class="mobile-link">Archive</a>
+    <div class="mobile-menu-bottom">
+      <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+      <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+    </div>
+  </div>
+
+  <aside class="case-sidenav" id="caseSidenav">
+    <a href="#overview"   class="sidenav-link active">Overview</a>
+    <a href="#problem"    class="sidenav-link">Problem</a>
+    <a href="#research"   class="sidenav-link">Research</a>
+    <a href="#process"    class="sidenav-link">Process</a>
+    <a href="#solution"   class="sidenav-link">Solution</a>
+    <a href="#reflection" class="sidenav-link">Reflection</a>
+  </aside>
+
+  <main class="case-study">
+
+    <a href="index.html#projects" class="back-link">← Back</a>
+
+    <!-- HERO -->
+    <header class="case-hero" id="overview">
+        <div class="case-logo">
+        <img src="traderjoes/logo.png" alt="Trader Joe's" class="client-logo" />
+      </div>
+      <span class="case-eyebrow">Trader Joe's &bull; Conceptual Mobile App</span>
+      <h1 class="case-title">Designing the app Trader Joe's fans have been asking for.</h1>
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <p>Product Designer</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Team</span>
+          <p>2 UX Designers</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Type</span>
+          <p>Conceptual<br/> iOS Design</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Skills</span>
+          <p>Product Design<br/>User Research<br/>Prototyping</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="case-img-full">
+      <img src="assets/traderjoescover.png" alt="Trader Joe's App" />
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="case-section" id="overview">
+      <span class="section-label">Overview</span>
+      <h2>Trader Joe's has one of the most loyal customer bases in grocery. And no app.</h2>
+      <p>Trader Joe's is famously and defiantly low-tech. No self-checkout, no loyalty program, and no app. For a lot of customers that's part of the charm, but charm doesn't help you figure out if the 'Everything But the Bagel Seasoning' is back in stock before you drive across town.</p>
+      <p>We asked: if Trader Joe's built an app, what would it actually look like? Not a generic grocery app with TJ's branding slapped on but something that felt like Trader Joe's and solved the specific friction their shoppers actually face.</p>
+
+      <div class="outcome-strip">
+        <div class="outcome-item">
+          <span class="outcome-num">2</span>
+          <span class="outcome-label">User journey maps</span>
+        </div>
+        <div class="outcome-item">
+          <span class="outcome-num">4</span>
+          <span class="outcome-label">Competitors analysed</span>
+        </div>
+        <div class="outcome-item">
+          <span class="outcome-num">3</span>
+          <span class="outcome-label">Key features shipped</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="case-section" id="problem">
+      <span class="section-label">Problem</span>
+      <h2>How might we assist busy tech millennials who cook, plan their grocery shopping?</h2>
+      <p>This was our design frame from the start. TJ's core shoppers are people who cook, who live in cities, who don't have a lot of time and face a predictable chain of friction every week.</p>
+
+      <div class="case-img-full">
+        <img src="traderjoes/challenge.png" alt="Challenge: lack of time → unclear what to buy → struggle to shop effectively" />
+        <span class="annotation">The problem chain: lack of time to plan meals leads to unclear ideas about what to buy, which leads to struggling to shop effectively</span>
+      </div>
+
+      <p>Nobody was solving all three parts of that chain together. Planning, shopping, and the store itself were three disconnected experiences.</p>
+    </section>
+    
+
+    <!-- RESEARCH -->
+    <section class="case-section" id="research">
+      <span class="section-label">Research</span>
+      <h2>We mapped two separate journeys: going to the store, and ordering online. Both were frustrating in different ways.</h2>
+
+      
+
+      <div class="case-img-full">
+        <img src="traderjoes/userjourney1.png" alt="User journey map: physical grocery shopping in store" />
+        <span class="annotation">User journey map — physical grocery shopping in store. Pain points cluster at Prepare and Shop stages: forgetting items, navigating crowds, discovering out-of-stock items too late</span>
+      </div>
+
+      <div class="case-img-full">
+        <img src="traderjoes/userjourneymap2.png" alt="User journey map: online grocery shopping" />
+        <span class="annotation">User journey map — online grocery shopping. Pain points cluster at Choose App and Shop: switching between apps, confusing layouts, pop-up distractions</span>
+      </div>
+
+      <p>The in-store journey broke down at preparation — people forgot what they needed and couldn't plan ahead. The online journey broke down at app selection — too many platforms, not enough trust in any of them. Both pointed to the same gap: no single place that connected meal planning, shopping lists, and Trader Joe's products.</p>
+
+      <h3>The competitive landscape confirmed it.</h3>
+      <p>Every major grocery app had quick reorder. None of them had personalisation, collaboration, planning, or anything that felt distinctive to a specific brand.</p>
+
+      <div class="case-img-full wide">
+        <img src="traderjoes/competitive.png" alt="Competitive analysis: Instacart, Weee!, Amazon Fresh, Walmart Grocery" />
+        <span class="annotation">Competitive analysis — every competitor has reorder, none have personalisation, collaboration, or planning. A clear gap.</span>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="case-section" id="process">
+      <span class="section-label">Process</span>
+      <h2>Gallery walk, IA, then three features that didn't exist anywhere else.</h2>
+
+      <div class="case-img-full">
+        <img src="traderjoes/gallerywalk.png" alt="Gallery walk workshop" />
+        <span class="annotation">Gallery walk — we posted our journey maps, IA, and early concepts and invited feedback via sticky notes. The responses shaped our final feature prioritisation.</span>
+      </div>
+
+      <p>The gallery walk gave us signal fast. Users responded most strongly to: meal planning built into the shopping experience, the ability to share lists with housemates or partners, and features that respected accessibility needs. Those became our three focus areas.</p>
+
+      <div class="case-img-full">
+        <img src="traderjoes/IA.png" alt="Information architecture sitemap" />
+        <span class="annotation">Information architecture — four main tabs (Home, Explore, Recipes, Lists) with Cart and Account at the top level. Lists supports both Voice AI and collaborative shopping.</span>
+      </div>
+
+      <p>The IA was built around how TJ's customers actually shop — habitually and fast. Home surfaces what's new, seasonal, and recently bought. Recipes connects directly to product availability at your nearest store. Lists supports both solo planning and group shopping. Every nav decision was grounded in the journey map findings.</p>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="case-section" id="solution">
+      <span class="section-label">Solution</span>
+      <h2>Three features that no grocery app was offering — all grounded in how TJ's shoppers actually live.</h2>
+
+      <h3>Meal Planning</h3>
+      <p>Recipes linked directly to real-time product availability at your nearest store. Browse a recipe, see which ingredients are in stock at Williamsburg, add them all to your list in one tap. The planning and the shopping trip become one continuous flow instead of two separate tasks.</p>
+
+      <div class="flow-card">
+        <div class="flow-media-wrap">
+          <div class="flow-media gif-frame">
+            <img src="traderjoes/mealplanning.gif" alt="Meal planning feature" />
+          </div>
+          <span class="annotation">Meal planning — recipes tied to live store inventory, with one-tap add-all to cart</span>
+        </div>
+        <div class="flow-text">
+          <h4>Plan once, shop once.</h4>
+          <p>The biggest pain point from both journey maps was the gap between deciding what to cook and knowing what to buy. Recipe-to-cart integration closes that gap — users see ingredient availability at their specific store before they leave home.</p>
+        </div>
+      </div>
+
+      <h3>Collaborative Shopping Lists</h3>
+      <p>Share a list with housemates, a partner, or anyone splitting a Trader Joe's run. Everyone can add items in real time. No more texting back and forth about whether someone already picked up the Mandarin Orange Chicken.</p>
+
+      <div class="flow-card reverse">
+        <div class="flow-media-wrap">
+          <div class="flow-media gif-frame">
+            <img src="traderjoes/collaboritiveshoppinglists.gif" alt="Collaborative shopping lists" />
+          </div>
+          <span class="annotation">Collaborative lists — shared in real time, synced across devices</span>
+        </div>
+        <div class="flow-text">
+          <h4>Grocery shopping is rarely solo.</h4>
+          <p>Our research showed that many TJ's shoppers coordinate with housemates or partners around the weekly shop. No existing grocery app supported real collaboration — just individual lists. This feature addressed a real behaviour that was being served by group chats and Notes app screenshots.</p>
+        </div>
+      </div>
+
+      <h3>Accessibility</h3>
+      <p>Voice-to-list, dietary preference filtering surfaced throughout the browse experience, and high-contrast modes. Designed to make the app usable for people with mobility limitations, visual impairments, or dietary restrictions that require careful label-checking in store.</p>
+
+      <div class="flow-card">
+        <div class="flow-media-wrap">
+          <div class="flow-media gif-frame">
+            <img src="traderjoes/accessibility.gif" alt="Accessibility features" />
+          </div>
+          <span class="annotation">Accessibility — voice AI for list building, dietary filters throughout, high-contrast support</span>
+        </div>
+        <div class="flow-text">
+          <h4>The in-store experience has limits. The app doesn't have to.</h4>
+          <p>TJ's physical stores aren't the most accessible environments — crowded aisles, limited signage, no way to pre-check ingredients for dietary needs. The app can do the work the store can't: surface allergy information, support voice input, and let users filter the entire catalog before they arrive.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="case-section" id="reflection">
+      <span class="section-label">Reflection</span>
+      <h2>What I learned</h2>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>The journey map is where the real design problems live.</h4>
+          <p>Mapping both in-store and online shopping journeys side by side showed us that the same emotional pattern appeared in both: frustration at the planning stage, relief at checkout. The design opportunity wasn't inside the store or inside an app — it was in the space between them. That's where our three features ended up.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>The gallery walk changed our feature priorities.</h4>
+          <p>We came in expecting meal planning to be the headline feature. The sticky note feedback pushed accessibility and collaboration to equal importance. Designing in public — even just posting work on a board — is one of the fastest ways to invalidate your own assumptions.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Brand voice is a design constraint, not a finishing touch.</h4>
+          <p>Trader Joe's copy is warm, specific, and slightly irreverent. Every screen had to pass a simple test: does this sound like TJ's, or does it sound like a generic grocery app? That filter produced better decisions than any visual guide would have — it forced us to think about what the brand actually values rather than just what it looks like.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="case-nav">
+      <a href="chatgpt-adhd.html" class="case-nav-link prev">
+        <span class="nav-direction">← Previous</span>
+        <span class="nav-project">ChatGPT for ADHD</span>
+      </a>
+      <a href="spicelife.html" class="case-nav-link next">
+        <span class="nav-direction">Next →</span>
+        <span class="nav-project">Spice Life</span>
+      </a>
+    </nav>
+
+  </main>
+
+  <footer class="footer case-footer">
+    <div class="footer-main">
+      <h2>Let's Collaborate</h2>
+      <a href="mailto:mtandon@pratt.edu" class="footer-cta">Get in touch</a>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col footer-col-nav">
+        <span class="label">( Navigate )</span>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#projects">Archive</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">( Connect )</span>
+        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manvi Tandon. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.case-section[id], .case-hero[id]');
+      const navLinks = document.querySelectorAll('.sidenav-link');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+          }
+        });
+      }, { rootMargin: '-20% 0px -65% 0px' });
+      sections.forEach(s => { if (s.id) observer.observe(s); });
+    });
+  </script>
+</body>
+</html>
