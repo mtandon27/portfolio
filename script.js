@@ -72,10 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================================
-  // Projects Carousel
+  // Projects Carousel — infinite loop
+  // Clones cards before + after the real set so the user can
+  // keep clicking in either direction without ever hitting a wall.
   // Desktop : JS translateX on .carousel-track
   // Mobile  : native CSS overflow scroll + scroll-snap
-  //           (no translateX — just scrollTo)
   // ============================================================
   const carousel            = document.getElementById('projectsCarousel');
   const prevBtn             = document.getElementById('carouselPrev');
@@ -83,16 +84,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const indicatorsContainer = document.getElementById('carouselIndicators');
 
   if (carousel) {
-    const cards     = Array.from(carousel.querySelectorAll('.carousel-card'));
+    const realCards = Array.from(carousel.querySelectorAll('.carousel-card'));
+    const realCount = realCards.length;
     const container = carousel.parentElement; // .carousel-container
-    let currentSlide = 0;
-    let totalSlides  = 1;
+
+    // Clone a full set before and after the originals
+    realCards.forEach(c => carousel.appendChild(c.cloneNode(true)));
+    realCards.slice().reverse().forEach(c => carousel.insertBefore(c.cloneNode(true), carousel.firstChild));
+
+    const allCards = () => Array.from(carousel.querySelectorAll('.carousel-card'));
+
+    let currentSlide = realCount; // start at first real card (after the prepended clones)
+    let isTransitioning = false;
     let autoScroll;
 
     const isMobile = () => window.innerWidth <= 768;
 
-    // Card width = rendered card width + CSS gap
     const getCardWidth = () => {
+      const cards = allCards();
       if (!cards.length) return 360;
       const gap = parseFloat(window.getComputedStyle(carousel).gap) || 40;
       return cards[0].getBoundingClientRect().width + gap;
@@ -100,48 +109,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getVisibleCount = () => Math.max(1, Math.round(container.offsetWidth / getCardWidth()));
 
-    // ── Indicators ────────────────────────────────────────────
+    // ── Indicators (based on real card count) ─────────────────
     const buildIndicators = () => {
       if (!indicatorsContainer) return;
       indicatorsContainer.innerHTML = '';
-      totalSlides = Math.max(1, cards.length - getVisibleCount() + 1);
-      for (let i = 0; i < totalSlides; i++) {
+      for (let i = 0; i < realCount; i++) {
         const dot = document.createElement('button');
         dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
         dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-        dot.addEventListener('click', () => goToSlide(i));
+        dot.addEventListener('click', () => goToSlide(i + realCount));
         indicatorsContainer.appendChild(dot);
       }
     };
 
-    const updateIndicators = (idx) => {
+    const updateIndicators = (absoluteIdx) => {
+      const realIdx = ((absoluteIdx - realCount) % realCount + realCount) % realCount;
       indicatorsContainer?.querySelectorAll('.carousel-dot')
-        .forEach((d, i) => d.classList.toggle('active', i === idx));
+        .forEach((d, i) => d.classList.toggle('active', i === realIdx));
     };
 
-    // ── Navigation ────────────────────────────────────────────
-    const goToSlide = (index) => {
-      currentSlide = Math.max(0, Math.min(index, totalSlides - 1));
+    // ── Core navigation ───────────────────────────────────────
+    const goToSlide = (index, animate = true) => {
+      const cards = allCards();
+      carousel.style.transition = animate ? 'transform 0.4s cubic-bezier(.4,0,.2,1)' : 'none';
+      carousel.style.transform  = `translateX(-${index * getCardWidth()}px)`;
+      currentSlide = index;
+      updateIndicators(index);
+    };
 
-      if (isMobile()) {
-        // Native scroll — reliable on every mobile browser
-        const card = cards[currentSlide];
-        if (card) container.scrollTo({ left: card.offsetLeft, behavior: 'smooth' });
-      } else {
-        // Desktop: JS transform on the track
-        carousel.style.transform = `translateX(-${currentSlide * getCardWidth()}px)`;
+    // After a transition, if we've landed in a clone zone, silently
+    // jump to the real equivalent without any visible snap.
+    const onTransitionEnd = () => {
+      const cards     = allCards();
+      const totalCards = cards.length;
+
+      if (currentSlide < realCount) {
+        // In the pre-clone zone — jump to real end
+        goToSlide(currentSlide + realCount, false);
+      } else if (currentSlide >= realCount * 2) {
+        // In the post-clone zone — jump to real start
+        goToSlide(currentSlide - realCount, false);
       }
-
-      updateIndicators(currentSlide);
+      isTransitioning = false;
     };
+    carousel.addEventListener('transitionend', onTransitionEnd);
 
-    const scrollNext = () => goToSlide(currentSlide < totalSlides - 1 ? currentSlide + 1 : 0);
-    const scrollPrev = () => goToSlide(currentSlide > 0 ? currentSlide - 1 : totalSlides - 1);
+    const scrollNext = () => {
+      if (isTransitioning && !isMobile()) return;
+      isTransitioning = true;
+      goToSlide(currentSlide + 1);
+    };
+    const scrollPrev = () => {
+      if (isTransitioning && !isMobile()) return;
+      isTransitioning = true;
+      goToSlide(currentSlide - 1);
+    };
 
     if (prevBtn) prevBtn.addEventListener('click', scrollPrev);
     if (nextBtn) nextBtn.addEventListener('click', scrollNext);
 
-    // Sync indicator while user drags natively on mobile
+    // Mobile: native scroll sync (indicators only — no transform)
     let scrollSyncTimer;
     container.addEventListener('scroll', () => {
       if (!isMobile()) return;
@@ -149,8 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollSyncTimer = setTimeout(() => {
         const cw      = getCardWidth();
         const nearest = Math.round(container.scrollLeft / cw);
-        currentSlide  = Math.max(0, Math.min(nearest, totalSlides - 1));
-        updateIndicators(currentSlide);
+        const realIdx = ((nearest - realCount) % realCount + realCount) % realCount;
+        updateIndicators(realIdx + realCount);
       }, 80);
     }, { passive: true });
 
@@ -161,13 +188,21 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper?.addEventListener('mouseenter', stopAuto);
     wrapper?.addEventListener('mouseleave', startAuto);
 
-    // Recalculate on resize / orientation change
+    // Recalculate on resize
     let resizeTimer;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => { stopAuto(); buildIndicators(); goToSlide(0); startAuto(); }, 200);
+      resizeTimer = setTimeout(() => {
+        stopAuto();
+        buildIndicators();
+        goToSlide(realCount, false);
+        startAuto();
+      }, 200);
     });
 
+    // Init — position at first real card, no animation
+    carousel.style.transition = 'none';
+    goToSlide(realCount, false);
     buildIndicators();
     startAuto();
   }
