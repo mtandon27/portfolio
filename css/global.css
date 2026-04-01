@@ -1786,9 +1786,40 @@ body.dark .star-dark-img { display: inline-block; }
   .projects-section { padding: 60px 0 0; }
   .projects-section .section-top { padding: 0 20px; flex-direction: column; gap: 8px; }
   .projects-section .section-desc p { text-align: left; }
-  .carousel-wrapper { padding: 0 20px; }
-  .carousel-track { gap: 20px; }
-  .carousel-card { width: 180px; }
+  .projects-section .section-meta { margin: 0 20px 24px; }
+
+  /* Hide arrow buttons — swipe handles navigation */
+  .carousel-btn { display: none !important; }
+
+  /* Wrapper: no padding, let container go edge-to-edge */
+  .carousel-wrapper { padding: 0; }
+
+  /* Container IS the scroll viewport on mobile */
+  .carousel-container {
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 20px;
+  }
+  .carousel-container::-webkit-scrollbar { display: none; }
+
+  /* Track: disable JS transform on mobile — native scroll takes over */
+  .carousel-track {
+    gap: 16px;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Cards snap into place and fill most of the viewport */
+  .carousel-card {
+    width: calc(100vw - 60px);
+    max-width: 340px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
   .carousel-indicators { padding: 20px 20px 48px; justify-content: flex-start; }
 }
 
@@ -1968,4 +1999,43 @@ body.dark .figma-tip::before {
    ============================================ */
 .newspaper-card:hover {
   background: var(--bg-card);
+}
+
+.about-art {
+  margin-top: 3rem;
+}
+
+.about-art h4 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.art-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.art-item {
+  overflow: hidden;
+  border-radius: 8px;
+  flex: 1 1 180px;
+  max-width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.art-item:hover img {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.art-item:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
