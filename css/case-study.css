@@ -1350,13 +1350,22 @@ body.dark .dark-only {
   }
   
   .case-nav {
-    flex-direction: column;
-    gap: 24px;
-  }
-  
-  .case-nav-link.prev,
-  .case-nav-link.next {
+    flex-direction: row;
+    gap: 12px;
+    padding: 32px 0;
     align-items: center;
+  }
+
+  .case-nav-link.prev {
+    align-items: flex-start;
+  }
+
+  .case-nav-link.next {
+    align-items: flex-end;
+  }
+
+  .case-nav-link .nav-title {
+    font-size: 13px;
   }
 }
 
