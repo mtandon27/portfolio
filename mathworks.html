@@ -93,9 +93,9 @@
     <!-- OVERVIEW -->
     <section class="case-section" id="overview">
       <span class="section-label">Overview</span>
-      <h2>How might we make feature modeling intuitive for engineers who live in MATLAB all day?</h2>
-      <p>MathWorks' Simulink is one of the leading platforms for system modeling and simulation. Engineers at automotive, aerospace, and industrial companies use it to build and test complex systems.</p>
-      <p>As Senior UX Designer, I led the 0-to-1 design of a new class of Feature Modeling applications inside Simulink. The goal was to let engineers define and manage product lines (collections of possible features, parameters, assets, and constraints).</p>
+      <h2>How can we make feature modeling intuitive for engineers who use Simulink?</h2>
+      <p>Simulink is one of the leading platforms for system modeling and simulation. Engineers at automotive, aerospace, and industrial companies use it to build and test complex systems.</p>
+      <p>As Senior UX Designer, I led the 0-to-1 design of a new application for Feature Modeling inside Simulink. The goal was to let engineers define and manage product lines (collections of possible features, parameters, assets, and constraints).</p>
 
 
     </section>
@@ -103,36 +103,36 @@
     <!-- PROBLEM -->
     <section class="case-section" id="problem">
       <span class="section-label">Problem</span>
-      <h2>The existing tools were built for experts. Everyone else was drowning.</h2>
+      <h2>The existing tools did not support flexible workflows.</h2>
       <p>Engineers at Bosch, Hyundai, and Cummins were doing something genuinely hard: managing complex product lines with hundreds of features, parameters, and interdependencies. The existing UML and modeling tools in the market made that harder due to their complexity and lack of customization. <br> <br>Current software pain points include:</p>
 
       <ul class="narrative-list">
-        <li><strong>Cluttered interfaces</strong> where data was hard to read and even harder to act on. Engineers spent more time deciphering the UI than making engineering decisions.</li>
-        <li><strong>Rigid workflows</strong> that assumed a single "correct" process. Real engineering is iterative and nonlinear the current tools did not account for that.</li>
-        <li><strong>No customization.</strong> Different teams at the same company had fundamentally different needs, but had no way to adapt the tools to fit them.</li>
-        <li><strong>Steep learning curves.</strong> Onboarding a new engineer to the existing workflows required manual review of documentation.</li>
+        <li><strong>Cluttered interfaces:</strong> where data was hard to read and even harder to act on. Engineers spent more time deciphering the UI than making engineering decisions.</li>
+        <li><strong>Rigid workflows:</strong> that assumed a single "correct" process. Real engineering is iterative and nonlinear, the current tools did not account for that.</li>
+        <li><strong>No customization:</strong> different teams at the same company had fundamentally different needs, but had no way to adapt the tools.</li>
+        <li><strong>Steep learning curves:</strong> onboarding a new engineer to the existing workflows required manual review of documentation and training.</li>
       </ul>
 
       <div class="key-insight">
         <span class="insight-label">The core question</span>
-        <p>These are highly technical users with deep domain expertise. The design challenge wasn't to dumb things down it was to remove the friction that was getting between them and their actual work. A cluttered UI doesn't make you smarter, it just makes you slower.</p>
+        <p>These are highly technical users with deep domain expertise. The design challenge wasn't to "dumb things down" it was to remove the friction that was getting between them and their work.</p>
       </div>
     </section>
 
     <!-- USERS -->
     <section class="case-section" id="users">
       <span class="section-label">Users</span>
-      <h2>Systems engineers who build cars, aircraft, and industrial machinery.</h2>
-      <p>Before designing anything, I needed to understand how these engineers actually worked not how the product team imagined they worked. I ran user interviews and contextual inquiries with engineers at key MathWorks customers to map real workflows and capture the gaps between what the tools offered and what people actually needed.</p>
+      <h2>Systems engineers who build cars, aircrafts, and industrial machinery.</h2>
+      <p>Before designing anything, I needed to understand how these engineers actually worked. I ran user interviews and contextual inquiries with engineers at key MathWorks customers to map real workflows and capture the gaps between what the tools offered and what people actually needed.</p>
 
       <div class="case-img-full">
         <img src="mathworks/users.png" alt="User personas and workflow mapping" />
-        <span class="annotation">User personas revealed systems engineers at automotive companies with fundamentally different modeling needs</span>
+        <span class="annotation">User personas revealed systems engineers at companies with fundamentally different modeling needs.</span>
       </div>
 
       <div class="case-img-full">
         <img src="mathworks/matrix.png" alt="Research synthesis matrix" />
-        <span class="annotation">Research synthesis included mapping pain points, workflow patterns, and opportunity areas across user segments</span>
+        <span class="annotation">Research synthesis included mapping pain points, workflow patterns, and opportunity areas across user segments.</span>
       </div>
 
       <p>Every interview surfaced the same underlying frustration: engineers knew exactly what they needed to accomplish, but the tools kept getting in the way. The research validated the opportunity clearly, 100% of interviewed engineers wanted better feature selection tools.</p>
@@ -148,7 +148,7 @@
         <span class="process-num">01</span>
         <div class="process-body">
           <h4>Discovery &amp; Kickoff</h4>
-          <p>I ran a kickoff session with PMs, engineers, and key stakeholders to align on scope and opportunity space before any design work began. Getting everyone's mental models into the open early saved us from painful misalignment later.</p>
+          <p>I ran a kickoff session with PMs, engineers, and key stakeholders to align on scope and opportunity space before any design work began. Documenting everyone's mental models early saved us from painful misalignment later.</p>
         </div>
       </div>
 
@@ -156,39 +156,39 @@
         <span class="process-num">02</span>
         <div class="process-body">
           <h4>Cross-Functional Sketching Workshops</h4>
-          <p>I facilitated sketching sessions in Miro with engineers, PMs, and domain experts using dot-voting and affinity mapping to converge on feature priorities. Getting engineers (not just designers) sketching interfaces surfaced constraints and opportunities that wouldn't have come up any other way.</p>
+          <p>I facilitated sketching sessions in Miro with engineers, PMs, and domain experts using dot-voting and affinity mapping to agree on feature priorities. Getting engineers (not just designers) sketching interfaces surfaced constraints and opportunities that wouldn't have come up any other way.</p>
         </div>
       </div>
 
       <div class="case-img-full">
         <img src="mathworks/sketching.png" alt="Cross-functional sketching workshop" />
-        <span class="annotation">Miro sketching workshop of engineers and designers working side-by-side to map feature priorities and interface concepts</span>
+        <span class="annotation">Miro sketching workshop of engineers and designers working side-by-side to map feature priorities and interface concepts.</span>
       </div>
 
       <div class="process-step">
         <span class="process-num">03</span>
         <div class="process-body">
           <h4>Iterative Design &amp; Engineering Collaboration</h4>
-          <p>I reviewed designs iteratively with PMs and engineers throughout development. This wasn't a handoff it was a continuous back-and-forth. We refined the toolstrip navigation, multi-panel workspace layout, customizable catalogs, and hierarchical data views across multiple rounds before anything was considered stable.</p>
+          <p>I reviewed designs iteratively with PMs and engineers throughout development. This wasn't a handoff, it was a continuous back-and-forth. We refined the toolstrip navigation, multi-panel workspace layout, customizable catalogs, and hierarchical data views across multiple rounds before anything was deemed viable.</p>
         </div>
       </div>
 
       <div class="case-img-full">
         <img src="mathworks/iterations.png" alt="Design iterations" />
-        <span class="annotation">Iterative design reviews to tailor the toolstrip navigation, workspace layouts, and data hierarchy</span>
+        <span class="annotation">Iterative design reviews to tailor the toolstrip navigation, workspace layouts, and data hierarchy.</span>
       </div>
 
       <div class="process-step">
         <span class="process-num">04</span>
         <div class="process-body">
           <h4>A/B Testing: Minimalist vs. Data-Rich</h4>
-          <p>We ran A/B tests comparing a minimalist UI approach against a data-rich interface. The result was clear and somewhat counterintuitive: engineers overwhelmingly preferred the data-rich version. These users wanted more information visible at once, the minimalist approach felt like it was hiding things they needed. We also tested different labeling strategies; clearer, more explicit labels won every time.</p>
+          <p>We ran A/B tests comparing a minimalist UI approach against a data-rich interface. The result was clear and somewhat counterintuitive: engineers overwhelmingly preferred the data-rich version. These users wanted more information visible at once; a minimalist approach felt like it was hiding things that they needed. We also tested different labeling strategies; clearer, more explicit labels were preferred.</p>
         </div>
       </div>
 
       <div class="case-img-full">
         <img src="mathworks/validation.png" alt="A/B testing and validation" />
-        <span class="annotation">A/B test results refelcted in refined user flows; data-rich interfaces outperformed minimalist ones for this user group; explicit labels reduced errors significantly</span>
+        <span class="annotation">A/B test results refelcted in refined user flows; data-rich interfaces outperformed minimalist ones for this user group; explicit labels reduced errors significantly.</span>
       </div>
     </section>
 
@@ -196,21 +196,21 @@
     <section class="case-section" id="solution">
       <span class="section-label">Solution</span>
       <h2>Feature Modeling Apps: a workspace for managing product lines in Simulink.</h2>
-      <p>The final design is a multi-panel workspace with a structured toolstrip, customizable catalogs, and hierarchical data views giving engineers visibility and control without overwhelming them. Every component reflects something a user asked for directly.</p>
+      <p>The final design was a multi-panel workspace with a structured toolstrip, customizable catalogs, and hierarchical data views giving engineers visibility and control without overwhelming. Every component reflects something a user asked for directly.</p>
 
       <div class="case-img-full">
         <img src="mathworks/featureapp.png" alt="Feature Modeling App interface" />
-        <span class="annotation">Feature Modeling App landing page includes toolstrip navigation, multi-panel workspace, customizable catalog on the left, and hierarchical data view on the right</span>
+        <span class="annotation">Feature Modeling App landing page includes toolstrip navigation, multi-panel workspace, customizable catalog on the left, and hierarchical data view on the right.</span>
       </div>
 
       <div class="case-img-full">
         <img src="mathworks/app.gif" alt="Interactive prototype walkthrough" />
-        <span class="annotation">Prototype walkthrough of feature selection workflow, model configuration, and constraint management in a single workflow</span>
+        <span class="annotation">Prototype walkthrough of feature selection workflow, model configuration, and constraint management in a single workflow.</span>
       </div>
 
       <div class="case-img-full">
         <img src="mathworks/cover2.png" alt="Final shipped design" />
-        <span class="annotation">The shipped product deployed to key customers including Bosch, Hyundai, and Cummins</span>
+        <span class="annotation">The shipped product deployed to key customers including Bosch, Hyundai, and Cummins.</span>
       </div>
     </section>
 
@@ -231,7 +231,7 @@
         </div>
         <div class="outcome-item">
           <span class="outcome-num">100%</span>
-          <span class="outcome-label">Engineer interest validated pre-launch</span>
+          <span class="outcome-label">Key customer interest</span>
         </div>
       </div>
 
@@ -247,7 +247,7 @@
         <span class="process-num">→</span>
         <div class="process-body">
           <h4>Don't design for the average user when your users are experts.</h4>
-          <p>Every instinct in UX pushes toward simplification. For most products, that's right. For expert tools, simplifying the wrong things creates friction by hiding information that power users need to see and abstracting controls that engineers want direct access to. The A/B test confirmed this: our most sophisticated users wanted more visibility, not less.</p>
+          <p>Every instinct in UX pushes toward simplification. For most products, that's the right decision. For expert users, simplifying the wrong things creates friction by hiding information that they need to see. </p>
         </div>
       </div>
 
@@ -263,7 +263,7 @@
         <span class="process-num">→</span>
         <div class="process-body">
           <h4>0-to-1 design requires more alignment work upfront, not less.</h4>
-          <p>When there's no existing product to anchor discussions, every stakeholder has a different vision in their head. The kickoff session and early research were the most curcial part of the process. Getting alignment before the first frame was drawn meant every subsequent decision had a foundation.</p>
+          <p>When there's no existing product to anchor discussions, every stakeholder has a different vision in their head. The kickoff session and early research were the most crucial part of the process. Getting alignment before the first frame was drawn meant every subsequent decision had a foundation.</p>
         </div>
       </div>
     </section>
