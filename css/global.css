@@ -1801,15 +1801,19 @@ body.dark .star-dark-img { display: inline-block; }
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding: 0 20px;
+    /* Remove padding here — use track padding instead so trailing space is scrollable */
+    padding: 0;
+    scroll-padding-left: 20px;
   }
   .carousel-container::-webkit-scrollbar { display: none; }
 
   /* Track: disable JS transform on mobile — native scroll takes over */
+  /* Add inline padding so first and last cards have breathing room */
   .carousel-track {
     gap: 16px;
     transform: none !important;
     transition: none !important;
+    padding: 0 20px;
   }
 
   /* Cards snap into place and fill most of the viewport */
