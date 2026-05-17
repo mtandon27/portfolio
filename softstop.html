@@ -9,6 +9,131 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/case-study.css" />
+  <style>
+    /* Method artifact cards */
+    .method-card {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      margin-top: 24px;
+      border: 1px solid var(--border, #e2dfd8);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow .2s, transform .15s;
+      background: var(--bg-card, #f2f0ec);
+    }
+    .method-card:hover {
+      box-shadow: 0 6px 28px rgba(0,0,0,.10);
+      transform: translateY(-1px);
+    }
+    .method-card-img {
+      position: relative;
+      overflow: hidden;
+      max-height: 200px;
+    }
+    .method-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      transition: transform .3s;
+    }
+    .method-card:hover .method-card-img img { transform: scale(1.03); }
+    .method-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(196,133,90,.55);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      opacity: 0;
+      transition: opacity .2s;
+      color: #fff;
+    }
+    .method-card:hover .method-card-overlay { opacity: 1; }
+    .method-card-overlay span { font-size: 12px; font-weight: 600; letter-spacing: .04em; }
+    .method-card-meta {
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+    .method-card-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent, #c4855a);
+      display: block;
+    }
+    .method-card-meta p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-muted, #6b6760);
+      margin: 0;
+    }
+
+    /* Lightbox */
+    .ss-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 900;
+      background: rgba(0,0,0,.88);
+      backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .ss-lightbox.open { display: flex; }
+    .ss-lightbox-inner {
+      position: relative;
+      max-width: 92vw;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .ss-lightbox-inner img {
+      max-width: 100%;
+      max-height: 86vh;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+    .ss-lightbox-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #111;
+      box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    }
+    .ss-lightbox-caption {
+      color: rgba(255,255,255,.7);
+      font-size: 12px;
+      text-align: center;
+      max-width: 560px;
+    }
+    @media (max-width: 600px) {
+      .method-card { grid-template-columns: 1fr; }
+      .method-card-img { max-height: 160px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -57,7 +182,7 @@
         </div>
         <div class="meta-item">
           <span class="meta-label">Team</span>
-          <p>Siying Chen, Jasmine Chen, Elizabeth Serjantov</p>
+          <p>Siying C, Jasmine C, Elizabeth S</p>
         </div>
         <div class="meta-item">
           <span class="meta-label">Timeline</span>
@@ -74,59 +199,62 @@
     <section class="case-section" id="context">
       <span class="section-label">Context &amp; Background</span>
       <h2>We have the tools. So why are we still scrolling?</h2>
-      <p>Despite years of screen-time features built into every smartphone like Apple's Screen Time and Android's Digital Wellbeing people continue to struggle with habitual phone use. The tools exist. The awareness is there. And yet the behavior persists.</p>
-      <p>This disconnect became our starting point. If the functionality already exists and people are still overusing their phones, the problem isn't technological. It's <em>emotional</em>.</p>
+      <p>Every smartphone now ships with features designed to help people use their phones less (Apple's Screen Time, Focus Mode). And yet, most people still dismiss these tools or don't use them at all. The tools exist, the awareness is there, but the behavior doesn't change.</p>
+      <p>That gap became our starting point. If the functionality is already there and people are still endlessly scrolling, the problem isn't a missing feature. It's something deeper.</p>
 
-      
+        <div class="case-img-full">
+        <img src="softstop/competitors.png" alt="presenting" />
+        <span class="annotation"></span>
+      </div>
 
-      <h3>The limits of "just set a timer"</h3>
-      <p>Existing tools treat overuse as a rational failure: exceed a number, get a warning. But phone use is rarely rational. It's habitual, automatic, and emotionally driven — often triggered by stress, boredom, or fatigue rather than intent.</p>
-      <p>Two hours on Instagram late at night is not the same as two hours of focused reading during the day. Yet current systems treat them identically. The result? Interventions that arrive after the behavior has already taken hold, users who dismiss alerts without a second thought, and a persistent cycle of guilt that rarely leads to lasting change.</p>
+      <h3>Why timers don't work</h3>
+      <p>Current tools treat phone overuse like a hard limit. But phone use isn't rational it's habitual and emotional, triggered by stress, boredom, or restlessness more often than conscious choice.</p>
+      <p>Two hours on Instagram at midnight is nothing like two hours of intentional reading in the afternoon. But both trigger the same pop-up. The result is a cycle that most people know well: dismiss the alert, feel a flicker of guilt, keep scrolling.</p>
 
       <div class="pain-points">
         <div class="pain-card">
           <span class="pain-num">Pain 01</span>
           <h4>Interventions that interrupt, not integrate</h4>
-          <p>Pop-ups arrive after a threshold is crossed — outside the behavior they're trying to change. By then, users are already in the flow.</p>
+          <p>Pop-ups arrive after a threshold is crossed, outside the moment they're trying to change. By the time the alert appears, the behavior has already taken hold.</p>
         </div>
         <div class="pain-card">
           <span class="pain-num">Pain 02</span>
-          <h4>One-size "treatments" for complex behavior</h4>
-          <p>Time limits apply the same response to every situation, ignoring context, emotional state, and individual patterns.</p>
+          <h4>One-size responses to complex behavior</h4>
+          <p>Time limits treat every session the same, regardless of context, emotional state, or what the person was actually trying to do.</p>
         </div>
         <div class="pain-card">
           <span class="pain-num">Pain 03</span>
           <h4>Guilt without growth</h4>
-          <p>Exceeding a limit triggers shame — not reflection. Users exit feeling bad but don't develop new habits or understanding.</p>
+          <p>Hitting a limit doesn't spark reflection. It just makes people feel bad. Users close the app feeling worse but don't build new habits.</p>
         </div>
         <div class="pain-card">
           <span class="pain-num">Pain 04</span>
           <h4>Alerts get ignored over time</h4>
-          <p>Repeated notifications create habituation. Users start dismissing them automatically — the very behavior the tool was meant to interrupt.</p>
+          <p>The same notification appearing every day eventually becomes wallpaper. Users swipe it away automatically, which is exactly what the tool was meant to interrupt.</p>
         </div>
       </div>
 
-      <h3>Design goal</h3>
-      <p>We set out to build <strong>Soft Stop</strong> — a speculative mobile app that shifts the design focus from control to awareness. Rather than blocking behavior, Soft Stop responds to the <em>texture</em> of attention: how someone is engaging, not just for how long. Our goal was to surface moments of recognition within ongoing interaction, creating space for choice without imposing restriction.</p>
+      <h3>What we set out to build</h3>
+      <p>We designed <strong>Soft Stop</strong>, a speculative mobile app that shifts the focus from control to awareness. Rather than blocking behavior, Soft Stop pays attention to <em>how</em> someone is engaging, not just for how long. The goal was to surface moments of recognition within the interaction itself, giving people space to make a choice rather than forcing one on them.</p>
     </section>
 
     <!-- Theoretical Framework -->
     <section class="case-section" id="framework">
       <span class="section-label">Theoretical Framework</span>
-      <h2>Grounding the work: emotion, habit, and the "machine zone"</h2>
-      <p>Soft Stop is grounded in two bodies of theory that shaped every design decision we made.</p>
+      <h2>Grounding the work in emotion and habit</h2>
+      <p>Soft Stop is built on two bodies of theory that shaped every design decision we made.</p>
 
       <h3>Don Norman's Three Levels of Emotional Design</h3>
-      <p>Norman (2004) describes how emotional responses to design operate at three interconnected levels. This framework organized our entire design language:</p>
+      <p>Norman (2004) describes how emotional responses to design operate at three interconnected levels. This framework became the backbone of our design language:</p>
 
       <div class="approach-grid">
         <div class="approach-item">
           <h4>Visceral</h4>
-          <p>First impressions and sensory response. We designed gentle, warm visual cues — gradual screen dimming, a soft companion emoji — that signal without alarming.</p>
+          <p>First impressions and sensory response. We used gentle, warm visual cues like gradual screen dimming and a soft companion emoji that signal without alarming.</p>
         </div>
         <div class="approach-item">
           <h4>Behavioral</h4>
-          <p>The feel of use. Reflective prompts, visual indicators, and intent-checking nudges help users understand their patterns in real time.</p>
+          <p>The feel of using the app. Reflective prompts, visual indicators, and intent-checking nudges help users notice their patterns as they happen.</p>
         </div>
         <div class="approach-item">
           <h4>Reflective</h4>
@@ -134,46 +262,46 @@
         </div>
       </div>
 
-      <h3>Natasha Dow Schüll &amp; The Machine Zone</h3>
-      <p>Schüll's research on addictive technology describes a state of absorbed, dissociative interaction — the "machine zone" — where users lose awareness of time and intention. Behavior is no longer governed by choice, but by self-reinforcing loops. This framing helped us understand what we were actually designing against: not bad decisions, but the absence of decision-making entirely.</p>
+      <h3>Natasha Dow Schüll and The Machine Zone</h3>
+      <p>Schüll's research on addictive technology describes a state of absorbed, dissociative interaction she calls the "machine zone," where users lose awareness of time and intention. Behavior stops being a choice and becomes a self-reinforcing loop. This helped us understand what we were actually designing against: not bad decisions, but the absence of decision-making entirely.</p>
 
-      <p>Rather than measuring time, Soft Stop tries to detect the <em>behavioral signatures</em> of that dissociative state — and gently surface users back out of it:</p>
+      <p>Rather than measuring time, Soft Stop looks for the <em>behavioral signatures</em> of that dissociative state and tries to gently surface users back out of it:</p>
 
       <div class="signal-grid">
         <div class="signal-item">
           <span>Signal 01</span>
-          <p>Unlock frequency — repeated checking behavior</p>
+          <p>Unlock frequency reflecting repeated checking behavior</p>
         </div>
         <div class="signal-item">
           <span>Signal 02</span>
-          <p>App-switching rate — fragmented attention</p>
+          <p>App-switching rate indicating fragmented attention</p>
         </div>
         <div class="signal-item">
           <span>Signal 03</span>
-          <p>Time-of-day patterns — contextual vulnerability</p>
+          <p>Time-of-day patterns capturing contextual vulnerability</p>
         </div>
         <div class="signal-item">
           <span>Signal 04</span>
-          <p>Scroll speed — intensity of engagement</p>
+          <p>Scroll speed suggesting depth and intensity of engagement</p>
         </div>
         <div class="signal-item">
           <span>Signal 05</span>
-          <p>Notification response time — immediacy of reaction</p>
+          <p>Notification response time indicating immediacy of reaction</p>
         </div>
         <div class="signal-item">
           <span>Signal 06</span>
-          <p>Repeated app re-opening — compulsive return</p>
+          <p>Repeated app re-opening signaling compulsive return</p>
         </div>
       </div>
 
-      <p>Individually, these signals are limited. Together, they begin to approximate the machine zone — and give Soft Stop a basis for intervening at the right moment, not just the right time.</p>
+      <p>Individually, these signals don't tell you much. Together, they start to approximate the machine zone and give Soft Stop a basis for stepping in at the right moment, not just the right time.</p>
     </section>
 
     <!-- Approach -->
     <section class="case-section" id="approach">
       <span class="section-label">Approach</span>
-      <h2>Two methods, one goal: understand the emotional experience</h2>
-      <p>We used two core emotional design methods, each building on the last, to move from identifying pain points to understanding the deeper emotional needs driving them.</p>
+      <h2>Two methods, one goal: understand what's actually driving the behavior</h2>
+      <p>We used two emotional design methods, each building on the last, to move from mapping pain points to understanding the emotional needs underneath them.</p>
 
       <div class="process-timeline">
 
@@ -181,23 +309,49 @@
           <span class="process-num">01</span>
           <div class="process-body">
             <h4>Emotional Journey Mapping</h4>
-            <p>We mapped the end-to-end emotional experience of using Apple's iOS Screen Time — from setup through the repeated pop-ups users encounter when a limit is hit. The mapping revealed three clear emotional low points: the first pop-up (frustration; users pick "15 more minutes" to resume quickly), the second pop-up (greater annoyance; users choose "Ignore for today"), and the final realization of having exceeded the limit (disappointment and self-doubt). What stood out wasn't just that emotions dropped — it was <em>why</em> they dropped. Each intervention felt punitive, not supportive. Users weren't learning anything; they were just feeling bad.</p>
+            <p>We mapped the full emotional experience of using Apple's iOS Screen Time, from initial setup through the repeated pop-ups that appear when a limit is hit. Three clear low points emerged: the first alert (frustration; tap "15 more minutes" and move on), the second alert (more annoyance; choose "Ignore for today"), and the final realization of having gone over the limit (disappointment and self-criticism). What stood out wasn't just that emotions dropped at each moment. It was why. Every intervention felt like a judgment, not a nudge. Users weren't reflecting on their behavior. They were just feeling bad about it.</p>
+            <div class="method-card" onclick="openSoftLightbox('softstop/journey.png')">
+              <div class="method-card-img">
+                <img src="softstop/journey.png" alt="Emotional Journey Map" />
+                <div class="method-card-overlay">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                  <span>View full map</span>
+                </div>
+              </div>
+              <div class="method-card-meta">
+                <span class="method-card-label">Method Artifact</span>
+                <p>Emotional Journey Map — iOS Screen Time from setup through exceeding limits, with emotion curve and proposed interventions</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="process-step">
           <span class="process-num">02</span>
           <div class="process-body">
-            <h4>Inclusive / Affective Persona Analysis</h4>
-            <p>We built and analyzed an affective persona — Lily L. — based on initial user interviews. Lily represents the younger generation's habitual phone use: opening Instagram when stressed, before bed, first thing in the morning. She knows her phone use is a problem. She already feels ashamed about it. Through Lily, we could see how much the emotional stakes mattered: she didn't need more restrictions — she needed something that felt like it was on her side. This persona grounded our design direction toward support over surveillance.</p>
+            <h4>Inclusive and Affective Persona Analysis</h4>
+            <p>We built an affective persona, Lily L., based on early user interviews. Lily represents the kind of habitual phone user a lot of us recognize: she opens Instagram when she's stressed, scrolls before bed, checks her phone first thing in the morning. She knows it's a problem. She already feels ashamed about it. What Lily needed wasn't another system telling her she'd failed. She needed something that felt like it was actually on her side. This persona pushed our design direction firmly toward support and away from surveillance.</p>
+            <div class="method-card" onclick="openSoftLightbox('softstop/persona.png','Affective Persona — Lily L., 25, Masters student, Boston MA')">
+              <div class="method-card-img">
+                <img src="softstop/persona.png" alt="Affective Persona — Lily L." />
+                <div class="method-card-overlay">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                  <span>View full persona</span>
+                </div>
+              </div>
+              <div class="method-card-meta">
+                <span class="method-card-label">Method Artifact</span>
+                <p>Affective Persona — Lily L., 25, Masters student navigating habitual late-night scrolling and academic stress</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="process-step">
           <span class="process-num">03</span>
           <div class="process-body">
-            <h4>Initial User Testing (Round 1, ~4 participants)</h4>
-            <p>We tested our first prototype iteration, asking participants to reflect on how visuals made them feel, whether the flow felt intuitive, and whether they trusted it. On the visceral level, all four participants responded positively to the calming color palette and layout. Behaviorally, they liked the onboarding but had questions about pop-up frequency. At the reflective level, they would recommend it to others — but felt it needed more personalized onboarding to fit individual goals. Critically: they did not want to feel controlled, even by a tool designed to help them.</p>
+            <h4>Initial User Testing</h4>
+            <p>We tested a first prototype iteration and asked participants to reflect on how the visuals made them feel, whether the flow felt intuitive, and whether they'd actually trust it. All four responded positively to the color palette and layout. They liked the onboarding but had questions about how often the pop-ups would appear. They would recommend it to others, but felt it needed more personalized setup to match their individual goals. The clearest signal: they did not want to feel controlled, even by a tool that was meant to help them.</p>
           </div>
         </div>
 
@@ -208,27 +362,27 @@
         <div class="insight-card">
           <span class="insight-num">Insight 01</span>
           <h4>Feedback needs to feel supportive, not corrective</h4>
-          <p>Users shut down when interventions feel like judgment. Reframing the tone from "you're doing this wrong" to "here's what you might not have noticed" changed everything.</p>
+          <p>Users shut down when something feels like a verdict. Reframing the tone from "you're doing this wrong" to "here's something you might not have noticed" changed everything.</p>
         </div>
         <div class="insight-card">
           <span class="insight-num">Insight 02</span>
-          <h4>Intent-checking creates space for reflection</h4>
-          <p>A 20–30 second pause after opening an app — asking why you opened it — raises awareness before behavior becomes automatic.</p>
+          <h4>Checking intent creates space for reflection</h4>
+          <p>A short pause after opening an app, asking why you opened it, raises awareness before the behavior becomes automatic. Twenty seconds is enough.</p>
         </div>
         <div class="insight-card">
           <span class="insight-num">Insight 03</span>
           <h4>Autonomy is non-negotiable</h4>
-          <p>Users want help developing healthier habits on their own terms. Any system that feels like it's "in charge" triggers resistance, not cooperation.</p>
+          <p>People want help building better habits on their own terms. The moment a tool feels like it's in charge, it loses them.</p>
         </div>
         <div class="insight-card">
           <span class="insight-num">Insight 04</span>
-          <h4>Integration beats standalone</h4>
-          <p>Users were more comfortable with Soft Stop embedded within iOS Settings than as a separate app. Familiarity reduced friction and increased trust.</p>
+          <h4>Make the invisible visible</h4>
+          <p>Users liked the use of haptics like a dimming screen, slower scroll, or a non-intrusive state indicator. It helped users close the app but some expressed annoyance even though they set the limit.</p>
         </div>
       </div>
 
       <div class="quote-card">
-        <p>Users want reminders that feel supportive and encouraging — not repetitive interruptions that are easy to dismiss.</p>
+        <p>Users want nudges that feel supportive and encouraging, not repetitive interruptions that are easy to dismiss.</p>
         <span>— Emotional Journey Mapping synthesis</span>
       </div>
     </section>
@@ -237,56 +391,56 @@
     <section class="case-section" id="iterations">
       <span class="section-label">Design Iterations</span>
       <h2>Testing two directions, three prototypes, and one key pivot</h2>
-      <p>With our research insights in hand, we developed two onboarding concepts and three functional prototypes to test how Soft Stop could live within users' existing routines.</p>
+      <p>With our research in hand, we developed two onboarding concepts and three functional prototypes to test how Soft Stop could fit into users' existing routines without feeling like one more thing to manage.</p>
 
       <h3>Onboarding: Standalone vs. Embedded</h3>
-      <p>We tested whether Soft Stop should introduce itself as a new standalone app or live quietly within iOS Screen Time settings. Both had distinct tradeoffs.</p>
+      <p>We tested whether Soft Stop should introduce itself as a new standalone app or sit quietly inside iOS Screen Time settings. Both approaches had real tradeoffs.</p>
 
       <div class="pain-points">
         <div class="pain-card">
           <span class="pain-num">Flow 01 — Standalone App</span>
-          <h4>More onboarding control, higher friction</h4>
-          <p>Users could build a personalized setup from scratch — choosing apps, vulnerability windows, time limits, and visual preferences. Rich, but it asked for a bigger commitment upfront.</p>
+          <h4>More control but higher friction</h4>
+          <p>Users could build a personalized setup from scratch, choosing apps, vulnerability windows, time limits, and visual preferences. Rich in options, but it asked for a bigger commitment before people had seen any value.</p>
         </div>
         <div class="pain-card">
           <span class="pain-num">Flow 02 — Inside iOS Settings</span>
-          <h4>Familiar, lower-stakes, immediately trusted</h4>
-          <p>Embedding Soft Stop within the existing Screen Time panel felt like a natural extension. Users didn't have to decide to "try a new app" — it was already part of a system they knew.</p>
+          <h4>Familiar but limited</h4>
+          <p>Embedding Soft Stop inside the existing Screen Time felt like a natural extension. Users didn't have to decide to try a new app. It was already part of a system they knew. This would mean sticking to the Apple design system, which means less creative freedom.</p>
         </div>
       </div>
 
-      <p><strong>Outcome:</strong> Users responded significantly better to the integrated flow. The familiarity reduced resistance, and the lighter lift made it feel like a safe experiment rather than a full commitment. We moved forward with Flow 02.</p>
+      <p>Users responded significantly better to the standalone flow due to the more nuanced level of personalization. We moved forward with Flow 01.</p>
 
-      <h3>Functional Prototypes: How Should Intervention Feel?</h3>
-      <p>We built three prototypes that showed Soft Stop in action during active use — specifically, while scrolling Instagram. Each explored a different theory of how to intervene without being intrusive.</p>
+      <h3>Functional Prototypes: How should an intervention feel?</h3>
+      <p>We built three prototypes showing Soft Stop in action during active use, specifically while scrolling Instagram. Each explored a different theory of how to step in without being intrusive.</p>
 
       <div class="process-timeline">
         <div class="process-step">
           <span class="process-num">P1</span>
           <div class="process-body">
-            <h4>Friction + Stats</h4>
-            <p>A mid-scroll interruption with usage data (scrolled 410 ft, 30 min in feeds). Explicit and data-rich, but users found it too disruptive — the stats felt punitive rather than informative.</p>
+            <h4>Friction and Stats</h4>
+            <p>A mid-scroll interruption with usage data showing things like scrolled 410 ft and 30 minutes in feeds. Explicit and data-rich, but users found it too disruptive. The numbers felt like a punishment more than useful information.</p>
           </div>
         </div>
         <div class="process-step">
           <span class="process-num">P2</span>
           <div class="process-body">
-            <h4>Intent-First Onboarding + Limit Feedback</h4>
-            <p>Longer onboarding that asked about goals, feelings, and app habits before setting limits. More personalized, but users wanted the nudges to be lighter during active use.</p>
+            <h4>Intent-First Onboarding with Limit Feedback</h4>
+            <p>Longer onboarding that asked about goals, feelings, and app habits before setting limits. More personalized, but users wanted the in-session nudges to be lighter once they were actually using the app.</p>
           </div>
         </div>
         <div class="process-step">
           <span class="process-num">P3</span>
           <div class="process-body">
-            <h4>Companion Creature + Gradual Visual Fading</h4>
-            <p>A floating emoji companion in the Dynamic Island that changes expression as screen time accumulates. Paired with progressive screen desaturation. Users responded most positively — "it noticed without yelling at me."</p>
+            <h4>Companion Creature with Gradual Visual Fading</h4>
+            <p>A floating emoji companion in the Dynamic Island that slowly shifts expression as screen time builds up, paired with progressive screen desaturation. Users responded most positively to this one. "It noticed without yelling at me" was how one person put it.</p>
           </div>
         </div>
       </div>
 
       <div class="key-insight">
         <span class="insight-label">Pivotal Learning</span>
-        <p>The most effective interventions made overuse visible without assigning blame. Emotional tone, not information density, determined whether users engaged or dismissed.</p>
+        <p>The most effective interventions made overuse feel visible without assigning blame. Emotional tone, not information density, determined whether users engaged or dismissed.</p>
       </div>
     </section>
 
@@ -294,14 +448,22 @@
     <section class="case-section" id="final">
       <span class="section-label">Final Design</span>
       <h2>A gentle companion, not a gatekeeper</h2>
-      <p>The final prototype brings together everything we learned into a system that feels less like a restriction and more like a quiet, attentive friend who notices when you've drifted.</p>
+      <p>The final prototype pulls together everything we learned into something that feels less like a restriction and more like a quiet presence that notices when you've drifted.</p>
 
       <div class="case-img-full">
         <div class="img-placeholder">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span class="img-placeholder-label">Final Prototype Screens — Onboarding through Active Use<br><small>Insert final prototype image here</small></span>
+          <img src="softstop/onboarding.gif" alt="onboarding" />
+          
         </div>
-        <span class="annotation">Final prototype: from personalized onboarding to in-app companion and mindful pause screen</span>
+        <span class="annotation">Personalized onboarding that focuses on understanding user behavior and understanding their limits and ways to wind down.</span>
+      </div>
+
+      <div class="case-img-full">
+        <div class="img-placeholder">
+          <img src="softstop/softstop.gif" alt="flow" />
+          
+        </div>
+        <span class="annotation">Soft Stop starts by grounding the user in their intention they set. Over time the emoji changes as they approach their limit, the screen starts to dim, and the scroll gets heavy. At their limit they are prompted to pick a moment of mindfulness.</span>
       </div>
 
       <h3>Key Design Decisions</h3>
@@ -311,53 +473,40 @@
           <span class="process-num">①</span>
           <div class="process-body">
             <h4>Emoji companion in the Dynamic Island</h4>
-            <p>As screen time accumulates, a small emoji appears in the Dynamic Island — neutral at first, then gently shifting expression. It doesn't pop up demanding attention. It's just there, quietly reflecting the user's state back at them. Users described it as "it noticed without yelling at me." This addresses the core failure of existing tools: awareness surfaces within the experience, not after it's over.</p>
+            <p>As screen time builds up, a small emoji appears in the Dynamic Island, starting neutral and gently shifting expression over time. It doesn't pop up demanding attention. It just sits there, quietly reflecting the user's state back at them. Users described it as "it noticed without yelling at me." Awareness happens within the experience, not after it's already over.</p>
           </div>
         </div>
         <div class="process-step">
           <span class="process-num">②</span>
           <div class="process-body">
             <h4>Progressive visual fading</h4>
-            <p>As users approach their self-set limit, the interface gently desaturates — not a hard stop, but a gradual shift in the environment itself. This visceral-level design makes the invisible state of extended use literally visible, without any text or interruption.</p>
+            <p>As users approach their self-set limit, the interface gently desaturates. Not a hard stop, but a gradual shift in the environment itself. It makes the invisible state of extended use literally visible, without any text or interruption required.</p>
           </div>
         </div>
         <div class="process-step">
           <span class="process-num">③</span>
           <div class="process-body">
-            <h4>Intent-check at app open</h4>
-            <p>When users open a tracked app, Soft Stop surfaces a brief pause: "Before you scroll — you said you wanted to sleep better." This 20–30 second moment of friction is intentional. It interrupts the automatic motion of opening an app and creates space for a choice. Not a block — a breath.</p>
+            <h4>Intent check at app open</h4>
+            <p>When users open a tracked app, Soft Stop surfaces a brief pause: "Before you scroll, you said you wanted to sleep better." That 20 second moment is intentional. It interrupts the automatic motion of opening an app and creates room for a choice. Not a block, just a breath.</p>
           </div>
         </div>
         <div class="process-step">
           <span class="process-num">④</span>
           <div class="process-body">
             <h4>Mindful pause, not hard stop</h4>
-            <p>When the soft limit is reached, instead of a wall, users see: "Time for a soft stop." They're offered three micro-actions — Hydrate, Meditate, Self-care — and a 5-minute break timer. The experience is actionable and forward-looking. It ends with a box-breathing exercise and a reflection summary. This is the heart of the behavioral and reflective design levels working together.</p>
+            <p>When a soft limit is reached, instead of a wall, users see: "Time for a soft stop." They're offered three small actions, Hydrate, Meditate, or Self-care, and a 5-minute break timer. The experience is actionable and forward-looking. It ends with a box-breathing exercise and a brief reflection summary.</p>
           </div>
         </div>
         <div class="process-step">
           <span class="process-num">⑤</span>
           <div class="process-body">
             <h4>Personalized, iOS-integrated onboarding</h4>
-            <p>Setup lives inside iOS Screen Time settings — familiar territory. Users answer questions about how they want to feel, what they're scrolling away from, and which apps concern them most. The result is a system that feels built for them, not deployed at them.</p>
+            <p>Setup lives inside iOS Screen Time settings on familiar ground. Users answer questions about how they want to feel, what they tend to scroll away from, and which apps concern them most. The result is a system that feels built around them rather than deployed at them.</p>
           </div>
         </div>
       </div>
 
-      <div class="outcome-strip">
-        <div class="outcome-item">
-          <span class="outcome-num">4/4</span>
-          <span class="outcome-label">participants praised visual design in testing</span>
-        </div>
-        <div class="outcome-item">
-          <span class="outcome-num">100%</span>
-          <span class="outcome-label">would recommend to a friend</span>
-        </div>
-        <div class="outcome-item">
-          <span class="outcome-num">0</span>
-          <span class="outcome-label">hard blocks or guilt-based alerts</span>
-        </div>
-      </div>
+    
 
       <a href="https://calm-intent-companion.lovable.app/" target="_blank" class="cta-btn">View live demo →</a>
     </section>
@@ -370,40 +519,52 @@
       <div class="learnings">
         <div class="learning-item">
           <h4>Emotional tone is a design material.</h4>
-          <p>We spent considerable time refining not what information to show users, but how it should feel when it arrived. The difference between a pop-up that shames and one that supports is almost entirely tonal — same message, completely different emotional response. I'll bring that sensitivity to every interaction I design going forward.</p>
+          <p>We spent more time thinking about how information should feel when it arrived than about what information to show. The difference between a pop-up that shames and one that supports is almost entirely the tone.</p>
         </div>
         <div class="learning-item">
           <h4>Designing for agency requires restraint.</h4>
-          <p>The instinct in wellbeing design is to intervene — to add friction, force reflection, block access. But our users taught us that the moment a system feels controlling, it loses the user entirely. The most impactful design choices we made were things we decided <em>not</em> to do: not block, not shame, not require. Restraint turned out to be our most powerful tool.</p>
+          <p>The instinct in wellbeing design is to intervene more: add friction, force reflection, block access. But our users made it clear that the moment a system feels like it's in control, they disengage entirely. The most impactful choices we made were things we decided not to do. Not block, not shame, not require.</p>
         </div>
         <div class="learning-item">
           <h4>Behavior change lives at the visceral level, not the reflective one.</h4>
-          <p>We initially focused heavily on reflective features: summaries, insights, habit tracking. But users responded most to things they felt before they could name — the gradual dimming, the quiet companion, the pause before scrolling. This project shifted my design philosophy: if you want to change behavior, reach people at the level where behavior actually happens.</p>
+          <p>We started with a heavy focus on reflective features: summaries, insights, habit tracking. But users responded most to things they felt before they could name them, the gradual dimming, the quiet companion, the pause before scrolling. This project shifted how I think about design: if you want to change behavior, you have to reach people at the level where behavior actually happens.</p>
         </div>
         <div class="learning-item">
           <h4>A good design asks the question, not just answers it.</h4>
-          <p>The intent-check moment — that 20-second pause asking why you opened this app — became the soul of Soft Stop. It doesn't tell users what to do. It just creates the conditions for them to notice what they're doing. That distinction, between a tool that controls and a tool that creates space, is something I'll carry into every future project.</p>
+          <p>The intent check moment, that 20-second pause asking why you opened this app, became the heart of Soft Stop. It doesn't tell users what to do. It just creates the conditions for them to notice what they're already doing.</p>
         </div>
       </div>
 
-      <div class="hmw-block">
-        <h3>Digital wellbeing isn't a productivity problem. It's an emotional design challenge.</h3>
-      </div>
+    
     </section>
 
-    <!-- Nav footer -->
-    <nav style="display:flex;justify-content:space-between;align-items:center;padding:40px 0;border-top:1px solid var(--border);margin-bottom:80px;">
-      <a href="index.html#work" style="font-size:13px;color:var(--text-muted);">← All Work</a>
-      <a href="https://calm-intent-companion.lovable.app/" target="_blank" style="font-size:13px;color:var(--text-muted);">Live Demo →</a>
-    </nav>
+  
   </main>
 
-  <footer>
-    <p>© 2026 Manvi Tandon</p>
-    <a href="mailto:mtandon@pratt.edu" style="font-size:13px;color:var(--text-muted);">mtandon@pratt.edu</a>
-    <a href="#overview" style="font-size:13px;color:var(--text-muted);">Back to top ↑</a>
+  <!-- Footer -->
+  <footer class="footer case-footer">
+    <div class="footer-main">
+      <h2>Let's Collaborate</h2>
+      <a href="mailto:mtandon@pratt.edu" class="footer-cta">Get in touch</a>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col footer-col-nav">
+        <span class="label">( Navigate )</span>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#projects">Archive</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">( Connect )</span>
+        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
+        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Manvi Tandon</p>
+    </div>
   </footer>
-
   <script>
     // Theme toggle
     const btn = document.getElementById('themeToggle');
@@ -414,6 +575,26 @@
       const next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
+    });
+
+    // Lightbox
+    function openSoftLightbox(src, caption) {
+      document.getElementById('ssLightboxImg').src = src;
+      document.getElementById('ssLightboxCaption').textContent = caption || '';
+      document.getElementById('ssLightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSoftLightbox(e) {
+      if (e.target === document.getElementById('ssLightbox')) {
+        document.getElementById('ssLightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.getElementById('ssLightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
     });
 
     // Side nav scroll tracking
