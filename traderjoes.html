@@ -14,37 +14,41 @@
 
 <body>
 
+  <!-- Navigation -->
+  <!-- ============ NAV ============ -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">
-      <span class="logo-main">Manvi Tandon</span>
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-fig"><img id="logoFig" src="assets/body6.svg" alt="" /></span>
+      <span class="nav__name">Manvi Tandon</span>
     </a>
-    <div class="nav-center">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#projects">Archive</a>
+    <div class="nav__center">
+      <a href="index.html#work" class="nav__link nav__link--wavy">Work</a>
+      <a href="index.html#archive" class="nav__link nav__link--dashed">Archive</a>
+      <a href="index.html#about" class="nav__link nav__link--solid">About</a>
     </div>
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
+    <div class="nav__right">
+      <a href="#" class="nav__cta" data-open-contact>Get in touch</a>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="sunIcon"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="1.5" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22.5"></line><line x1="3.5" y1="3.5" x2="5.3" y2="5.3"></line><line x1="18.7" y1="18.7" x2="20.5" y2="20.5"></line><line x1="1.5" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22.5" y2="12"></line><line x1="3.5" y1="20.5" x2="5.3" y2="18.7"></line><line x1="18.7" y1="5.3" x2="20.5" y2="3.5"></line></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="moonIcon" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span></button>
     </div>
   </nav>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="menu" id="menu">
+    <button class="menu__close" id="menuClose" aria-label="Close">&#10005;</button>
+    <a href="index.html#work" data-menu-link>Work</a>
+    <a href="index.html#archive" data-menu-link>Archive</a>
+    <a href="index.html#about" data-menu-link>About</a>
+    <a href="#" class="menu__cta" data-open-contact data-menu-link>Get in touch</a>
+    <div class="menu__social">
+      <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/mtandon27" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://medium.com/@mtandon_14181" target="_blank" rel="noopener">Medium</a>
+    </div>
+  </div>
 
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">&#10005;</button>
@@ -69,7 +73,7 @@
 
   <main class="case-study">
 
-    <a href="index.html#projects" class="back-link">← Back</a>
+    <a href="index.html#archive" class="back-link">← Back to Archive</a>
 
     <!-- HERO -->
     <header class="case-hero" id="overview">
@@ -285,44 +289,99 @@
 
   </main>
 
-  <footer class="footer case-footer">
-    <div class="footer-main">
-  <h2>Collaborate</h2>
-  <a href="mailto:mtandon@pratt.edu" class="footer-cta">Contact me</a>
-</div>
-    <div class="footer-cols">
-      <div class="footer-col footer-col-nav">
-        <span class="label">( Navigate )</span>
-        <a href="index.html#work">Work</a>
-        <a href="index.html#projects">Archive</a>
-        <a href="index.html#about">About</a>
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__label">Have a project in mind?</span>
+      <a href="#" class="footer__big" data-open-contact>Get in touch ↗</a>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <span>( Navigate )</span>
+          <a href="index.html#work" class="ulink">Work</a>
+          <a href="index.html#archive" class="ulink">Archive</a>
+          <a href="index.html#about" class="ulink">About</a>
+        </div>
+        <div class="footer__col">
+          <span>( Find me )</span>
+          <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank" rel="noopener" class="ulink">LinkedIn</a>
+          <a href="https://github.com/mtandon27" target="_blank" rel="noopener" class="ulink">GitHub</a>
+          <a href="https://medium.com/@mtandon_14181" target="_blank" rel="noopener" class="ulink">Medium</a>
+        </div>
       </div>
-      <div class="footer-col">
-        <span class="label">( Connect )</span>
-        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
-        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+
+      <div class="footer__walk" id="footerWalk">
+        <div class="footer__walk-row">
+          <img class="walker" data-light="assets/body6-maroon.svg" data-dark="assets/body6.svg" src="assets/body6-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body4-maroon.svg" data-dark="assets/body4.svg" src="assets/body4-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body1-maroon.svg" data-dark="assets/body1.svg" src="assets/body1-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body2-maroon.svg" data-dark="assets/body2.svg" src="assets/body2-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body3-maroon.svg" data-dark="assets/body3.svg" src="assets/body3-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body5-maroon.svg" data-dark="assets/body5.svg" src="assets/body5-maroon.svg" alt="" />
+        </div>
+        <div class="footer__rule"></div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Manvi Tandon. All rights reserved.</p>
+
+      <div class="footer__bottom">
+        <span>Manvi Tandon</span>
+        <span class="muted">© 2026 Manvi Tandon. All rights reserved.</span>
+        <a href="#overview" class="muted">Back to top ↑</a>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- ============ CONTACT MODAL ============ -->
+  <div class="contact" id="contact">
+    <div class="contact__bg" data-close-contact></div>
+    <div class="contact__panel">
+      <button class="contact__close" data-close-contact aria-label="Close">&#10005;</button>
+      <span class="contact__eyebrow">Get in touch</span>
+      <h3 class="contact__title">Let's leave a mark together.</h3>
+      <form id="contactForm">
+        <label>Name<input name="name" required placeholder="Your name" /></label>
+        <label>Email<input name="email" type="email" required placeholder="you@email.com" /></label>
+        <label>Message<textarea name="message" required rows="4" placeholder="Tell me about your project…"></textarea></label>
+        <button type="submit" class="contact__send">Send message →</button>
+      </form>
+    </div>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Sidenav
       const sections = document.querySelectorAll('.case-section[id], .case-hero[id]');
       const navLinks = document.querySelectorAll('.sidenav-link');
-      const observer = new IntersectionObserver((entries) => {
+      new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute('id');
-            navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+            navLinks.forEach(l => {
+              l.classList.toggle('active', l.getAttribute('href') === `#${id}`);
+            });
           }
         });
-      }, { rootMargin: '-20% 0px -65% 0px' });
-      sections.forEach(s => { if (s.id) observer.observe(s); });
+      }, { rootMargin: '-20% 0px -65% 0px' }).observe
+      sections.forEach(s => { if (s.id) {
+        new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) navLinks.forEach(l => {
+              l.classList.toggle('active', l.getAttribute('href') === `#${e.target.id}`);
+            });
+          });
+        }, { rootMargin: '-20% 0px -65% 0px' }).observe(s);
+      }});
+
+      // Screen tabs
+      document.querySelectorAll('.screen-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const idx = tab.dataset.tab;
+          document.querySelectorAll('.screen-tab').forEach(t => t.classList.remove('active'));
+          document.querySelectorAll('.screen-panel').forEach(p => p.classList.remove('active'));
+          tab.classList.add('active');
+          document.querySelector(`.screen-panel[data-panel="${idx}"]`).classList.add('active');
+        });
+      });
     });
   </script>
 </body>

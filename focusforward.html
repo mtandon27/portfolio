@@ -237,21 +237,41 @@
     </div>
   </div>
 
-  <!-- Nav -->
+  <!-- Navigation -->
+  <!-- ============ NAV ============ -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">Manvi Tandon</a>
-    <div class="nav-center">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#projects">Archive</a>
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-fig"><img id="logoFig" src="assets/body6.svg" alt="" /></span>
+      <span class="nav__name">Manvi Tandon</span>
+    </a>
+    <div class="nav__center">
+      <a href="index.html#work" class="nav__link nav__link--wavy">Work</a>
+      <a href="index.html#archive" class="nav__link nav__link--dashed">Archive</a>
+      <a href="index.html#about" class="nav__link nav__link--solid">About</a>
     </div>
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <div class="nav__right">
+      <a href="#" class="nav__cta" data-open-contact>Get in touch</a>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="sunIcon"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="1.5" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22.5"></line><line x1="3.5" y1="3.5" x2="5.3" y2="5.3"></line><line x1="18.7" y1="18.7" x2="20.5" y2="20.5"></line><line x1="1.5" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22.5" y2="12"></line><line x1="3.5" y1="20.5" x2="5.3" y2="18.7"></line><line x1="18.7" y1="5.3" x2="20.5" y2="3.5"></line></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="moonIcon" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span></button>
     </div>
   </nav>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="menu" id="menu">
+    <button class="menu__close" id="menuClose" aria-label="Close">&#10005;</button>
+    <a href="index.html#work" data-menu-link>Work</a>
+    <a href="index.html#archive" data-menu-link>Archive</a>
+    <a href="index.html#about" data-menu-link>About</a>
+    <a href="#" class="menu__cta" data-open-contact data-menu-link>Get in touch</a>
+    <div class="menu__social">
+      <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/mtandon27" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://medium.com/@mtandon_14181" target="_blank" rel="noopener">Medium</a>
+    </div>
+  </div>
 
   <!-- Side nav -->
   <aside class="case-sidenav" id="caseSidenav">
@@ -266,7 +286,7 @@
   </aside>
 
   <main class="case-study">
-    <a href="index.html#work" class="back-link">← Back</a>
+    <a href="index.html#archive" class="back-link">← Back to Archive</a>
 
     <!-- Hero -->
     <header class="case-hero" id="overview">
