@@ -40,8 +40,8 @@ const SKILLS = ['Product Design', 'UX Research', 'Illustration', 'Design Systems
   grid.innerHTML = WORK.map(p => `
     <a href="${p.href}" class="work-card reveal">
       <div class="work-card__img img-swap">${p.imgDark
-        ? `<img class="is-light" src="${p.img}" alt="${p.title}" /><img class="is-dark" src="${p.imgDark}" alt="${p.title}" />`
-        : `<img src="${p.img}" alt="${p.title}" />`}</div>
+        ? `<img class="is-light" loading="lazy" decoding="async" src="${p.img}" alt="${p.title}" /><img class="is-dark" loading="lazy" decoding="async" src="${p.imgDark}" alt="${p.title}" />`
+        : `<img loading="lazy" decoding="async" src="${p.img}" alt="${p.title}" />`}</div>
       <div class="work-card__meta">
         <span class="work-card__title">${p.title} <span class="work-card__arrow">↗</span></span>
         <span class="work-card__year">${p.year}</span>
@@ -73,7 +73,7 @@ const SKILLS = ['Product Design', 'UX Research', 'Illustration', 'Design Systems
       </div>
       <div class="arch-panel">
         <div class="arch-panel__inner">
-          <div class="arch-panel__img"><img src="${a.img}" alt="${a.title}" /></div>
+          <div class="arch-panel__img"><img loading="lazy" decoding="async" src="${a.img}" alt="${a.title}" /></div>
           <div>
             <span class="arch-tag">${a.tag}</span>
             <p class="arch-panel__desc">${a.desc}</p>

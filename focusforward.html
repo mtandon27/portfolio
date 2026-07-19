@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/global.css" />
-    
+    <link rel="stylesheet" href="css/case-study.css" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -232,7 +233,7 @@
   <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
     <div class="lightbox-inner">
       <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''">✕</button>
-      <img id="lightbox-img" src="" alt="" />
+      <img loading="lazy" decoding="async" id="lightbox-img" src="" alt="" />
       <p class="lightbox-caption" id="lightbox-caption"></p>
     </div>
   </div>
@@ -290,7 +291,7 @@
 
     <!-- Hero -->
     <header class="case-hero" id="overview">
-      <div class="case-logo"><img src="focusforward/logo.png" alt="Focus Forward" /></div>
+      <div class="case-logo"><img loading="lazy" decoding="async" src="focusforward/logo.png" alt="Focus Forward" /></div>
       <span class="case-eyebrow">Focus Forward Project · Service Design</span>
       <h1 class="case-title">Building the system that exists after the program ends</h1>
       <p style="font-size:17px;line-height:1.7;color:var(--text-muted);max-width:640px;margin-bottom:0;"></p>
@@ -350,7 +351,7 @@
         <button class="expand-btn" onclick="openLightbox('focusforward/blueprint.png','Service Design Blueprint — Pre-Enrollment through Post-Graduation')">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand
         </button>
-        <img src="focusforward/blueprint.png" alt="Service Design Blueprint" onclick="openLightbox(this.src,this.alt)" />
+        <img loading="lazy" decoding="async" src="focusforward/blueprint.png" alt="Service Design Blueprint" onclick="openLightbox(this.src,this.alt)" />
         <span class="annotation">Service Design Blueprint: Pre-Enrollment through Post-Graduation</span>
       </div>
 
@@ -380,7 +381,7 @@
         <button class="expand-btn" onclick="openLightbox('focusforward/crosschannel.png','Cross-Channel Systems Analysis matrix')">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand
         </button>
-        <img src="focusforward/crosschannel.png" alt="Cross-Channel Systems Analysis matrix" onclick="openLightbox(this.src,this.alt)" />
+        <img loading="lazy" decoding="async" src="focusforward/crosschannel.png" alt="Cross-Channel Systems Analysis matrix" onclick="openLightbox(this.src,this.alt)" />
         <span class="annotation">Cross-Channel Systems Analysis matrix</span>
       </div>
 
@@ -396,7 +397,7 @@
       </div>
 
       <div class="case-img-full">
-        <img src="focusforward/goodservice.png" alt="Good Services Scale rubric" onclick="openLightbox(this.src,this.alt)" style="cursor:zoom-in;" />
+        <img loading="lazy" decoding="async" src="focusforward/goodservice.png" alt="Good Services Scale rubric" onclick="openLightbox(this.src,this.alt)" style="cursor:zoom-in;" />
         <a href="https://miro.com/app/board/uXjVGq65e5Q=/?share_link_id=383745892814" target="_blank" rel="noopener" class="int-link" style="margin-top:4px;">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           View full Good Services Scale on Miro
@@ -434,7 +435,7 @@
         <button class="expand-btn" onclick="openLightbox('focusforward/codesign.png','Co-Design Workshop — Miro board overview')">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand
         </button>
-        <img src="focusforward/codesign.png" alt="Co-Design Workshop: Miro board overview" onclick="openLightbox(this.src,this.alt)" />
+        <img loading="lazy" decoding="async" src="focusforward/codesign.png" alt="Co-Design Workshop: Miro board overview" onclick="openLightbox(this.src,this.alt)" />
         <span class="annotation">Co-Design Workshop: Miro board overview</span>
       </div>
     </section>
@@ -457,7 +458,7 @@
         <button class="expand-btn" onclick="openLightbox('focusforward/probe.png','Cultural Probe — sticky note clusters')">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand
         </button>
-        <img src="focusforward/probe.png" alt="Cultural Probe sticky note clusters from Miro" onclick="openLightbox(this.src,this.alt)" />
+        <img loading="lazy" decoding="async" src="focusforward/probe.png" alt="Cultural Probe sticky note clusters from Miro" onclick="openLightbox(this.src,this.alt)" />
         <span class="annotation">Cultural Probe sticky note clusters from Miro</span>
       </div>
 
@@ -497,7 +498,7 @@
         <button class="expand-btn" onclick="openLightbox('focusforward/cojourney.jpg','Co-Journey Map: post-graduation communication cliff')">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand
         </button>
-        <img src="focusforward/cojourney.jpg" alt="Co-Journey Map: post-graduation communication cliff" onclick="openLightbox(this.src,this.alt)" />
+        <img loading="lazy" decoding="async" src="focusforward/cojourney.jpg" alt="Co-Journey Map: post-graduation communication cliff" onclick="openLightbox(this.src,this.alt)" />
         <span class="annotation">Co-Journey Map: post-graduation communication cliff</span>
       </div>
 
@@ -519,7 +520,7 @@
         <button class="expand-btn" onclick="openLightbox('focusforward/brainwriting.png','Brainwriting — donor expansion ideation')">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand
         </button>
-        <img src="focusforward/brainwriting.png" alt="Brainwriting results — donor expansion ideation board" onclick="openLightbox(this.src,this.alt)" />
+        <img loading="lazy" decoding="async" src="focusforward/brainwriting.png" alt="Brainwriting results — donor expansion ideation board" onclick="openLightbox(this.src,this.alt)" />
         <span class="annotation">Brainwriting results — donor expansion ideation board</span>
       </div>
     </section>
@@ -539,14 +540,14 @@
         <button class="expand-btn" onclick="openLightbox('focusforward/participantsuccess.png','Ecosystem Loop 01 — Tracking Participant Success')">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand
         </button>
-        <img src="focusforward/participantsuccess.png" alt="Ecosystem Loop 01 — Tracking Participant Success" onclick="openLightbox(this.src,this.alt)" />
+        <img loading="lazy" decoding="async" src="focusforward/participantsuccess.png" alt="Ecosystem Loop 01 — Tracking Participant Success" onclick="openLightbox(this.src,this.alt)" />
         <span class="annotation">Ecosystem Loop 01 — Tracking Participant Success</span>
       </div>
       <div class="case-img-full">
         <button class="expand-btn" onclick="openLightbox('focusforward/donorexpansion.png','Ecosystem Loop 02 — Donor Expansion')">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand
         </button>
-        <img src="focusforward/donorexpansion.png" alt="Ecosystem Loop 02 — Donor Expansion" onclick="openLightbox(this.src,this.alt)" />
+        <img loading="lazy" decoding="async" src="focusforward/donorexpansion.png" alt="Ecosystem Loop 02 — Donor Expansion" onclick="openLightbox(this.src,this.alt)" />
         <span class="annotation">Ecosystem Loop 02 — Donor Expansion</span>
       </div>
 
@@ -566,13 +567,13 @@
 
         <div class="int-sub">
           <div class="int-sub-text"><span class="int-sub-label">AI Video Editing</span><p>Turn raw WhatsApp videos or interview recordings into captioned, branded reels in minutes (no video editing skills required).</p></div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/editor.png','AI video editing interface')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/editor.png" alt="AI video editing interface" onclick="openLightbox(this.src,'AI video editing interface — Vizard with captions')" /><span class="annotation">AI video editing interface — Vizard with captions</span></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/editor.png','AI video editing interface')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/editor.png" alt="AI video editing interface" onclick="openLightbox(this.src,'AI video editing interface — Vizard with captions')" /><span class="annotation">AI video editing interface — Vizard with captions</span></div>
         </div>
         <div class="int-sub int-sub-flip">
           <div class="int-sub-text"><span class="int-sub-label">Reel Prompt Toolkit</span><p>Structured prompts graduates can pick from when creating content. Topics like "Where I started" or "Inside the program".</p>
         <br><a class="int-link" href="https://docs.google.com/presentation/d/1WbQCgocfkYDYM4Fan2ZwrKjfK87J50m6nymJMdeOS3w/edit?usp=sharing" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Reel Prompt Kit</a>
     </div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/reelprompt.png','Reel Prompt Toolkit')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/reelprompt.png" alt="Reel Prompt Toolkit" onclick="openLightbox(this.src,'Reel Prompt Toolkit — prompt card set')" /><span class="annotation">Reel Prompt Toolkit — prompt card set for FFP content creation</span></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/reelprompt.png','Reel Prompt Toolkit')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/reelprompt.png" alt="Reel Prompt Toolkit" onclick="openLightbox(this.src,'Reel Prompt Toolkit — prompt card set')" /><span class="annotation">Reel Prompt Toolkit — prompt card set for FFP content creation</span></div>
         </div>
         
 
@@ -617,20 +618,20 @@
             <br>
             <a class="int-link" href="https://docs.google.com/forms/d/1VFNf8rG8D_9yu9AH2LjclyQvKL_176KJiUV3h2RD30g/edit" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Google Forms — Consent Form</a>
        </div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/consent.png','Informed Consent Form')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/consent.png" alt="Informed Consent Form" onclick="openLightbox(this.src,'Informed Consent Form — print and online versions')" /><span class="annotation">Informed Consent Form — print version and online Google Form side by side</span></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/consent.png','Informed Consent Form')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/consent.png" alt="Informed Consent Form" onclick="openLightbox(this.src,'Informed Consent Form — print and online versions')" /><span class="annotation">Informed Consent Form — print version and online Google Form side by side</span></div>
         </div>
         <div class="int-sub int-sub-flip">
           <div class="int-sub-text"><span class="int-sub-label">Check-In Communication Templates</span><p>Structured but flexible Google Doc templates for context-dependent check-ins. Optional based on facilitator capacity. Designed to reduce cognitive load so even minimal contact is consistent and counts toward the data picture.</p>
             <br> 
     <a class="int-link" href="https://docs.google.com/document/d/1v7953hTump9WL9D1beQeoP_bbBTXMctUPXgV2YBmmJ0/edit?usp=drive_link " target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Check-in Template</a>
         </div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/check-in.png','Check-in templates')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/check-in.png" alt="Check-in templates" onclick="openLightbox(this.src,'Check-in communication templates')" /><span class="annotation">Check-in communication template Google Doc with situation-based guidance</span></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/check-in.png','Check-in templates')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/check-in.png" alt="Check-in templates" onclick="openLightbox(this.src,'Check-in communication templates')" /><span class="annotation">Check-in communication template Google Doc with situation-based guidance</span></div>
         </div>
         <div class="int-sub">
           <div class="int-sub-text"><span class="int-sub-label">Engagement Log</span><p>A facilitator tracking sheet using PACER and NYC DOC to log court outcomes and recidivism for opted-in participants. Organizes all points of contact in one place with responsive logic for updates.</p>
          <br> 
     <a class="int-link" href="https://docs.google.com/spreadsheets/d/10GL4Df2Xf3tFxmrq72FdpyPr6t8zkgaHAQgGNKFcFJU/edit?usp=drive_link" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Engagement Log</a></div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/tracking.png','Engagement Log')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/tracking.png" alt="Engagement Log spreadsheet" onclick="openLightbox(this.src,'Engagement Log spreadsheet')" /><span class="annotation">Engagement Log showing participant tracking, check-in frequency, and key focus columns</span></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/tracking.png','Engagement Log')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/tracking.png" alt="Engagement Log spreadsheet" onclick="openLightbox(this.src,'Engagement Log spreadsheet')" /><span class="annotation">Engagement Log showing participant tracking, check-in frequency, and key focus columns</span></div>
         </div>
 
         <div class="transition-block">
@@ -669,24 +670,24 @@
 
         <div class="int-sub">
           <div class="int-sub-text"><span class="int-sub-label">Alumni page Landing + Newsletter</span><p>A quarterly newsletter "The Forward Post" will keep alumni informed, connected, and celebrated. Covers class outcomes, community milestones, and alumni successes. Graduates can subscribe and submit updates directly.</p></div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/Alumnihub.png','Alumni Communication Hub landing')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/Alumnihub.png" alt="Alumni landing page" onclick="openLightbox(this.src,'Alumni Communication Hub landing page')" /><span class="annotation">Alumni page — Stay Connected Stay Forward with newsletter archive</span></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/Alumnihub.png','Alumni Communication Hub landing')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/Alumnihub.png" alt="Alumni landing page" onclick="openLightbox(this.src,'Alumni Communication Hub landing page')" /><span class="annotation">Alumni page — Stay Connected Stay Forward with newsletter archive</span></div>
         </div>
         <div class="int-sub int-sub-flip">
           <div class="int-sub-text"><span class="int-sub-label">Newsletter Design</span><p>The Forward Post archive with quarterly issues covering program updates, employer partnerships, mentorship launches, and alumni spotlights. Subscribe form embedded for low-friction sign-up.</p></div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/newsletter.png','The Forward Post newsletter')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/newsletter.png" alt="The Forward Post newsletter" onclick="openLightbox(this.src,'The Forward Post newsletter design')" /><span class="annotation">The Forward Post — issue list and subscribe form</span></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/newsletter.png','The Forward Post newsletter')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/newsletter.png" alt="The Forward Post newsletter" onclick="openLightbox(this.src,'The Forward Post newsletter design')" /><span class="annotation">The Forward Post — issue list and subscribe form</span></div>
         </div>
         <div class="int-sub">
           <div class="int-sub-text"><span class="int-sub-label">Events &amp; Participation</span><p>An upcoming events page listing workshops, mentorship kickoffs, and the annual alumni reunion with RSVP spots tracked in real time. Creates touchpoints that bring the community together beyond the 13-week cohort.</p></div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/events.png','Events and Participation page')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/events.png" alt="Events page" onclick="openLightbox(this.src,'Events and Participation page')" /><span class="annotation">Events page — workshops, Alumni Mentor Kickoff, and annual reunion with RSVP spots</span></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/events.png','Events and Participation page')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/events.png" alt="Events page" onclick="openLightbox(this.src,'Events and Participation page')" /><span class="annotation">Events page — workshops, Alumni Mentor Kickoff, and annual reunion with RSVP spots</span></div>
         </div>
         <div class="int-sub int-sub-flip">
           <div class="int-sub-text"><span class="int-sub-label">Alumni Visibility &amp; Community</span><p>A "Focus Forward Updates" feed featuring alumni success stories, program announcements, and resource releases with a "Share Your Story" form. Continuously grows community voice and gives donors something real to connect with.</p></div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/visibility.png','Alumni Visibility page')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/visibility.png" alt="Alumni Visibility page" onclick="openLightbox(this.src,'Alumni Visibility and Community page')" /><span class="annotation">Alumni updates feed — stories, announcements, and share your story CTA</span></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/visibility.png','Alumni Visibility page')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/visibility.png" alt="Alumni Visibility page" onclick="openLightbox(this.src,'Alumni Visibility and Community page')" /><span class="annotation">Alumni updates feed — stories, announcements, and share your story CTA</span></div>
         </div>
         <div class="int-sub">
           <div class="int-sub-text"><span class="int-sub-label">Redesigned Testimonials Page</span><p>A proposed redesign of the FFP testimonials webpage with video testimonials, written stories, and a submission form in one place. Showcases real journeys, drives donor empathy, and enables alumni to continuously add their voices.</p><br>
-        <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/sharestory.png','Testimonials redesign')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/sharestory.png" alt="Testimonials redesign" onclick="openLightbox(this.src,'Share Your Story')" /><span class="annotation">Enabling alumni to share their journey through video or written submission form</span></div></div>
-          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/testimonials.png','Testimonials redesign')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img src="focusforward/testimonials.png" alt="Testimonials redesign" onclick="openLightbox(this.src,'Testimonials redesign')" /><span class="annotation">Highlighting alumni stories and testimonials, all in one place</span></div>
+        <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/sharestory.png','Testimonials redesign')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/sharestory.png" alt="Testimonials redesign" onclick="openLightbox(this.src,'Share Your Story')" /><span class="annotation">Enabling alumni to share their journey through video or written submission form</span></div></div>
+          <div class="case-img-full" style="margin:0;"><button class="expand-btn" onclick="openLightbox('focusforward/testimonials.png','Testimonials redesign')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg> Expand</button><img loading="lazy" decoding="async" src="focusforward/testimonials.png" alt="Testimonials redesign" onclick="openLightbox(this.src,'Testimonials redesign')" /><span class="annotation">Highlighting alumni stories and testimonials, all in one place</span></div>
           
         </div>
 
@@ -727,7 +728,7 @@
       
 
       <div class="case-img-full">
-        <img src="focusforward/presentation.png" alt="presenting" />
+        <img loading="lazy" decoding="async" src="focusforward/presentation.png" alt="presenting" />
         <span class="annotation">Final presentation to the Focus Forward Project team, Spring 2026</span>
       </div>
 
@@ -768,31 +769,64 @@
     </nav>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer case-footer">
-    <div class="footer-main">
-      <h2>Let's Collaborate</h2>
-      <a href="mailto:mtandon@pratt.edu" class="footer-cta">Get in touch</a>
-    </div>
-    <div class="footer-cols">
-      <div class="footer-col footer-col-nav">
-        <span class="label">( Navigate )</span>
-        <a href="index.html#work">Work</a>
-        <a href="index.html#projects">Archive</a>
-        <a href="index.html#about">About</a>
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__label">Have a project in mind?</span>
+      <a href="#" class="footer__big" data-open-contact>Get in touch ↗</a>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <span>( Navigate )</span>
+          <a href="index.html#work" class="ulink">Work</a>
+          <a href="index.html#archive" class="ulink">Archive</a>
+          <a href="index.html#about" class="ulink">About</a>
+        </div>
+        <div class="footer__col">
+          <span>( Find me )</span>
+          <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank" rel="noopener" class="ulink">LinkedIn</a>
+          <a href="https://github.com/mtandon27" target="_blank" rel="noopener" class="ulink">GitHub</a>
+          <a href="https://medium.com/@mtandon_14181" target="_blank" rel="noopener" class="ulink">Medium</a>
+        </div>
       </div>
-      <div class="footer-col">
-        <span class="label">( Connect )</span>
-        <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/mtandon27" target="_blank">GitHub</a>
-        <a href="https://medium.com/@mtandon_14181" target="_blank">Medium</a>
+
+      <div class="footer__walk" id="footerWalk">
+        <div class="footer__walk-row">
+          <img class="walker" data-light="assets/body6-maroon.svg" data-dark="assets/body6.svg" src="assets/body6-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body4-maroon.svg" data-dark="assets/body4.svg" src="assets/body4-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body1-maroon.svg" data-dark="assets/body1.svg" src="assets/body1-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body2-maroon.svg" data-dark="assets/body2.svg" src="assets/body2-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body3-maroon.svg" data-dark="assets/body3.svg" src="assets/body3-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body5-maroon.svg" data-dark="assets/body5.svg" src="assets/body5-maroon.svg" alt="" />
+        </div>
+        <div class="footer__rule"></div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Manvi Tandon</p>
+
+      <div class="footer__bottom">
+        <span>Manvi Tandon</span>
+        <span class="muted">© 2026 Manvi Tandon. All rights reserved.</span>
+        <a href="#overview" class="muted">Back to top ↑</a>
+      </div>
     </div>
   </footer>
 
+  <!-- ============ CONTACT MODAL ============ -->
+  <div class="contact" id="contact">
+    <div class="contact__bg" data-close-contact></div>
+    <div class="contact__panel">
+      <button class="contact__close" data-close-contact aria-label="Close">&#10005;</button>
+      <span class="contact__eyebrow">Get in touch</span>
+      <h3 class="contact__title">Let's leave a mark together.</h3>
+      <form id="contactForm">
+        <label>Name<input name="name" required placeholder="Your name" /></label>
+        <label>Email<input name="email" type="email" required placeholder="you@email.com" /></label>
+        <label>Message<textarea name="message" required rows="4" placeholder="Tell me about your project…"></textarea></label>
+        <button type="submit" class="contact__send">Send message →</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
   <script>
     // Theme toggle
     const btn = document.getElementById('themeToggle');
