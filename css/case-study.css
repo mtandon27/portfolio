@@ -66,6 +66,10 @@
   width: 10%;
   height:auto;
 }
+.case-logo--wide{width:260px;max-width:60%;}
+.case-logo .is-dark{display:none;}
+body.dark .case-logo .is-light{display:none;}
+body.dark .case-logo .is-dark{display:block;}
 
 
 .case-eyebrow {
@@ -1941,3 +1945,52 @@ body.dark .nav-logo-fig img{filter:brightness(0) invert(1);}
 @media(max-width:560px){
   .footer-walk .walker{height:34px;}
 }
+
+/* ============================================
+   FLOW CARD — stacked, full-width variant
+   (bigger images, image on top, text below)
+   ============================================ */
+.flow-card.stacked{
+  grid-template-columns:1fr;
+  gap:20px;
+}
+.flow-card.stacked .flow-media-wrap{max-width:100%;}
+.flow-card.stacked .flow-media{max-width:100%;width:100%;}
+.flow-card.stacked .flow-media img{width:100%;max-height:none;}
+.flow-card.stacked .flow-text{max-width:640px;}
+
+/* ============================================
+   MAGNIFIER — hover to zoom like a magnifying glass
+   ============================================ */
+.zoom-target{cursor:zoom-in;}
+.zoom-lens{
+  position:fixed;top:0;left:0;width:260px;height:560px;border-radius:36px;
+  border:3px solid var(--ink);box-shadow:0 16px 40px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.2) inset;
+  pointer-events:none;z-index:2000;opacity:0;transition:opacity .15s ease;
+  background-repeat:no-repeat;background-color:var(--bg);
+}
+.zoom-lens.show{opacity:1;}
+@media(hover:none),(max-width:768px){
+  .zoom-target{cursor:default;}
+  .zoom-lens{display:none !important;}
+}
+
+/* ============================================
+   IMAGE PAIR — two supporting images side by side
+   ============================================ */
+.case-img-pair{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;
+  margin:32px 0;align-items:start;
+}
+.case-img-pair img{width:100%;border-radius:8px;border:1px solid var(--border);}
+.case-img-pair .annotation{grid-column:1 / -1;text-align:center;max-width:640px;margin:8px auto 0;}
+@media(max-width:768px){
+  .case-img-pair{grid-template-columns:1fr;}
+}
+
+/* ============================================
+   FLOW MEDIA — light/dark image swap
+   ============================================ */
+.flow-media .is-dark{display:none;}
+body.dark .flow-media .is-light{display:none;}
+body.dark .flow-media .is-dark{display:block;}

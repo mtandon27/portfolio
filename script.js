@@ -18,7 +18,7 @@ const WORK = [
 ];
 
 const ARCHIVE = [
-  { num: '01', href: 'tastebuds.html', target: '_self', img: 'tastebuds/tastebudscover.png', tag: 'Product Design', year: '2026', title: 'Taste Buds', desc: 'A taste-profiling app that helps people learn their palate, find dishes that match it, and blend tastes with friends to decide where to eat.' },
+  { num: '01', href: 'tastebuds.html', target: '_self', img: 'tastebuds/landingpage.gif', tag: 'Product Design', year: '2026', title: 'Taste Buds', desc: 'A taste-profiling app that helps people learn their palate, find dishes that match it, and blend tastes with friends to decide where to eat.', phoneCover: true },
   { num: '02', href: 'chatgpt-adhd.html', target: '_self', img: 'chatgpt/chatgptcover.gif', tag: 'UX Research', year: '2024', title: 'ChatGPT for ADHD', desc: 'Exploring how AI assistants can support neurodivergent users through more intentional interactions.' },
   { num: '03', href: 'sva.html', target: '_self', img: 'assets/sva.gif', tag: 'UX Research', year: '2023', title: "Why Don't Students Scroll?", desc: 'An eye-tracking study revealing how students actually navigate a university library website.' },
   { num: '04', href: 'focusforward.html', target: '_self', img: 'assets/focusforward.gif', tag: 'Service Design', year: '2023', title: 'Focus Forward Project', desc: 'Service design for a New York City nonprofit supporting individuals facing federal charges.' },
@@ -65,7 +65,7 @@ const SKILLS = ['Product Design', 'UX Research', 'Illustration', 'Design Systems
   const list = document.getElementById('archiveList');
   if (!list) return;
   list.innerHTML = ARCHIVE.map(a => `
-    <a href="${a.href}" target="${a.target}" class="arch-row" data-cover="${a.img}">
+    <a href="${a.href}" target="${a.target}" class="arch-row" data-cover="${a.img}" data-cover-phone="${a.phoneCover ? '1' : ''}">
       <div class="arch-row__top">
         <span class="arch-row__num">${a.num}</span>
         <span class="arch-row__title">${a.title}</span>
@@ -74,7 +74,7 @@ const SKILLS = ['Product Design', 'UX Research', 'Illustration', 'Design Systems
       </div>
       <div class="arch-panel">
         <div class="arch-panel__inner">
-          <div class="arch-panel__img"><img loading="lazy" decoding="async" src="${a.img}" alt="${a.title}" /></div>
+          <div class="arch-panel__img${a.phoneCover ? ' arch-panel__img--phone' : ''}"><img loading="lazy" decoding="async" src="${a.img}" alt="${a.title}" /></div>
           <div>
             <span class="arch-tag">${a.tag}</span>
             <p class="arch-panel__desc">${a.desc}</p>
@@ -359,6 +359,7 @@ const SKILLS = ['Product Design', 'UX Research', 'Illustration', 'Design Systems
     row.addEventListener('mouseenter', () => {
       const src = row.getAttribute('data-cover');
       if (src) { img.src = src; peek.classList.add('show'); }
+      peek.classList.toggle('peek--phone', row.getAttribute('data-cover-phone') === '1');
     });
     row.addEventListener('mousemove', move);
     row.addEventListener('mouseleave', () => peek.classList.remove('show'));
