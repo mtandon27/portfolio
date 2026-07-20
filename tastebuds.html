@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manvi Tandon</title>
+  <link rel="icon" type="image/x-icon" href="assets/mt.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+</head>
+
+<body>
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-fig"><img id="logoFig" src="assets/body6.svg" alt="" /></span>
+      <span class="nav__name">Manvi Tandon</span>
+    </a>
+    <div class="nav__center">
+      <a href="index.html#work" class="nav__link nav__link--wavy">Work</a>
+      <a href="index.html#archive" class="nav__link nav__link--dashed">Archive</a>
+      <a href="index.html#about" class="nav__link nav__link--solid">About</a>
+    </div>
+    <div class="nav__right">
+      <a href="#" class="nav__cta" data-open-contact>Get in touch</a>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="sunIcon"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="1.5" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22.5"></line><line x1="3.5" y1="3.5" x2="5.3" y2="5.3"></line><line x1="18.7" y1="18.7" x2="20.5" y2="20.5"></line><line x1="1.5" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22.5" y2="12"></line><line x1="3.5" y1="20.5" x2="5.3" y2="18.7"></line><line x1="18.7" y1="5.3" x2="20.5" y2="3.5"></line></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="moonIcon" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <span class="icon-btn__tooltip" role="tooltip"></span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="menu" id="menu">
+    <button class="menu__close" id="menuClose" aria-label="Close">&#10005;</button>
+    <a href="index.html#work" data-menu-link>Work</a>
+    <a href="index.html#archive" data-menu-link>Archive</a>
+    <a href="index.html#about" data-menu-link>About</a>
+    <a href="#" class="menu__cta" data-open-contact data-menu-link>Get in touch</a>
+    <div class="menu__social">
+      <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/mtandon27" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://medium.com/@mtandon_14181" target="_blank" rel="noopener">Medium</a>
+    </div>
+  </div>
+
+  <!-- Side Navigation -->
+  <aside class="case-sidenav" id="caseSidenav">
+    <a href="#overview"   class="sidenav-link active">Overview</a>
+    <a href="#problem"    class="sidenav-link">Problem</a>
+    <a href="#solution"   class="sidenav-link">Solution</a>
+    <a href="#visuals"    class="sidenav-link">Visual Identity</a>
+    <a href="#iteration"  class="sidenav-link">Iteration</a>
+    <a href="#future"     class="sidenav-link">Future</a>
+    <a href="#reflection" class="sidenav-link">Reflection</a>
+  </aside>
+
+  <main class="case-study">
+    <a href="index.html#archive" class="back-link">← Back</a>
+
+    <!-- HERO -->
+    <header class="case-hero" id="overview">
+      <div class="case-logo">
+        <img loading="lazy" decoding="async" src="tastebuds/tastebuds-logo.png" alt="Taste Buds" class="client-logo" />
+      </div>
+      <span class="case-eyebrow">Taste Buds</span>
+      <h1 class="case-title">Teaching an app to understand what your palate actually wants.</h1>
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <p>Product Designer<br/>&amp; Researcher</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <p>Feb – Apr 2026</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Team</span>
+          <p>2 Designers<br/>(with Mariel Go)</p>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Skills</span>
+          <p>Product Design<br/>Visual Design<br/>Prototyping</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="case-section" id="overview">
+      <span class="section-label">Overview</span>
+      <h2>"What to eat?" is the one question everyone asks and no app actually answers.</h2>
+      <p>Every food app sits somewhere between three ideas that never quite meet: food exploration apps that show you what's nearby, personality tests that tell you who you are, and taste science that explains why you like what you like. None of them ask what your palate specifically wants tonight, or help a table of four people with four different palates agree on where to go.</p>
+      <p>Taste Buds is a mobile app built around three moments: <strong>Learn</strong> your evolving palate, <strong>Explore</strong> recommendations that feel like a friend's suggestion instead of an algorithm, and <strong>Blend</strong> your taste with friends to end the "where should we eat" debate for good.</p>
+
+      <div class="case-img-full">
+        <img loading="lazy" decoding="async" src="tastebuds/tastebudscover.png" alt="Taste Buds taste palate visualization" />
+        <span class="annotation">Your taste palate, visualized as an overlapping blob instead of a list of percentages</span>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="case-section" id="problem">
+      <span class="section-label">Problem</span>
+      <h2>Every food app assumes you already know what you want.</h2>
+      <p>Search and review platforms sort by rating, distance, or cuisine type, none of which describe how a dish will actually taste to <em>you</em>. And the moment a second person joins dinner, the whole system breaks down into a group chat of restaurant links nobody commits to.</p>
+
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h4>1. Taste is personal, but recs are generic.</h4>
+          <p>A 96% rating tells you what a crowd thought. It doesn't tell you whether you, specifically, will love a sour-forward broth or find it off-putting.</p>
+        </div>
+        <div class="approach-item">
+          <h4>2. Group decisions collapse to the lowest common denominator.</h4>
+          <p>Without a way to actually see where a group's tastes overlap, plans default to whatever's safest and least interesting for everyone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="case-section" id="solution">
+      <span class="section-label">Solution</span>
+      <h2>Learn your palate, explore what fits it, blend it with the people you eat with.</h2>
+      <p>Onboarding builds a taste profile in under a minute. From there, every dish you rate refines it, every recommendation is scored against it, and every friend you add becomes another palate to blend into a plan.</p>
+
+      <h3>1. Learn: get to know your own tastebuds</h3>
+      <div class="flow-card">
+        <div class="flow-media-wrap">
+          <div class="flow-media">
+            <img loading="lazy" decoding="async" src="tastebuds/learn-flow.png" alt="Onboarding flow: pick dishes, calibrate tastes, get your profile" />
+          </div>
+          <span class="annotation">Pick 3+ dishes you genuinely love, calibrate the five basic tastes, land on a taste profile</span>
+        </div>
+        <div class="flow-text">
+          <h4>Build a profile from dishes, not a quiz</h4>
+          <p>Instead of asking abstract preference questions, onboarding starts with dishes you already love as anchors, then lets you fine-tune sweet, salty, sour, bitter, and umami with a simple drag. The payoff is immediate: a named taste identity like "Sweet &amp; Umami Lover," plus a first read on spice tolerance and texture preferences.</p>
+        </div>
+      </div>
+
+      <h3>2. Explore: recommendations that feel like a friend, not an algorithm</h3>
+      <div class="flow-card reverse">
+        <div class="flow-media-wrap">
+          <div class="flow-media">
+            <img loading="lazy" decoding="async" src="tastebuds/explore-flow.png" alt="Explore flow: palate-matched dishes and logging a meal" />
+          </div>
+          <span class="annotation">Nightly picks scored against your palate, plus a quick way to log what you actually ate</span>
+        </div>
+        <div class="flow-text">
+          <h4>Every dish you log sharpens the next recommendation</h4>
+          <p>Explore opens with a plain-language read of what you're craving tonight, not just a list. Snapping or logging a meal afterward updates your profile in real time. The moment a rating shifts your umami score, Explore tells you exactly which upcoming recommendations just changed because of it.</p>
+        </div>
+      </div>
+
+      <h3>3. Blend: end the "where should we eat" debate for good</h3>
+      <div class="flow-card">
+        <div class="flow-media-wrap">
+          <div class="flow-media">
+            <img loading="lazy" decoding="async" src="tastebuds/blend-flow1.png" alt="Blend flow: adding friends and seeing where your tastes overlap" />
+          </div>
+          <span class="annotation">Add the friends you're eating with, see exactly where your palates overlap and diverge, then get restaurant picks scored against the whole table</span>
+        </div>
+        <div class="flow-text">
+          <h4>Merge palates into one shape you can actually read</h4>
+          <p>Add anyone you're eating with and Taste Buds blends your profiles into a single overlapping shape, sweet and bitter here, spicy there, so it's obvious at a glance where you agree and where one of you is compromising. Then it scores nearby restaurants against that blend instead of an average of star ratings.</p>
+        </div>
+      </div>
+
+      <div class="flow-card reverse">
+        <div class="flow-media-wrap">
+          <div class="flow-media">
+            <img loading="lazy" decoding="async" src="tastebuds/blend-flow2.png" alt="Blend flow: group blend and confirming a reservation" />
+          </div>
+          <span class="annotation">Blend scales from a pair to a full group, then locks in a table with live RSVPs</span>
+        </div>
+        <div class="flow-text">
+          <h4>From a pair blend to a full table</h4>
+          <p>The same overlap logic scales to a group: everyone's individual match percentage rolls up into one group match and a plain-language "common ground" summary. Once a spot is picked, the table view tracks who's in, who's pending, and locks in the reservation, so Blend ends at an actual dinner, not just a suggestion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUAL IDENTITY -->
+    <section class="case-section" id="visuals">
+      <span class="section-label">Visual Identity</span>
+      <h2>A warm design system for an app that maps how people actually taste.</h2>
+      <p>Cream paper instead of white, ink instead of pure black. Instrument Serif carries the voice in italics for headlines and match scores; Poppins handles the everyday reading copy. Six pastel taste colors, sweet, sour, salty, bitter, umami, spicy, run through every chip, blob, and recommendation tag so the same color always means the same taste. Almost nothing in the system has a corner sharper than 12px.</p>
+
+      <div class="case-img-full">
+        <img loading="lazy" decoding="async" src="tastebuds/design-system.png" alt="Taste Buds design system: colors, typography, and taste palette" />
+        <span class="annotation">Surfaces &amp; ink, the six-taste color palette, and type pairing from the design system</span>
+      </div>
+    </section>
+
+    <!-- ITERATION -->
+    <section class="case-section" id="iteration">
+      <span class="section-label">Iteration</span>
+      <h2>Like a palate, the product kept evolving.</h2>
+      <p>Every major visualization in Taste Buds went through at least one full rebuild after we watched someone try to use it.</p>
+
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h4>From a tongue map and a scatter of dots, to one shape.</h4>
+          <p>The first version of the taste profile paired a floating tongue diagram with six disconnected colored circles, one per taste. It looked scientific but tested badly: people couldn't tell if bigger meant "more" or "better," and nothing about it felt personal to them. We replaced both with a single merged, organic blob where each taste bleeds into its neighbors. Overlap and preference became something you could feel at a glance instead of something you had to decode.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img loading="lazy" decoding="async" src="tastebuds/iteration-palate-viz.png" alt="Before and after of the taste profile visualization" />
+        <span class="annotation">The original scatter and tongue map were too abstract; the merged blob reads as one personal shape</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h4>Blend needed to show where you agree, not just that you match.</h4>
+          <p>An early Blend screen placed two people's taste circles side by side with a dividing line, "feels disconnected" was the exact note we got back, and nobody understood what the overlap actually meant. The fix was the same merged-blob language from the palate screen, now shared between two people, with explicit "where you overlap" and "where you diverge" labels so the takeaway is legible without explanation.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img loading="lazy" decoding="async" src="tastebuds/iteration-blend-viz.png" alt="Before and after of the Blend overlap visualization" />
+        <span class="annotation">A merged shape and explicit overlap/diverge labels made the same data instantly readable</span>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">03</span>
+        <div class="process-body">
+          <h4>Blend only worked for two people, until we asked why anyone would use it in real life.</h4>
+          <p>Users kept telling us they wanted to Blend with a group, not a single friend, dinner is rarely just two people. We rebuilt Blend around groups from the ground up: everyone gets an individual match percentage against the group, a shared "common ground" summary in plain language, and a live table view that tracks RSVPs until the reservation is locked in.</p>
+        </div>
+      </div>
+
+      <div class="case-img-full">
+        <img loading="lazy" decoding="async" src="tastebuds/iteration-group-blend.png" alt="Group blend and confirmed reservation screens" />
+        <span class="annotation">Moving from pair blends to group blends let a full table converge on umami and lock in a reservation together</span>
+      </div>
+
+      <div class="quote-card">
+        <p>Users generally preferred the tongue visualization over the taste-bud framing, since it felt less abstract, and didn't understand the difference between a taste palate and taste buds.</p>
+        <span>— Round 1 usability testing</span>
+      </div>
+    </section>
+
+    <!-- FUTURE -->
+    <section class="case-section" id="future">
+      <span class="section-label">Future</span>
+      <h2>Taste Buds as an ecosystem, not just an app.</h2>
+      <p>Scaling past the happy path means asking harder questions about data, friction, and who gets left out.</p>
+
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h4>Cultural mapping</h4>
+          <p>Taste is cultural as much as personal. A future version could map a palate's geographic roots, showing someone who leans sour and umami how their taste aligns with specific regional cuisines.</p>
+        </div>
+        <div class="approach-item">
+          <h4>Restaurant partnerships</h4>
+          <p>Rather than relying purely on crowdsourced data, restaurants could partner directly with Taste Buds to surface hidden menu items or fusion dishes that precisely match a niche palate.</p>
+        </div>
+        <div class="approach-item">
+          <h4>Community-led exploration</h4>
+          <p>Beyond solo discovery, users could follow "Taste Curators," local chefs, food bloggers, or friends with a similar palate, and explore restaurants through their specific taste lens.</p>
+        </div>
+      </div>
+
+      <h3>What we still need to learn</h3>
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Does Blend work when someone doesn't have the app?</h4>
+          <p>To keep the barrier to entry low, we need a "Guest Blend" experience, a quick way for a group to calibrate tastes instantly without anyone making a full account.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Is there really value in the visualizations, or just delight?</h4>
+          <p>An open question we're still testing for. We're committed to investing in a visual language that makes taste nuance concrete and intuitive, not just pretty.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>How does this system actually help someone's palate evolve?</h4>
+          <p>Today Taste Buds only suggests what to eat next. We're exploring moments of surprise that nudge users toward unfamiliar flavor territory in a way that feels rewarding instead of risky.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="case-section" id="reflection">
+      <span class="section-label">Reflection</span>
+      <h2>What I learned</h2>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Visualizing something invisible is a design problem, not a decoration problem.</h4>
+          <p>Taste has no natural visual language. Our first instinct was to borrow one, a tongue map, a scatter plot, because it looked scientific. The breakthrough was realizing the shape itself had to carry the meaning: merged where tastes overlap, separate where they don't. That's a much harder problem than picking prettier colors, and it's the one that actually moved the needle in testing.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Design for the group, not the pair.</h4>
+          <p>Blend's biggest jump in usefulness didn't come from a visual polish pass, it came from admitting the two-person version solved a smaller problem than the one people actually had. Dinner is rarely just two people, and the product only became worth using once it matched that reality.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="process-num">→</span>
+        <div class="process-body">
+          <h4>Confusing feedback is still useful feedback.</h4>
+          <p>Round 1 testing told us people didn't understand "taste palate" versus "taste buds," or why Blend mattered before they'd tried it. Neither note told us exactly what to build, but both told us precisely where the product stopped explaining itself, which is often more useful than being told what to add.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <nav class="case-nav">
+      <a href="index.html#archive" class="case-nav-link prev">
+        <span class="nav-direction">← Back</span>
+        <span class="nav-project">Archive</span>
+      </a>
+      <a href="chatgpt-adhd.html" class="case-nav-link next">
+        <span class="nav-direction">Next →</span>
+        <span class="nav-project">ChatGPT for ADHD</span>
+      </a>
+    </nav>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__label">Have a project in mind?</span>
+      <a href="#" class="footer__big" data-open-contact>Get in touch ↗</a>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <span>( Navigate )</span>
+          <a href="index.html#work" class="ulink">Work</a>
+          <a href="index.html#archive" class="ulink">Archive</a>
+          <a href="index.html#about" class="ulink">About</a>
+        </div>
+        <div class="footer__col">
+          <span>( Find me )</span>
+          <a href="https://www.linkedin.com/in/manvi-tandon/" target="_blank" rel="noopener" class="ulink">LinkedIn</a>
+          <a href="https://github.com/mtandon27" target="_blank" rel="noopener" class="ulink">GitHub</a>
+          <a href="https://medium.com/@mtandon_14181" target="_blank" rel="noopener" class="ulink">Medium</a>
+        </div>
+      </div>
+
+      <div class="footer__walk" id="footerWalk">
+        <div class="footer__walk-row">
+          <img class="walker" data-light="assets/body6-maroon.svg" data-dark="assets/body6.svg" src="assets/body6-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body4-maroon.svg" data-dark="assets/body4.svg" src="assets/body4-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body1-maroon.svg" data-dark="assets/body1.svg" src="assets/body1-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body2-maroon.svg" data-dark="assets/body2.svg" src="assets/body2-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body3-maroon.svg" data-dark="assets/body3.svg" src="assets/body3-maroon.svg" alt="" />
+          <img class="walker" data-light="assets/body5-maroon.svg" data-dark="assets/body5.svg" src="assets/body5-maroon.svg" alt="" />
+        </div>
+        <div class="footer__rule"></div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>Manvi Tandon</span>
+        <span class="muted">© 2026 Manvi Tandon. All rights reserved.</span>
+        <a href="#overview" class="muted">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ CONTACT MODAL ============ -->
+  <div class="contact" id="contact">
+    <div class="contact__bg" data-close-contact></div>
+    <div class="contact__panel">
+      <button class="contact__close" data-close-contact aria-label="Close">&#10005;</button>
+      <span class="contact__eyebrow">Get in touch</span>
+      <h3 class="contact__title">Let's leave a mark together.</h3>
+      <form id="contactForm">
+        <label>Name<input name="name" required placeholder="Your name" /></label>
+        <label>Email<input name="email" type="email" required placeholder="you@email.com" /></label>
+        <label>Message<textarea name="message" required rows="4" placeholder="Tell me about your project…"></textarea></label>
+        <button type="submit" class="contact__send">Send message →</button>
+      </form>
+    </div>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Sidenav
+      const sections = document.querySelectorAll('.case-section[id], .case-hero[id]');
+      const navLinks = document.querySelectorAll('.sidenav-link');
+      sections.forEach(s => { if (s.id) {
+        new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) navLinks.forEach(l => {
+              l.classList.toggle('active', l.getAttribute('href') === `#${e.target.id}`);
+            });
+          });
+        }, { rootMargin: '-20% 0px -65% 0px' }).observe(s);
+      }});
+    });
+  </script>
+</body>
+</html>

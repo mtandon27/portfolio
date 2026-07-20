@@ -14,16 +14,17 @@ const WORK = [
   { href: 'buckets.html', img: 'assets/bucketslight.gif', imgDark: 'assets/bucketsdark.gif', year: '2025', title: 'Buckets', tag: 'Product Design', desc: 'A friendship building app based on shared bucket list experiences.' },
   { href: 'keralamuseum.html', img: 'assets/keralamuseumcover.png', year: '2025', title: 'Kerala Art Museum', tag: 'UX Research', desc: 'Community focused mobile design for the Kerala Art Museum.' },
   { href: 'dsdelights.html', img: 'assets/dsdelightscover.png', year: '2024', title: "D's Delights", tag: 'Brand & Web Design', desc: 'Brand identity and website for D\u2019s Delights jewelry brand.' },
-  { href: 'mathworks.html', img: 'assets/mathworkscover.png', year: '2022–24', title: 'MathWorks', tag: 'Enterprise UX', desc: 'System-modeling engineering software for Simulink.' }
+  { href: 'mathworks.html', img: 'assets/mwlight.gif', imgDark: 'assets/mwdark.gif', year: '2022–24', title: 'MathWorks', tag: 'Enterprise UX', desc: 'System-modeling engineering software for Simulink.' }
 ];
 
 const ARCHIVE = [
-  { num: '01', href: 'chatgpt-adhd.html', target: '_self', img: 'chatgpt/chatgptcover.gif', tag: 'UX Research', year: '2024', title: 'ChatGPT for ADHD', desc: 'Exploring how AI assistants can support neurodivergent users through more intentional interactions.' },
-  { num: '02', href: 'sva.html', target: '_self', img: 'assets/sva.gif', tag: 'UX Research', year: '2023', title: "Why Don't Students Scroll?", desc: 'An eye-tracking study revealing how students actually navigate a university library website.' },
-  { num: '03', href: 'focusforward.html', target: '_self', img: 'assets/FFP.gif', tag: 'Service Design', year: '2023', title: 'Focus Forward Project', desc: 'Service design for a New York City nonprofit supporting individuals facing federal charges.' },
-  { num: '04', href: 'traderjoes.html', target: '_self', img: 'assets/traderjoescover.png', tag: 'App Concept', year: '2022', title: "Trader Joe's App", desc: "Imagining a mobile app experience for Trader Joe's grocery shoppers." },
-  { num: '05', href: 'spicelife.html', target: '_self', img: 'spicelife/spicelife.gif', tag: 'Illustration', year: '2022', title: 'Spice Life', desc: 'An illustrated cookbook celebrating the flavors and stories of South Asian cuisine.' },
-  { num: '06', href: 'https://mtandon27.github.io/plantparent/index.html', target: '_blank', img: 'assets/plantparent.gif', tag: 'Coding', year: '2021', title: 'Plant Parent', desc: 'A plant-care tracker helping new and existing plant owners track their plants growth.' }
+  { num: '01', href: 'tastebuds.html', target: '_self', img: 'tastebuds/tastebudscover.png', tag: 'Product Design', year: '2026', title: 'Taste Buds', desc: 'A taste-profiling app that helps people learn their palate, find dishes that match it, and blend tastes with friends to decide where to eat.' },
+  { num: '02', href: 'chatgpt-adhd.html', target: '_self', img: 'chatgpt/chatgptcover.gif', tag: 'UX Research', year: '2024', title: 'ChatGPT for ADHD', desc: 'Exploring how AI assistants can support neurodivergent users through more intentional interactions.' },
+  { num: '03', href: 'sva.html', target: '_self', img: 'assets/sva.gif', tag: 'UX Research', year: '2023', title: "Why Don't Students Scroll?", desc: 'An eye-tracking study revealing how students actually navigate a university library website.' },
+  { num: '04', href: 'focusforward.html', target: '_self', img: 'assets/focusforward.gif', tag: 'Service Design', year: '2023', title: 'Focus Forward Project', desc: 'Service design for a New York City nonprofit supporting individuals facing federal charges.' },
+  { num: '05', href: 'traderjoes.html', target: '_self', img: 'assets/traderjoes.gif', tag: 'App Concept', year: '2022', title: "Trader Joe's App", desc: "Imagining a mobile app experience for Trader Joe's grocery shoppers." },
+  { num: '06', href: 'spicelife.html', target: '_self', img: 'spicelife/spicelife.gif', tag: 'Illustration', year: '2022', title: 'Spice Life', desc: 'An illustrated cookbook celebrating the flavors and stories of South Asian cuisine.' },
+  { num: '07', href: 'https://mtandon27.github.io/plantparent/index.html', target: '_blank', img: 'assets/plantparent.gif', tag: 'Coding', year: '2021', title: 'Plant Parent', desc: 'A plant-care tracker helping new and existing plant owners track their plants growth.' }
 ];
 
 const VECTOR_POOL = [
