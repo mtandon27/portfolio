@@ -1855,7 +1855,7 @@ code {
 .nav-right{display:flex;align-items:center;gap:16px;}
 .theme-toggle{
   width:34px;height:34px;border:1px solid var(--line);background:transparent;border-radius:50%;
-  color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;
+  color:var(--ink);display:flex;align-items:center;justify-content:center;
   flex-shrink:0;transition:background .2s,border-color .2s;
 }
 .theme-toggle:hover{background:var(--hover);}
@@ -1864,7 +1864,7 @@ body.dark .theme-toggle .icon-sun{display:none;}
 body.dark .theme-toggle .icon-moon{display:block;}
 .hamburger{
   display:none;flex-direction:column;justify-content:center;align-items:center;
-  width:34px;height:34px;gap:5px;background:transparent;border:none;cursor:pointer;flex-shrink:0;
+  width:34px;height:34px;gap:5px;background:transparent;border:none;flex-shrink:0;
 }
 .hamburger span{display:block;width:20px;height:1.5px;background:var(--ink);}
 

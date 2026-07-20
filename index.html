@@ -30,6 +30,7 @@
       <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="sunIcon"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="1.5" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22.5"></line><line x1="3.5" y1="3.5" x2="5.3" y2="5.3"></line><line x1="18.7" y1="18.7" x2="20.5" y2="20.5"></line><line x1="1.5" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22.5" y2="12"></line><line x1="3.5" y1="20.5" x2="5.3" y2="18.7"></line><line x1="18.7" y1="5.3" x2="20.5" y2="3.5"></line></svg>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="moonIcon" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <span class="icon-btn__tooltip" role="tooltip"></span>
       </button>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span></button>
     </div>
@@ -63,13 +64,55 @@
       </div>
 
       <div class="collage" id="collage">
-        <img class="photo" data-light="assets/hero1.jpg" data-dark="assets/hero1.jpg" src="assets/hero1.jpg" alt="" data-depth="1.4" style="top:0%;left:0%;width:28%;z-index:5;" />
-        <img class="photo knockout" data-light="assets/heroimg.png" data-dark="assets/heroimg.png" src="assets/heroimg.png" alt="" data-depth="0.8" style="top:0%;right:0%;width:27%;z-index:6;" />
-        <img class="photo" data-light="assets/mathworkscover.png" data-dark="assets/mathworkscover.png" src="assets/mathworkscover.png" alt="" data-depth="1.1" style="top:0%;left:36%;width:28%;z-index:4;" />
-        <img class="photo" data-light="assets/periodcover.png" data-dark="assets/periodcover.png" src="assets/periodcover.png" alt="" data-depth="1.6" style="top:37%;left:1%;width:27%;z-index:6;" />
-        <img class="photo" data-light="assets/dsdelightscover.png" data-dark="assets/dsdelightscover.png" src="assets/dsdelightscover.png" alt="" data-depth="0.6" style="top:37%;right:0%;width:27%;z-index:5;" />
-        <img class="photo" data-light="spicelife/spicelifecover-thumb.png" data-dark="spicelife/spicelifecover-thumb.png" src="spicelife/spicelifecover-thumb.png" alt="" data-depth="1.3" style="top:37%;left:36%;width:28%;z-index:7;" />
-        <img class="photo knockout" data-light="assets/eyes.gif" data-dark="assets/darkeyes.gif" src="assets/eyes.gif" alt="" data-depth="1.8" style="top:74%;left:37%;width:25%;z-index:8;" />
+        <div class="photo" data-light="assets/hero1.jpg" data-dark="assets/hero1.jpg" data-depth="1.4" style="top:0%;left:0%;width:28%;z-index:5;">
+          <img src="assets/hero1.jpg" alt="" />
+          <span class="hero-label hero-label--left">
+            <img class="is-light" src="assets/label2-photography-maroon.png" alt="" />
+            <img class="is-dark" src="assets/label2-photography-blue.png" alt="" />
+          </span>
+        </div>
+        <div class="photo knockout" data-light="assets/heroimg.png" data-dark="assets/heroimg.png" data-depth="0.8" style="top:0%;right:0%;width:27%;z-index:6;">
+          <img src="assets/heroimg.png" alt="" />
+          <span class="hero-label hero-label--left">
+            <img class="is-light" src="assets/label2-illustration-maroon.png" alt="" />
+            <img class="is-dark" src="assets/label2-illustration-blue.png" alt="" />
+          </span>
+        </div>
+        <div class="photo" data-light="assets/mathworkscover.png" data-dark="assets/mathworkscover.png" data-depth="1.1" style="top:0%;left:36%;width:28%;z-index:4;">
+          <img src="assets/mathworkscover.png" alt="" />
+          <span class="hero-label hero-label--left">
+            <img class="is-light" src="assets/label2-appdesign-maroon.png" alt="" />
+            <img class="is-dark" src="assets/label2-appdesign-blue.png" alt="" />
+          </span>
+        </div>
+        <div class="photo" data-light="assets/periodcover.png" data-dark="assets/periodcover.png" data-depth="1.6" style="top:37%;left:1%;width:27%;z-index:6;">
+          <img src="assets/periodcover.png" alt="" />
+          <span class="hero-label hero-label--right">
+            <img class="is-light" src="assets/label2-branddesign-maroon.png" alt="" />
+            <img class="is-dark" src="assets/label2-branddesign-blue.png" alt="" />
+          </span>
+        </div>
+        <div class="photo" data-light="assets/dsdelightscover.png" data-dark="assets/dsdelightscover.png" data-depth="0.6" style="top:37%;right:0%;width:31%;z-index:5;">
+          <img src="assets/dsdelightscover.png" alt="" />
+          <span class="hero-label hero-label--left">
+            <img class="is-light" src="assets/label2-websitedesign-maroon.png" alt="" />
+            <img class="is-dark" src="assets/label2-websitedesign-blue.png" alt="" />
+          </span>
+        </div>
+        <div class="photo" data-light="spicelife/spicelifecover-thumb.png" data-dark="spicelife/spicelifecover-thumb.png" data-depth="1.3" style="top:37%;left:36%;width:32%;z-index:7;">
+          <img src="spicelife/spicelifecover-thumb.png" alt="" />
+          <span class="hero-label hero-label--right">
+            <img class="is-light" src="assets/label2-visualdesign-maroon.png" alt="" />
+            <img class="is-dark" src="assets/label2-visualdesign-blue.png" alt="" />
+          </span>
+        </div>
+        <div class="photo knockout" data-light="assets/eyes.gif" data-dark="assets/darkeyes.gif" data-depth="1.8" style="top:74%;left:37%;width:25%;z-index:8;">
+          <img src="assets/eyes.gif" alt="" />
+          <span class="hero-label hero-label--left">
+            <img class="is-light" src="assets/label2-animation-maroon.png" alt="" />
+            <img class="is-dark" src="assets/label2-animation-blue.png" alt="" />
+          </span>
+        </div>
       </div>
     </div>
   </section>

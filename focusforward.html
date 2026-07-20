@@ -69,8 +69,8 @@
     .stat-strip { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid var(--border); margin: 40px 0; border-radius: 10px; overflow: hidden; }
     .stat-item { padding: 28px 24px; border-right: 1px solid var(--border); background: var(--accent); color: #fff; }
     .stat-item:last-child { border-right: none; }
-    .stat-num { font-family: var(--font-serif); font-size: clamp(28px, 4vw, 42px); font-weight: 400; line-height: 1; display: block; margin-bottom: 8px; }
-    .stat-label { font-size: 12px; opacity: .85; line-height: 1.4; }
+    .stat-num { font-family: var(--font-serif); font-size: clamp(28px, 4vw, 42px); font-weight: 400; line-height: 1; display: block; margin-bottom: 8px; color: inherit; }
+    .stat-label { font-size: 12px; opacity: .85; line-height: 1.4; color: inherit; }
 
     /* Key insight */
     .key-insight { padding: 22px 24px; background: var(--accent-light); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; margin: 28px 0; }
@@ -255,6 +255,7 @@
       <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="sunIcon"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="1.5" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22.5"></line><line x1="3.5" y1="3.5" x2="5.3" y2="5.3"></line><line x1="18.7" y1="18.7" x2="20.5" y2="20.5"></line><line x1="1.5" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22.5" y2="12"></line><line x1="3.5" y1="20.5" x2="5.3" y2="18.7"></line><line x1="18.7" y1="5.3" x2="20.5" y2="3.5"></line></svg>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="moonIcon" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <span class="icon-btn__tooltip" role="tooltip"></span>
       </button>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span></button>
     </div>

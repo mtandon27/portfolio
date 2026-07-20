@@ -106,6 +106,12 @@ const SKILLS = ['Product Design', 'UX Research', 'Illustration', 'Design Systems
 
   function sync() {
     const dark = document.body.classList.contains('dark');
+    if (btn) {
+      const label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+      btn.setAttribute('aria-label', label);
+      const tip = btn.querySelector('.icon-btn__tooltip');
+      if (tip) tip.textContent = label;
+    }
     if (sun) sun.style.display = dark ? 'none' : 'block';
     if (moon) moon.style.display = dark ? 'block' : 'none';
     // legacy case-study pages use .icon-sun / .icon-moon (CSS handles display)
